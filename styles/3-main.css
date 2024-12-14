@@ -13,22 +13,21 @@ main{
 main .containerMeme{
   background-color:red;
   width: 90%;
-  height: 270px;
+  height: 320px;
   display: flex;
   flex-direction: column;
 }
 
-
 main .containerMeme .topText,
 .bottomText{
-  background-color: #fa20f6;
+  background-color: #ffffff;
   margin: 0;
   padding: 10px;
 }
 
 main .containerMeme .imageMeme{
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
   object-position: top;
 }

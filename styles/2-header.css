@@ -1,12 +1,65 @@
+/* ***** MOBILE FIRST ***** */
 header{
   background-color: #da27a4;
-  width: 100%;
+  width:var(--width);
   height: 90px;
+  font-family: var(--fontGenos);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+/* ***** HEADER: TITLE ***** */
+header .titleMeme{
+  font-weight: var(--fontWeight500);
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* ***** HEADER NAV BUTTONS ***** */
+header .navMenu{
+  background-color: blue;
+  width: var(--width);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ***** GENERAL NAVIGATION BUTTON STYLES ***** */
+header .navMenu .btn{
+  background-color: black;
+  width: 29%;
+  font-size: 0.9em;
+  color: var(--colorWhitesmoke);
+  font-weight: var(--fontWeight500);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
- 
+/* ***** PSEUDO ELEMENTS BUTTON ICONS ***** */
+header .navMenu .buttonImage::before{
+  font-family: "font awesome 5 free";
+  font-weight: 600;
+  content: "\f03e";
+}
+
+
+header .navMenu .buttonText::before{
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f031";
+  margin-left: 1px;
+  margin-top: -1px;
+}
+
+header .navMenu .buttonMode::before{
+  font-family: "font awesome 5 free";
+  font-weight: 600;
+  content: "\f6be";
+}
