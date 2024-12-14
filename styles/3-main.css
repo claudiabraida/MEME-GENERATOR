@@ -1,0 +1,39 @@
+main{
+  background-color: #f6fe18;
+  width: 100%;
+  height: 418px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+main .containerMeme{
+  background-color:red;
+  width: 90%;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+main .containerMeme .topText,
+.bottomText{
+  background-color: #fa20f6;
+  margin: 0;
+  padding: 10px;
+}
+
+main .containerMeme .imageMeme{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+}
+
+main .download{
+  background-color: #5782d2;
+  border: none;
+} 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/0-normalize.css">
+  <link rel="stylesheet" href="./styles/1-principal-style.css">
+  <title>Generador de Memes</title>
+</head>
+
+<body class="bodyDarkMode">
+  
+  <!-- ************** HEADER: TITLE- MENU BUTTONS ************** -->
+  <header>
+    <h1 class="titleMeme">Generador de Memes</h1>
+    <nav class="navMenu">
+      <button class="btn buttonImage">imagen</button>
+      <button class="btn buttonText">texto</button>
+      <button class="btn buttonMode">Modo Oscuro</button>
+    </nav>
+  </header>
+  
+  <!-- ************** MAIN: MEME ************** -->
+  <main>
+    <section class="containerMeme">
+      <p class="topText">Top Text</p>
+      <img class="imageMeme" src="" alt="imagen mediante url">
+      <p class="bottomText">Bottom Text</p>
+    </section>
+    <button class="download">download</button>
+  </main>
+  
+  <!-- ************** PANELS CONTROLS ************** -->
+  <!-- -------------- IMAGE CONTROLS -------------- -->
+  <aside class="imagePanelControls">
+    <button class="btn closeImagePanelControls">x</button>
+
+    <p>imagen</p>
+  </aside>
+  
+  <!-- -------------- TEXT CONTROLS --------------- -->
+  <aside class="textPanelControls">
+    <button class="btn closeTextPanelControls">x</button>
+    <p>texto</p>
+  </aside>
+
+  <!-- ************** FOOTER ************** -->
+  <footer class="infoFooter">
+    
+  </footer>
+  
+  <script src="./main.js"></script>
+</body>
+</html>
