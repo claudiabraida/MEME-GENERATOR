@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("./2-header.css");
+@import url("./3-main.css");
+@import url("./4-aside-image.css");
+@import url("./5-aside-text.css");
+@import url("./6-footer.css");
+
+/* ************** ESTILOS GENERALES ************** */
+
+/* VARIABLES */ 
+:root{
+  --width:100%;
+  --colorWhitesmoke: whitesmoke;
+  --fontGenos: Genos;
+  --fontWeight500: 500;
+}
+
+/* ************** PANELS CONTROLS ************** */
+body aside{
+  width: 20%;
+  height: 595px;
+  position: absolute;
+  top: 0%;
+  display: none;
+}
+
+/* --- BUTTON CLOSE PANELS --- */
+body aside .btn{
+  background: transparent;
+  height: 20px;
+  border: none;
+  position: relative;
+  left: 90%;
+}
+
+
+

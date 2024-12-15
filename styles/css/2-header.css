@@ -18,7 +18,9 @@ header .titleMeme{
   margin: 0;
 }
 
-/* ***** HEADER NAV BUTTONS ***** */
+/* ***** HEADER NAV-MENU BUTTONS ***** */
+
+/*  Alinación: botones del nav  */
 header .navMenu{
   background-color: blue;
   width: var(--width);
@@ -27,7 +29,8 @@ header .navMenu{
   align-items: center;
 }
 
-/* ***** GENERAL NAVIGATION BUTTON STYLES ***** */
+/* ***** NAV-MENU BUTTONS ***** */
+/* ---- Estilos generales botones de navegación ---- */
 header .navMenu .btn{
   background-color: black;
   width: 29%;
@@ -41,15 +44,15 @@ header .navMenu .btn{
   align-items: center;
 }
 
-
-/* ***** PSEUDO ELEMENTS BUTTON ICONS ***** */
+/* -------- Pseudo elements buttons icons -------- */
+/* .......... icono imagen .......... */
 header .navMenu .buttonImage::before{
   font-family: "font awesome 5 free";
   font-weight: 600;
   content: "\f03e";
 }
 
-
+/* ........... icono texto ........... */
 header .navMenu .buttonText::before{
   font-family: "font awesome 5 free";
   font-weight: 900;
@@ -58,8 +61,11 @@ header .navMenu .buttonText::before{
   margin-top: -1px;
 }
 
+/* .... icono (gato) modo claro/oscuro .... */
 header .navMenu .buttonMode::before{
   font-family: "font awesome 5 free";
   font-weight: 600;
   content: "\f6be";
 }
+
+

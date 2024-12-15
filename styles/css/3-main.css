@@ -1,3 +1,5 @@
+/* ************** MAIN: MEME **************  */
+/* ... Alineación:container y boton de descarga ... */
 main{
   background-color: #f6fe18;
   width: 100%;
@@ -7,17 +9,21 @@ main{
   justify-content: center;
   align-items: center;
   gap: 20px;
-  text-align: center;
 }
 
+/* ************** CONTAINER MEME **************  */
+/* .......... Alineación de elementos .......... */
 main .containerMeme{
   background-color:red;
   width: 90%;
   height: 320px;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
+
+/* --- GENERAL STYLES TOP TEX / BOTTOM TEX ---  */
 main .containerMeme .topText,
 .bottomText{
   background-color: #ffffff;
@@ -25,6 +31,7 @@ main .containerMeme .topText,
   padding: 10px;
 }
 
+/* ------- IMAGE -------  */
 main .containerMeme .imageMeme{
   width: 100%;
   height: 300px;
@@ -32,7 +39,9 @@ main .containerMeme .imageMeme{
   object-position: top;
 }
 
-main .download{
+/* --- BUTTON DOWNLOAD ---  */
+main .downloadMeme{
   background-color: #5782d2;
   border: none;
 } 
+
