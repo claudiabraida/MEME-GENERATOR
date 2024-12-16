@@ -18,20 +18,36 @@
 /* ************** PANELS CONTROLS ************** */
 body aside{
   width: 20%;
-  height: 595px;
+  height: 591px;
   position: absolute;
-  top: 0%;
+  top: 0;
   display: none;
 }
 
 /* --- BUTTON CLOSE PANELS --- */
-body aside .btn{
+body aside .btnClose{
   background: transparent;
   height: 20px;
   border: none;
   position: relative;
   left: 90%;
 }
+
+/* *******************MEDIAS QUERIES******************* */
+
+/* ................MEDIA QUERIE TABLET................ */
+@media (min-width: 768px) {
+  body aside{
+    right: 0;
+  }
+
+  aside .btnClose{
+    display: none;
+  }
+  
+}
+
+
 
 
 

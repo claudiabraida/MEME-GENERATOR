@@ -38,8 +38,6 @@ $buttonImage.addEventListener("click", () => {
 /*BUTTONS CLOSE PANELS*/
 $buttonCloseImagePanelControls.addEventListener("click", () => {
   $asideImagePanelControls.style.display = "none"
-  // $asideImagePanelControls.style.width = "300px"
-
 })
 
 $buttonCloseTextPanelControls.addEventListener("click", () => {

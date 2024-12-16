@@ -1,0 +1,71 @@
+/* ***** MOBILE FIRST ***** */
+header{
+  background-color: #da27a4;
+  width:var(--width);
+  height: 90px;
+  font-family: var(--fontGenos);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ***** HEADER: TITLE ***** */
+header .titleMeme{
+  font-weight: var(--fontWeight500);
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* ***** HEADER NAV-MENU BUTTONS ***** */
+
+/*  Alinación: botones del nav  */
+header .navMenu{
+  background-color: blue;
+  width: var(--width);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ***** NAV-MENU BUTTONS ***** */
+/* ---- Estilos generales botones de navegación ---- */
+header .navMenu .btn{
+  background-color: black;
+  width: 29%;
+  font-size: 0.9em;
+  color: var(--colorWhitesmoke);
+  font-weight: var(--fontWeight500);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------- Pseudo elements buttons icons -------- */
+/* .......... icono imagen .......... */
+header .navMenu .buttonImage::before{
+  font-family: "font awesome 5 free";
+  font-weight: 600;
+  content: "\f03e";
+}
+
+/* ........... icono texto ........... */
+header .navMenu .buttonText::before{
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f031";
+  margin-left: 1px;
+  margin-top: -1px;
+}
+
+/* .... icono (gato) modo claro/oscuro .... */
+header .navMenu .buttonMode::before{
+  font-family: "font awesome 5 free";
+  font-weight: 600;
+  content: "\f6be";
+}
+
+
