@@ -77,7 +77,7 @@ $textareaTopText.addEventListener("input", () => {
 /* --------------------- NO TOP TEXT --------------------- */
 $inputCheckboxNoTopText.addEventListener("input", () => {
   $pTopText.innertHtml = $inputCheckboxNoTopText.value
-$pTopText.remove()
+  $pTopText.remove()
 })
 
 /* ---------------- VARIABLES BOTTOM TEXT ---------------- */

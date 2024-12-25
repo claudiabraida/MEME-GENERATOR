@@ -8,7 +8,7 @@
   <title>Generador de Memes</title>
 </head>
 
-<body class="bodyDarkMode">
+<body class="body-dak-mode">
   
   <!-- ✨✨✨✨ HEADER: TITLE/NAV-MENU BUTTONS ✨✨✨✨ -->
   <header>
@@ -36,13 +36,66 @@
    
   <aside class="image-panel-controls">
     <button class="btn-close close-image-panel-controls">x</button>
-    <p>imagen</p>
+    <p class="paragraph-image">imagen</p>
     <form action="">
-  <!-- ................... IMAGE URL ................... -->
+      <!-- ................... IMAGE URL ................... -->
       <fieldset>
         <label for="url-image-meme">URL</label>
         <input type="url" name="url" id="url-image-meme">
       </fieldset>
+      
+      <!-- ................... BACKGROUND COLOR IMAGE ................... -->
+      <fieldset>
+        <legend>fondo</legend>
+        <input type="color" name="background-color-image" id="background-color-image">
+        <label class="name-background-color-image" for="">ffffff</label>
+        <!-- .............. SELECT BACKGROUND COLOR IMAGE .............. -->
+        <select name="select-background-color" id="select-background-color">
+          <option id="none">Ninguno</option>
+          <option id="lighten">Aclarar</option>
+          <option id="darken">Oscurecer</option>
+          <option id="difference">Diferencia</option>
+          <option id="luminosity">Luminosidad</option>
+          <option id="multiply">Multiplicar</option>
+        </select>
+      </fieldset>
+      
+      <!-- ............... SELECT BACKGROUND COLOR IMAGE ............... -->
+      <fieldset>
+        <legend>filtros</legend>
+        <label for="image-size">Tamaño de imagen</label>
+        <input type="range" name="image-size" id="image-size">
+
+        <label for="brightness">brillo</label>
+        <input type="range" name="brightness" id="brightness">
+        
+        <label for="opacity">opacity</label>
+        <input type="range" name="opacity" id="opacity">
+
+        <label for="contrast">contraste</label>
+        <input type="range" name="contrast" id="contrast">
+
+        <label for="blur">blur</label>
+        <input type="range" name="blur" id="blur">
+
+        <label for="grayscale">grayscale</label>
+        <input type="range" name="grayscale" id="grayscale">
+
+        <label for="sepia">sepia</label>
+        <input type="range" name="sepia" id="sepia">
+
+        <label for="hue">hue</label>
+        <input type="range" name="hue" id="hue">
+
+        <label for="saturate">saturate</label>
+        <input type="range" name="saturate" id="saturate">
+
+        <label for="invert">invert</label>
+        <input type="range" name="invert" id="invert">
+        
+        <button type="button" id="reset">restablecer</button>
+      </fieldset>
+
     </form>
     
   </aside>

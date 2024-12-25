@@ -13,6 +13,8 @@
   --colorWhitesmoke: whitesmoke;
   --fontGenos: Genos;
   --fontWeight500: 500;
+  --converter: uppercase;
+
 }
 
 /* ************** PANELS CONTROLS ************** */
@@ -22,6 +24,7 @@ body aside{
   position: absolute;
   top: 0;
   display: none;
+  
 }
 
 /* --- BUTTON CLOSE PANELS --- */
@@ -33,6 +36,7 @@ body aside .btn-close{
   left: 90%;
 }
 
+
 /* *************** MEDIAS QUERIES *************** */
 
 /* ............ MEDIA QUERIE TABLET ............ */
@@ -40,6 +44,7 @@ body aside .btn-close{
 
   main{
     background-color: rgb(43, 226, 214);
+    filter: brightness();
   }
   body aside{
     right: 0;
