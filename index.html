@@ -10,42 +10,93 @@
 
 <body class="bodyDarkMode">
   
-  <!-- ************** HEADER: TITLE- NAV-MENU BUTTONS ************** -->
+  <!-- ✨✨✨✨ HEADER: TITLE/NAV-MENU BUTTONS ✨✨✨✨ -->
   <header>
-    <h1 class="titleMeme">Generador de Memes</h1>
-    <nav class="navMenu">
-      <button class="btn buttonImage">imagen</button>
-      <button class="btn buttonText">texto</button>
-      <button class="btn buttonMode">Modo Oscuro</button>
+    <h1 class="title-meme">Generador de Memes</h1>
+    <nav class="nav-menu">
+      <button class="btn button-image">imagen</button>
+      <button class="btn button-text">texto</button>
+      <button class="btn button-mode">Modo Oscuro</button>
     </nav>
   </header>
   
-  <!-- ************** MAIN: MEME ************** -->
+  <!-- ✨✨✨✨✨✨✨✨ MAIN: MEME ✨✨✨✨✨✨✨✨ -->
   <main>
-    <section class="containerMeme">
-      <p class="topText">Top Text</p>
-      <img class="imageMeme" src="" alt="imagen mediante url">
-      <p class="bottomText">Bottom Text</p>
+    <section class="container-meme">
+      <p class="top-text">Top Text</p>
+      <div class="image-meme"></div>
+      <p class="bottom-text">Bottom Text</p>
     </section>
-    <button class="downloadMeme">download</button>
+    <button class="download-meme">download</button>
   </main>
-  
-  <!-- ************** PANELS CONTROLS ************** -->
-  <!-- -------------- IMAGE CONTROLS -------------- -->
-  <aside class="imagePanelControls">
-    <button class="btnClose closeImagePanelControls">x</button>
 
+  <!-- ✨✨✨✨✨✨✨ PANELS CONTROLS ✨✨✨✨✨✨✨ -->
+  
+  <!-- __________________ IMAGE CONTROLS __________________ -->
+   
+  <aside class="image-panel-controls">
+    <button class="btn-close close-image-panel-controls">x</button>
     <p>imagen</p>
+    <form action="">
+  <!-- ................... IMAGE URL ................... -->
+      <fieldset>
+        <label for="url-image-meme">URL</label>
+        <input type="url" name="url" id="url-image-meme">
+      </fieldset>
+    </form>
+    
   </aside>
   
-  <!-- -------------- TEXT CONTROLS --------------- -->
-  <aside class="textPanelControls">
-    <button class="btnClose closeTextPanelControls">x</button>
+  <!-- __________________ TEXT CONTROLS __________________ -->
+
+  <aside class="text-panel-controls">
+    <button class="btn-close close-text-panel-controls">x</button>
     <p>texto</p>
+    <form action="">
+      <!-- ................... TOP TEXT ................... -->
+      <fieldset>
+        <legend>superior</legend>
+        <textarea name="top-text" id="top-text" placeholder="top text" cols="16" rows="2"></textarea>
+        <input type="checkbox" name="no-top-text" id="no-top-text">
+        <label for="no-top-text">sin texto superior</label>
+      </fieldset>
+
+      <!-- .................. BOTTOM TEXT .................. -->
+      <fieldset>
+        <legend>inferior</legend>
+        <textarea name="bottom-text" id="bottom-text" placeholder="top text" cols="16" rows="2"></textarea>
+        <input type="checkbox" name="no-bottom-text" id="no-bottom-text">
+        <label for="no-top-text">sin texto inferior</label>
+      </fieldset>
+
+      <!-- .................. FONT-FAMILY .................. -->
+      <fieldset>
+        <legend>fuente</legend>
+        <select name="selectFont" id="selectFont">
+          <option value="arial">arial</option>
+          <option value="arialBlack">arial black</option>
+          <option value="americanTypewriter">american type writer</option>
+          <option value="andaleMono">andale mono</option>
+          <option value="comicSanMs">Comic San MS</option>
+          <option value="helvetica">helvetica</option>
+          <option value="impact">impact</option>
+          <option value="verdana">verdana</option>
+          <option value="timeNewRoman">time new roman</option>
+        </select>
+      </fieldset>
+
+      <!-- .................. ALIGN-TEXT .................. -->
+      <fieldset>
+        <input type="number" name="fontSize" id="fontSize">
+        <input type="button" id ="alignTextLeft">
+        <input type="button" id ="alignTextCenter">
+        <input type="button" id ="alignTextRight">
+      </fieldset>
+    </form>
   </aside>
 
-  <!-- ************** FOOTER ************** -->
-  <footer class="infoFooter">
+  <!-- ✨✨✨✨✨✨✨✨✨ FOOTER ✨✨✨✨✨✨✨✨ -->
+  <footer class="info-footer">
     
   </footer>
   <script src="https://kit.fontawesome.com/e010b89ab9.js" crossorigin="anonymous"></script>

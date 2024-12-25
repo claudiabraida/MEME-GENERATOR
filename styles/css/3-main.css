@@ -13,10 +13,10 @@ main{
 
 /* ************** CONTAINER MEME **************  */
 /* .......... Alineación de elementos .......... */
-main .containerMeme{
-  background-color:red;
+main .container-meme{
+ 
   width: 90%;
-  height: 320px;
+
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -24,23 +24,27 @@ main .containerMeme{
 
 
 /* --- GENERAL STYLES TOP TEX / BOTTOM TEX ---  */
-main .containerMeme .topText,
-.bottomText{
+main .container-meme .top-text,
+.bottom-text{
   background-color: #ffffff;
   margin: 0;
   padding: 10px;
 }
 
+/* main .top-text:checked{
+  display: flex;
+
+} */
 /* ------- IMAGE -------  */
-main .containerMeme .imageMeme{
-  width: 100%;
+main .container-meme .image-meme{
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 300px;
-  object-fit: cover;
-  object-position: top;
 }
 
 /* --- BUTTON DOWNLOAD ---  */
-main .downloadMeme{
+main .download-meme{
   background-color: #5782d2;
   border: none;
 } 
