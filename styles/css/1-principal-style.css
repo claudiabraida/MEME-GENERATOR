@@ -48,7 +48,8 @@ body aside .btn-close{
   
   }
   body aside{
-    right: 0;
+
+    right: 10%;
   }
 
   aside .btn-close{
@@ -56,7 +57,8 @@ body aside .btn-close{
   }
 
   body aside{
-    display: flex;
+    background-color: aqua;
+    /* display: flex; */
   }
 }
 
@@ -65,6 +67,15 @@ body aside .btn-close{
     background-color: #ff9ce6;
   }
 
+  body aside{
+    display: flex;
+    right: 30%;
+  }
+  
+  body .text-panel-controls{
+    display: none;
+  }
+  
 }
 
 

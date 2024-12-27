@@ -48,8 +48,8 @@
       <!-- _____________ IMAGE BACKGROUND COLOR (FONDO) ____________ -->
       <fieldset>
         <legend>fondo</legend>
-        <input type="color" name="color-palette-image" id="color-palette-image">
-        <label class="name-color-palette-image" for="color-palette-image">ffffff</label>
+        <input type="color" name="background-color-image" id="background-color-image">
+        <label class="name-background-color-image" for="background-color-image">ffffff</label>
         
         <!-- ____________ SELECT BACKGROUND COLOR IMAGE ____________ -->
        <select name="select-blend-mode-image" id="select-blend-mode-image">
@@ -141,30 +141,58 @@
 
       <fieldset>
         <!-- __________________ FONT SIZE -TEXT __________________ -->
-        <input type="number" name="font-size" id="font-size">
+        <input type="number" name="font-size" id="font-size" placeholder="tamaño de fuente">
         <!-- _____________________ ALIGN-TEXT _____________________ -->
-        <input type="button" id ="align-text-left">
-        <input type="button" id ="align-text-center">
-        <input type="button" id ="align-text-right">
+        <input type="button"  id ="align-text-left">
+        <input type="button"  id ="align-text-center">
+        <input type="button"  id ="align-text-right">
       </fieldset>
-
-      <div class="wrapper-color-palette-text">
+      
+      <!-- _____________________ TEXT COLOR / BACKGROUND_____________________ -->
+      <div class="wrapper-input-color-text">
+        <!-- _______ TEXT COLOR _______ -->
         <fieldset>
           <legend>color</legend>
-          <input type="color" name="color-palette-text" id="color-palette-text">
-          <label class="name-color-palette-text" for="color-palette-text">ffffff</label>
+          <input type="color" name="color-text" id="color-text">
+          <label class="name-color-text" for="color-text">ffffff</label>
         </fieldset>
-
+        <!-- _______ TEXT BACKGROUND COLOR _______ -->
         <fieldset>
           <legend>fondo</legend>
-          <input type="color" name="color-palette-background-text" id="color-palette-background-text">
-          <label class="name-color-palette-background-text" for="color-palette-background-text">ffffff</label>
+          <input type="color" name="background-color-text" id="background-color-text">
+          <label class="name-background-color-text" for="background-color-text">ffffff</label>
+          <!-- _______ TEXT BACKGROUND COLOR _______ -->
+          <input type="checkbox" name="transparent-background-text" id="transparent-background-text">
+          <label for="transparent-background-text">fondo transparente</label>
         </fieldset>
       </div>
-      
 
+      <!-- _______ TEXT FONT OUTLINE _______ -->
+      <fieldset>
+        <legend>contorno</legend>
+        <input type="button" id ="">ninguno
+        <input type="button" id ="">claro
+        <input type="button" id ="">oscuro
+      </fieldset>
 
+      <!-- _______ TEXT FONT SPACING _______ -->
+      <fieldset>
+        <legend>espaciado</legend>
+        <input type="number" name="text-font-spacing" id="text-font-spacing">
+      </fieldset>
 
+      <!-- _______ TEXT FONT LINE SPACING _______ -->
+       <fieldset>
+        <legend>interlineado</legend>
+        <select name="text-font-line-spacing" id="text-font-line-spacing">
+          <option value="0.8">0.8</option>
+          <option value="1">1</option>
+          <option value="1.2">1.2</option>
+          <option value="1.5">1.5</option>
+          <option value="2">2</option>
+          <option value="2.5">2.5</option>
+        </select>
+       </fieldset>
     </form>
   </aside>
 

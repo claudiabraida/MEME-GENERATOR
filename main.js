@@ -25,8 +25,8 @@ const $inputUrlImageMeme = $("#url-image-meme");
 const $inputRangeImageSize = $("#image-size");
 
 /* 💠💠💠💠 VARIABLES INPUT COLOR BACKGROUND IMAGE (FONDO) 💠💠💠💠 */
-const $inputColorPaletteImage = $("#color-palette-image");
-const $labelNameColorPaletteImage = $(".name-color-palette-image");
+const $inputBackgroundColorImage = $("#background-color-image");
+const $labelNameBackgroundColorImage = $(".name-background-color-image");
 
 /* 💠💠💠💠💠💠 VARIABLE SELECT BLEND MODE IMAGE (FONDO) 💠💠💠💠💠💠 */
 const $selectBlendModeImage = $("#select-blend-mode-image")
@@ -57,6 +57,14 @@ const $inputCheckboxNoBottomText = $("#no-bottom-text");
 
 /* 💠💠💠💠💠💠💠💠💠 SELECT FONT-FAMILY 💠💠💠💠💠💠💠💠💠 */
 const $selectFontFamily = $("#select-font");
+
+/* 💠💠💠💠💠💠💠💠💠 SELECT FONT-FAMILY 💠💠💠💠💠💠💠💠💠 */
+
+$inputColorText = $("#color-text");
+$labelNameColorText = $(".name-color-text");
+
+$inputBackgroundColorText = $("#background-color-text");
+$labelNameBackgroundColorText = $(".name-background-color-text");
 /* =========================== FUNCTIONS =========================== */
 
 /* 💡💡💡💡💡💡💡💡💡💡💡 FUNTION FILTER FUSION  💡💡💡💡💡💡💡💡💡💡💡 */
@@ -185,9 +193,9 @@ $inputRangeImageSize.addEventListener("input", () => {
 
 
 /* 💥💥💥💥💥 EVENT INPUT COLOR-PALETTE/ LABEL NAME  💥💥💥💥💥 */ 
-$inputColorPaletteImage.addEventListener("input", () => {
-  $labelNameColorPaletteImage.innerText = $inputColorPaletteImage.value
-  $divImageMeme.style.backgroundColor = $inputColorPaletteImage.value
+$inputBackgroundColorImage.addEventListener("input", () => {
+  $labelNameBackgroundColorImage.innerText = $inputBackgroundColorImage.value
+  $divImageMeme.style.backgroundColor = $inputBackgroundColorImage.value
 })
 
 /* 💥💥💥💥💥💥💥💥 EVENT SELECT BLEND MODE 💥💥💥💥💥💥💥💥 */ 
