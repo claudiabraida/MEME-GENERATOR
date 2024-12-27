@@ -43,10 +43,11 @@ body aside .btn-close{
 /* ............ MEDIA QUERIE TABLET ............ */
 @media (min-width: 768px) {
 
-  main{
-    /* background: transparent; */
+ /* main{
+    
+     background: transparent; 
   
-  }
+  }*/
   body aside{
 
     right: 10%;
