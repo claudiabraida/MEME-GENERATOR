@@ -14,19 +14,20 @@ main{
 /* ************** CONTAINER MEME **************  */
 /* .......... Alineación de elementos .......... */
 main .container-meme{
- background-color: #000000;
+ background-color: #ffffff;
   width: 90%;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-
 /* --- GENERAL STYLES TOP TEX / BOTTOM TEX ---  */
 main .container-meme .top-text,
 .bottom-text{
   background-color: #ffffff;
   text-transform: var(--converter);
+  /* font-family: cursive; */
+  /* font-family: Aldrich; */
   margin: 0;
   padding: 10px;
 }

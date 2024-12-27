@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./styles/css/image/emoji.ico" type="image/x-icon">
   <link rel="stylesheet" href="./styles/css/0-normalize.css">
   <link rel="stylesheet" href="./styles/css/1-principal-style.css">
   <title>Generador de Memes</title>
 </head>
-
 <body class="body-dak-mode">
   
-  <!-- ✨✨✨✨ HEADER: TITLE/NAV-MENU BUTTONS ✨✨✨✨ -->
+  <!-- ※※※※※※※ HEADER: TITLE/NAV-MENU BUTTONS ※※※※※※※ -->
   <header>
     <h1 class="title-meme">Generador de Memes</h1>
     <nav class="nav-menu">
@@ -20,7 +20,7 @@
     </nav>
   </header>
   
-  <!-- ✨✨✨✨✨✨✨✨ MAIN: MEME ✨✨✨✨✨✨✨✨ -->
+  <!-- ※※※※※※※※※※※※ MAIN: MEME ※※※※※※※※※※※※ -->
   <main>
     <section class="container-meme">
       <p class="top-text">Top Text</p>
@@ -29,45 +29,42 @@
     </section>
     <button class="download-meme">download</button>
   </main>
-
-  <!-- ✨✨✨✨✨✨✨ PANELS CONTROLS ✨✨✨✨✨✨✨ -->
   
-  <!-- __________________ IMAGE CONTROLS __________________ -->
-   
+  <!-- ※※※※※※※※※※ IMAGE PANEL CONTROL ※※※※※※※※※※ -->
   <aside class="image-panel-controls">
+    <!-- __________________ BUTTON CLOSE IMAGE PANEL __________________ -->
     <button class="btn-close close-image-panel-controls">x</button>
     <p class="paragraph-image">imagen</p>
     <form action="">
-      <!-- ................... IMAGE URL ................... -->
+      <!-- ______________________ IMAGE URL ______________________ -->
       <fieldset>
         <label for="url-image-meme">URL</label>
-        <input type="url" name="url" id="url-image-meme">
-
+        <input type="url" name="url-image-meme" id="url-image-meme">
+       <!-- _____________________ IMAGE SIZE _____________________ -->
         <label for="image-size">Tamaño de imagen</label>
         <input type="range" name="image-size" id="image-size">
       </fieldset>
-      
-      <!-- ................... BACKGROUND COLOR IMAGE ................... -->
+
+      <!-- _____________ IMAGE BACKGROUND COLOR (FONDO) ____________ -->
       <fieldset>
         <legend>fondo</legend>
-        <input type="color" name="background-color-image" id="background-color-image">
-        <label class="name-background-color-image" for="name-background-color-image">ffffff</label>
+        <input type="color" name="color-palette-image" id="color-palette-image">
+        <label class="name-color-palette-image" for="color-palette-image">ffffff</label>
         
-        <!-- .............. SELECT BACKGROUND COLOR IMAGE .............. -->
-        <select name="select-background-color" id="select-background-color">
-          <option id="none">Ninguno</option>
-          <option id="lighten">Aclarar</option>
-          <option id="darken">Oscurecer</option>
-          <option id="difference">Diferencia</option>
-          <option id="luminosity">Luminosidad</option>
-          <option id="multiply">Multiplicar</option>
-        </select>
+        <!-- ____________ SELECT BACKGROUND COLOR IMAGE ____________ -->
+       <select name="select-blend-mode-image" id="select-blend-mode-image">
+        <option id="blend-mode-image" value="initial">Ninguno</option>
+        <option id="blend-mode-image" value="lighten">Aclarar</option>
+        <option id="blend-mode-image" value="darken">Oscurecer</option>
+        <option id="blend-mode-image" value="difference">Diferencia</option>
+        <option id="blend-mode-image" value="luminosity">Luminosidad</option>
+        <option id="blend-mode-image" value="multiply">Multiplicar</option>
+       </select>
       </fieldset>
       
-      <!-- ............... SELECT BACKGROUND COLOR IMAGE ............... -->
+      <!-- ____________________ FILTERS IMAGE  ____________________ -->
       <fieldset>
         <legend>filtros</legend>
-        
 
         <label for="brightness">brillo</label>
         <input type="range" name="brightness" id="brightness">
@@ -95,63 +92,64 @@
 
         <label for="invert">invert</label>
         <input type="range" name="invert" id="invert">
-        
-        <button type="button" id="reset">restablecer</button>
+       <!-- _________ BUTTON RESET FILTERS IMAGE  _________ -->
+        <button type="button" id="button-reset-filter-image">restablecer</button>
       </fieldset>
-
     </form>
-    
   </aside>
-  
-  <!-- __________________ TEXT CONTROLS __________________ -->
 
+  <!-- ※※※※※※※※※※ TEXT PANEL CONTROL ※※※※※※※※※※ -->
   <aside class="text-panel-controls">
+    <!-- ________________ BUTTON CLOSE TEXT PANEL ________________ -->
     <button class="btn-close close-text-panel-controls">x</button>
     <p>texto</p>
     <form action="">
-      <!-- ................... TOP TEXT ................... -->
       <fieldset>
         <legend>superior</legend>
+        <!-- __________________ WRITE TOP TEXT __________________ -->
         <textarea name="top-text" id="top-text" placeholder="top text" cols="16" rows="2"></textarea>
+        <!-- ______________ NO TOP TEXT (checkbox)  ______________ -->   
         <input type="checkbox" name="no-top-text" id="no-top-text">
         <label for="no-top-text">sin texto superior</label>
       </fieldset>
-
-      <!-- .................. BOTTOM TEXT .................. -->
+      
       <fieldset>
         <legend>inferior</legend>
+        <!-- ___________________ WRITE TOP TEXT ___________________ -->
         <textarea name="bottom-text" id="bottom-text" placeholder="top text" cols="16" rows="2"></textarea>
+        <!-- ______________ NO BOTTOM TEXT (checkbox)  ______________ -->   
         <input type="checkbox" name="no-bottom-text" id="no-bottom-text">
         <label for="no-top-text">sin texto inferior</label>
       </fieldset>
 
-      <!-- .................. FONT-FAMILY .................. -->
+      <!-- __________________ SELECT FONT-FAMILY __________________ -->
       <fieldset>
         <legend>fuente</legend>
-        <select name="selectFont" id="selectFont">
-          <option value="arial">arial</option>
-          <option value="arialBlack">arial black</option>
-          <option value="americanTypewriter">american type writer</option>
-          <option value="andaleMono">andale mono</option>
-          <option value="comicSanMs">Comic San MS</option>
-          <option value="helvetica">helvetica</option>
-          <option value="impact">impact</option>
-          <option value="verdana">verdana</option>
-          <option value="timeNewRoman">time new roman</option>
+        <select name="select-font" id="select-font">
+          <option value="initial">ninguno</option>
+          <option value="Combo">Combo</option>
+          <option value="Barrio">Barrio</option>
+          <option value="Montserrat Alternates">Montserrat Alternates</option>
+          <option value="Griffy">Griffy</option>
+          <option value="Special Elite">Special Elite</option>
+          <option value="Black Ops One">Black Ops One</option>
+          <option value="Genos">Genos</option>
+          <option value="Permanent Marker">Permanent Marker</option>
+          <option value="Kranky">Kranky</option>
         </select>
       </fieldset>
 
-      <!-- .................. ALIGN-TEXT .................. -->
+      <!-- _____________________ ALIGN-TEXT _____________________ -->
       <fieldset>
-        <input type="number" name="fontSize" id="fontSize">
-        <input type="button" id ="alignTextLeft">
-        <input type="button" id ="alignTextCenter">
-        <input type="button" id ="alignTextRight">
+        <input type="number" name="font-size" id="font-size">
+        <input type="button" id ="align-text-left">
+        <input type="button" id ="align-text-center">
+        <input type="button" id ="align-text-right">
       </fieldset>
     </form>
   </aside>
 
-  <!-- ✨✨✨✨✨✨✨✨✨ FOOTER ✨✨✨✨✨✨✨✨ -->
+  <!-- ※※※※※※※※※※※※※※ FOOTER ※※※※※※※※※※※※※※ -->
   <footer class="info-footer">
     
   </footer>
