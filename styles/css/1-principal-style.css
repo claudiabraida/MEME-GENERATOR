@@ -44,7 +44,7 @@ body aside .btn-close{
 @media (min-width: 768px) {
 
   main{
-    background-color: rgb(43, 226, 214);
+    /* background: transparent; */
   
   }
   body aside{

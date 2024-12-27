@@ -4,7 +4,7 @@
 main{
   background-color: #d8ec1f;
   width: 100%;
-  height: 418px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,8 +27,11 @@ main .container-meme .top-text,
 .bottom-text{
   background-color: #ffffff;
   text-transform: var(--converter);
-  /* font-family: cursive; */
+  /* text-shadow: 1.3px -1px 1px white;  */
+  /* -webkit-text-stroke:2px #b5cd47; */
   /* font-family: Aldrich; */
+/* letter-spacing: 23px; */
+-webkit-text-stroke: 1px white;
   margin: 0;
   padding: 10px;
 }

@@ -51,7 +51,7 @@
         <input type="color" name="background-color-image" id="background-color-image">
         <label class="name-background-color-image" for="background-color-image">ffffff</label>
         
-        <!-- ____________ SELECT BACKGROUND COLOR IMAGE ____________ -->
+        <!-- ____________ SELECT BLEND MODE IMAGE ____________ -->
        <select name="select-blend-mode-image" id="select-blend-mode-image">
         <option id="blend-mode-image" value="initial">Ninguno</option>
         <option id="blend-mode-image" value="lighten">Aclarar</option>
@@ -106,7 +106,7 @@
     <form action="">
       <fieldset>
         <legend>superior</legend>
-        <!-- __________________ WRITE TOP TEXT __________________ -->
+        <!-- __________________ TEXTAREA TOP TEXT (WRITE) __________________ -->
         <textarea name="top-text" id="top-text" placeholder="top text" cols="16" rows="2"></textarea>
         <!-- ______________ NO TOP TEXT (checkbox)  ______________ -->   
         <input type="checkbox" name="no-top-text" id="no-top-text">
@@ -115,7 +115,7 @@
       
       <fieldset>
         <legend>inferior</legend>
-        <!-- ___________________ WRITE TOP TEXT ___________________ -->
+        <!-- ___________________ TEXTAREA BOTTOM TEXT (WRITE) ___________________ -->
         <textarea name="bottom-text" id="bottom-text" placeholder="top text" cols="16" rows="2"></textarea>
         <!-- ______________ NO BOTTOM TEXT (checkbox)  ______________ -->   
         <input type="checkbox" name="no-bottom-text" id="no-bottom-text">
@@ -141,11 +141,11 @@
 
       <fieldset>
         <!-- __________________ FONT SIZE -TEXT __________________ -->
-        <input type="number" name="font-size" id="font-size" placeholder="tamaño de fuente">
+        <input type="number" name="font-size-text" id="font-size-text" placeholder="tamaño de fuente">
         <!-- _____________________ ALIGN-TEXT _____________________ -->
-        <input type="button"  id ="align-text-left">
-        <input type="button"  id ="align-text-center">
-        <input type="button"  id ="align-text-right">
+        <input type="button" id ="align-text-left">
+        <input type="button" id ="align-text-center">
+        <input type="button" id ="align-text-right">
       </fieldset>
       
       <!-- _____________________ TEXT COLOR / BACKGROUND_____________________ -->
@@ -159,11 +159,11 @@
         <!-- _______ TEXT BACKGROUND COLOR _______ -->
         <fieldset>
           <legend>fondo</legend>
-          <input type="color" name="background-color-text" id="background-color-text">
-          <label class="name-background-color-text" for="background-color-text">ffffff</label>
-          <!-- _______ TEXT BACKGROUND COLOR _______ -->
+          <input type="color" name="background-text" id="background-text">
+          <label class="name-background-text" for="background-text">ffffff</label>
+          <!-- _______ TEXT TRANSPARENT (CHECKBOX) _______ -->
           <input type="checkbox" name="transparent-background-text" id="transparent-background-text">
-          <label for="transparent-background-text">fondo transparente</label>
+          <label class="transparent-backg-text-" for="transparent-background-text">fondo transparente</label>
         </fieldset>
       </div>
 
@@ -175,22 +175,22 @@
         <input type="button" id ="">oscuro
       </fieldset>
 
-      <!-- _______ TEXT FONT SPACING _______ -->
+      <!-- _______ TEXT LINE HEIGHT _______ -->
       <fieldset>
-        <legend>espaciado</legend>
-        <input type="number" name="text-font-spacing" id="text-font-spacing">
+        <legend>interlineado</legend>
+        <input type="number" name="text-line-height" id="text-line-height">
       </fieldset>
 
-      <!-- _______ TEXT FONT LINE SPACING _______ -->
+      <!-- _______ TEXT LETTER SPACING _______ -->
        <fieldset>
-        <legend>interlineado</legend>
-        <select name="text-font-line-spacing" id="text-font-line-spacing">
-          <option value="0.8">0.8</option>
-          <option value="1">1</option>
-          <option value="1.2">1.2</option>
-          <option value="1.5">1.5</option>
+        <legend>espaciado</legend>
+        <select name="select-letter-spacing-text" id="select-letter-spacing-text">
           <option value="2">2</option>
-          <option value="2.5">2.5</option>
+          <option value="4">4</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
         </select>
        </fieldset>
     </form>

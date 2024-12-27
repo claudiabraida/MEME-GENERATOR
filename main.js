@@ -8,6 +8,12 @@ const $ = element => document.querySelector(element);
 const $buttonImage = $(".button-image");
 const $buttonText = $(".button-text");
 
+/*💠💠💠💠💠💠💠💠 VARIABLES CONTAINER MEME 💠💠💠💠💠💠💠 */
+const $containerMeme = $(".container-meme");
+const $pTopText = $(".top-text");
+const $divImageMeme = $(".image-meme");
+const $pBottomText = $(".bottom-text");
+
 /* 💠💠💠💠💠 VARIABLES BUTTONS CLOSE PANELS CONTROLS 💠💠💠💠💠 */
 const $buttonCloseImagePanelControls = $(".close-image-panel-controls");
 const $buttonCloseTextPanelControls = $ (".close-text-panel-controls");
@@ -19,19 +25,18 @@ const $asideTextPanelControls = $(".text-panel-controls");
 
 /* -------------------------- IMAGE PANEL  -------------------------- */
 
-/* 💠💠💠💠💠 VARIABLES MAIN: IMAGE-MEME / URL / SIZE 💠💠💠💠💠 */
-const $divImageMeme = $(".image-meme");
+/* 💠💠💠💠💠💠 VARIABLES IMAGE INPUT URL/ NPUT SIZE 💠💠💠💠💠💠 */
 const $inputUrlImageMeme = $("#url-image-meme");
 const $inputRangeImageSize = $("#image-size");
 
-/* 💠💠💠💠 VARIABLES INPUT COLOR BACKGROUND IMAGE (FONDO) 💠💠💠💠 */
+/* 💠💠💠💠 VARIABLES INPUT IMAGE BACKGROUND COLOR (FONDO) 💠💠💠💠 */
 const $inputBackgroundColorImage = $("#background-color-image");
 const $labelNameBackgroundColorImage = $(".name-background-color-image");
 
-/* 💠💠💠💠💠💠 VARIABLE SELECT BLEND MODE IMAGE (FONDO) 💠💠💠💠💠💠 */
+/* 💠💠💠💠💠 VARIABLE SELECT BLEND MODE IMAGE (FONDO) 💠💠💠💠💠 */
 const $selectBlendModeImage = $("#select-blend-mode-image")
 
-/* 💠💠💠💠💠💠💠💠💠 VARIABLES FILTERS IMAGE 💠💠💠💠💠💠💠💠💠 */ 
+/* 💠💠💠💠💠💠💠💠💠 VARIABLES FILTERS IMAGE 💠💠💠💠💠💠💠💠 */ 
 const $inputRangeBrightness = $("#brightness");
 const $inputRangeOpacity = $("#opacity");
 const $inputRangeContrast = $("#contrast");
@@ -41,30 +46,48 @@ const $inputRangeSepia = $("#sepia")
 const $inputRangeHue = $("#hue")
 const $inputRangeSaturate = $("#saturate")
 const $inputRangeInvert = $("#invert")
+
+/* 💠💠💠💠💠💠 VARIABLE BUTTON RESET FILTERS IMAGE 💠💠💠💠💠💠 */ 
 const $buttonResetFilterImage = $("#button-reset-filter-image");
 
 /* -------------------------- TEXT PANEL  -------------------------- */
 
-/* 💠💠💠💠💠💠💠💠💠 VARIABLES TOP TEXT 💠💠💠💠💠💠💠💠💠 */
-const $pTopText = $(".top-text");
+/* 💠💠💠💠💠💠💠 VARIABLES TEXTAREA TOP TEXT (PANEL TEXT)💠💠💠💠💠💠💠 */
 const $textareaTopText = $("#top-text");
 const $inputCheckboxNoTopText = $("#no-top-text");
 
-/* 💠💠💠💠💠💠 VARIABLES BOTTOM TEXT (PANEL TEXT) 💠💠💠💠💠💠 */
-const $pBottomText = $(".bottom-text");
+/* 💠💠💠💠💠💠 VARIABLES TEXTAREA BOTTOM TEXT (PANEL TEXT) 💠💠💠💠💠💠 */
 const $textareaBottomText = $("#bottom-text");
 const $inputCheckboxNoBottomText = $("#no-bottom-text");
 
-/* 💠💠💠💠💠💠💠💠💠 SELECT FONT-FAMILY 💠💠💠💠💠💠💠💠💠 */
+/* 💠💠💠💠💠💠💠💠💠 SELECT FONT-FAMILY /FONT SIZE💠💠💠💠💠💠💠💠💠 */
 const $selectFontFamily = $("#select-font");
+const $inputFontSizeText = $("#font-size-text");
 
-/* 💠💠💠💠💠💠💠💠💠 SELECT FONT-FAMILY 💠💠💠💠💠💠💠💠💠 */
+/* 💠💠💠💠💠💠💠 VARIABLE ALIGN-TEXT 💠💠💠💠💠💠💠 */
+// ????????????????????????????????????????????????????????????
 
-$inputColorText = $("#color-text");
-$labelNameColorText = $(".name-color-text");
+/* 💠💠💠💠💠💠💠 VARIABLE INPUT TEXT COLOR 💠💠💠💠💠💠💠 */
+const $inputColorText = $("#color-text");
+const $labelNameColorText = $(".name-color-text");
 
-$inputBackgroundColorText = $("#background-color-text");
-$labelNameBackgroundColorText = $(".name-background-color-text");
+/* 💠💠💠💠💠💠 VARIABLE INPUT BACKGROUND TEXT 💠💠💠💠💠💠 */
+const $inputBackgroundText = $("#background-text");
+const $labelNameBackgroundText = $(".name-background-text");
+
+/* 💠💠💠💠💠💠 TEXT TRANSPARENT (CHECKBOX) 💠💠💠💠💠💠 */
+// ????????????????????????????????????????????????????????????
+
+/* 💠💠💠💠💠💠 VARIABLE TEXT FONT OUTLINE 💠💠💠💠💠💠💠 */
+// ??????????????????????????????????????????????????????????
+
+/* 💠💠💠💠💠💠 VARIABLE TEXT LINE HEIGH 💠💠💠💠💠💠💠 */
+const $inputTextLineHeight = $("#text-line-height");
+
+/* 💠💠💠💠💠 VARIABLE TEXT LETTER SPACING 💠💠💠💠💠 */
+const $selectLetterSpacingText = $("#select-letter-spacing-text");
+
+
 /* =========================== FUNCTIONS =========================== */
 
 /* 💡💡💡💡💡💡💡💡💡💡💡 FUNTION FILTER FUSION  💡💡💡💡💡💡💡💡💡💡💡 */
@@ -168,8 +191,9 @@ $buttonImage.addEventListener("click", () => {
   }
 })
 
+// BUTTON MODO CLARO OSCURO =====>>
 
-/* 💥💥💥💥💥💥 EVENT BUTTONS CLOSE PANELS CONTROLS 💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥 EVENT BUTTON CLOSE IMAGE /TEXT PANEL 💥💥💥💥💥💥 */
 $buttonCloseImagePanelControls.addEventListener("click", () => {
   $asideImagePanelControls.style.display = "none"
 })
@@ -192,7 +216,7 @@ $inputRangeImageSize.addEventListener("input", () => {
 })
 
 
-/* 💥💥💥💥💥 EVENT INPUT COLOR-PALETTE/ LABEL NAME  💥💥💥💥💥 */ 
+/* 💥💥💥💥💥 EVENT INPUT IMAGE BACKGROUND COLOR (FONDO)  💥💥💥💥💥 */ 
 $inputBackgroundColorImage.addEventListener("input", () => {
   $labelNameBackgroundColorImage.innerText = $inputBackgroundColorImage.value
   $divImageMeme.style.backgroundColor = $inputBackgroundColorImage.value
@@ -246,34 +270,85 @@ $buttonResetFilterImage.addEventListener("click", resetValuesFilters);
 
 /* ----------------------- EVENT PANEL TEXT ----------------------- */
 
-/* 💥💥💥💥💥💥💥💥💥💥 WRITE TOP TEXT 💥💥💥💥💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥💥💥 TEXTAREA TOP TEXT (WRITE) 💥💥💥💥💥💥💥💥 */
 $textareaTopText.addEventListener("input", () => {
   $pTopText.innerText = $textareaTopText.value
 })
 
-/* 💥💥💥💥💥💥💥💥💥💥 NO TOP TEXT 💥💥💥💥💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥💥💥 NO TOP TEXT (checkbox) 💥💥💥💥💥💥💥💥 */
 $inputCheckboxNoTopText.addEventListener("input", () => {
   $pTopText.innertHtml = $inputCheckboxNoTopText.value
   $pTopText.remove()
 })
 
-/* 💥💥💥💥💥💥💥💥💥 WRITE BOTTOM TEXT 💥💥💥💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥💥 TEXTAREA BOTTOM TEXT (WRITE)💥💥💥💥💥💥💥 */
 $textareaBottomText.addEventListener("input", () => {
   $pBottomText.innerText = $textareaBottomText.value
 
 })
 
-/* 💥💥💥💥💥💥💥💥💥 NO BOTTOM TEXT 💥💥💥💥💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥💥 NO BOTTOM TEXT (checkbox) 💥💥💥💥💥💥💥💥 */
 $inputCheckboxNoBottomText.addEventListener("input", () => {
   $pBottomText.remove()
 })
 
-/* 💥💥💥💥💥💥💥💥💥 SELECT FONT 💥💥💥💥💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥💥 EVENT SELECT FONT FAMILY 💥💥💥💥💥💥💥 */
 $selectFontFamily.addEventListener("input", () => {
   $pTopText.style.fontFamily = $selectFontFamily.value
 })
+
 $selectFontFamily.addEventListener("input", () => {
   $pBottomText.style.fontFamily = $selectFontFamily.value
 })
 
-/* 💥💥💥💥💥💥💥💥💥  💥💥💥💥💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥 EVENT INPUT FONT SIZE TEXT 💥💥💥💥💥💥💥 */
+$inputFontSizeText.addEventListener("input", () => {
+  $pTopText.style.fontSize = `${$inputFontSizeText.value}px`
+  $pBottomText.style.fontSize = `${$inputFontSizeText.value}px`
+})
+
+/* 💥💥💥💥💥💥💥 EVENT ALIGN-TEXT  💥💥💥💥💥💥💥💥 */
+// ??????????????????????????????????????????????????????????
+
+
+/* 💥💥💥💥💥💥💥 EVENT INPUT TEXT COLOR  💥💥💥💥💥💥💥💥 */
+$inputColorText.addEventListener("input", () => {
+  $labelNameColorText.innerText = $inputColorText.value
+  $pTopText.style.color = $inputColorText.value
+  $pBottomText.style.color = $inputColorText.value
+})
+
+/* 💥💥💥💥💥 EVENT INPUT TEXT BACKGROUND COLOR 💥💥💥💥💥 */
+$inputBackgroundText.addEventListener("input", () => {
+  $labelNameBackgroundText.innerText = $inputBackgroundText.value
+  $pTopText.style.backgroundColor = $inputBackgroundText.value
+  $pBottomText.style.backgroundColor = $inputBackgroundText.value
+})
+
+/* 💥💥💥💥💥💥 EVENT TEXT TRANSPARENT (CHECKBOX)💥💥💥💥💥💥💥 */
+// ??????????????????????????????????????????????????????????
+
+
+/* 💥💥💥💥💥💥 EVENT TEXT FONT OUTLINE💥💥💥💥💥💥💥 */
+// ??????????????????????????????????????????????????????????
+
+
+/* 💥💥💥💥💥💥 EVENT TEXT LINE HEIGHT 💥💥💥💥💥💥💥 */
+
+
+$inputTextLineHeight.addEventListener("input", () => {
+  $pTopText.style.lineHeight= $inputTextLineHeight.value
+  $pBottomText.style.lineHeight= $inputTextLineHeight.value
+
+})
+/* 💥💥💥💥💥💥 EVENT TEXT LETTER SPACING 💥💥💥💥💥💥💥 */
+$selectLetterSpacingText.addEventListener("input", () => {
+  $pTopText.style.letterSpacing= `${$selectLetterSpacingText.value}px`
+  $pBottomText.style.letterSpacing= `${$selectLetterSpacingText.value}px`
+
+})
+
+/* 💥💥💥💥💥💥💥 EVENT RESET PANEL TEX 💥💥💥💥💥💥💥💥 */
+
+
+
