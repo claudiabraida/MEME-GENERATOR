@@ -1,3 +1,20 @@
 body .text-panel-controls{
-  background-color: #0000ff;
+  background-color: #f0ed4f;
+  z-index: 1;
 }
+
+/* 💥💥💥 ALIGNMENT: INPUT COLOR-BACKGROUND  💥💥💥 */
+body .text-panel-controls form
+.wrapper-input-color-and-background-text{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 💥💥💥 ALIGNMENT: COLOR-BACKGROUND FIELSET 💥💥💥 */
+.fieldset-color-text,
+.fieldset-background-text{
+  width: 38%;
+}
+
+
+

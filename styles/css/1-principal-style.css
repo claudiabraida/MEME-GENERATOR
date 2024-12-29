@@ -1,34 +1,47 @@
+
+/* 💥💥💥💥💥💥 IMPORTS GOOGLE FONTS 💥💥💥💥💥💥 */
+
 @import url('https://fonts.googleapis.com/css2?family=Barrio&family=Black+Ops+One&family=Combo&family=Genos:ital,wght@0,100..900;1,100..900&family=Griffy&family=Kranky&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Special+Elite&display=swap');
 
+/* 💥💥💥💥💥💥 IMPORTS STYLES 💥💥💥💥💥💥 */
 @import url("./2-header.css");
 @import url("./3-main.css");
 @import url("./4-aside-image.css");
 @import url("./5-aside-text.css");
 @import url("./6-footer.css");
 
-/* ************** ESTILOS GENERALES ************** */
-
-/* VARIABLES */ 
+/* 💥💥💥💥💥💥 ESTILOS GENERALES 💥💥💥💥💥💥 */
+/* ____ VARIABLES ____ */ 
 :root{
   --width:100%;
   --colorWhitesmoke: whitesmoke;
   --fontGenos: Genos;
   --fontWeight500: 500;
   --converter: uppercase;
-
 }
 
-/* ************** PANELS CONTROLS ************** */
+/* 🔹🔹🔹🔹🔹🔹 MODE: LIGHT / DARK 🔹🔹🔹🔹🔹🔹 */ 
+.body-dark-mode{
+  background-color: #dd79a3;
+  /* °optional background color
+ background-color: linear-gradient(#181317, #ad2c91, #201423) ; 
+  */
+}
+
+.body-light-mode{
+  background-color: #ffffff ;
+  /* °optional color (line 27) */
+}
+
+/* 🔹🔹🔹🔹🔹🔹 PANELS CONTROLS 🔹🔹🔹🔹🔹🔹 */ 
 body aside{
-  width: 20%;
-  height: 591px;
+  /* width: 100%; */
   position: absolute;
   top: 0;
-  display: none;
-  
+  /* display: none; */
 }
 
-/* --- BUTTON CLOSE PANELS --- */
+/* 🔹🔹🔹🔹🔹 BUTTON CLOSE PANELS 🔹🔹🔹🔹🔹 */ 
 body aside .btn-close{
   background: transparent;
   height: 20px;
@@ -37,42 +50,56 @@ body aside .btn-close{
   left: 90%;
 }
 
+/* 🔹🔹🔹🔹🔹 CHECKBOXS STYLES 🔹🔹🔹🔹🔹 */ 
+input[type="checkbox"] {
+  appearance: none;
+}
+input[type="checkbox"] + label::before {
 
-/* *************** MEDIAS QUERIES *************** */
+  border: 2px solid #f11515;
+  border-radius: 50%;
+  content: "🔹";
+  font-size: 8px;
+  margin: 3px;
+  text-align: center;
+}
 
-/* ............ MEDIA QUERIE TABLET ............ */
+input[type="checkbox"]:checked + label::before {
+  border-color: rgb(238, 79, 21);
+  color: transparent;
+}
+
+/* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
+
 @media (min-width: 768px) {
 
- /* main{
-    
-     background: transparent; 
-  
-  }*/
+  /* PANELS IMAGE/TEXT */
   body aside{
-
+    background-color: aqua;
     right: 10%;
   }
 
+  /* HIDDEN PANEL BUTTONL */
   aside .btn-close{
     display: none;
   }
 
-  body aside{
-    background-color: aqua;
-    /* display: flex; */
-  }
 }
+
+/* @-@-@-@- MEDIA QUERIE DESKTOP -@-@-@-@ */
 
 @media (min-width: 1024px) {
   main{
     background-color: #ff9ce6;
   }
 
+  /* PANELS IMAGE/TEXT */
   body aside{
     display: flex;
     right: 30%;
   }
   
+  /* HIDDEN TEXT PANEL */
   body .text-panel-controls{
     display: none;
   }

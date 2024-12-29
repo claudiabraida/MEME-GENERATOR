@@ -1,8 +1,15 @@
 
 body .image-panel-controls{
   background-color: #ae00ff;
-  z-index: 1;
+  z-index: 2;
 }
 
+
+body .image-panel-controls form .filter-image{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
 
 

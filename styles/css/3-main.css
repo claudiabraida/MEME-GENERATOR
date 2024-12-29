@@ -1,10 +1,11 @@
 
-/* ************** MAIN: MEME **************  */
-/* ... Alineación:container y boton de descarga ... */
+/* 💥💥💥💥💥💥 MAIN: MEME 💥💥💥💥💥💥 */
+/* ... Alineación:container y botón de descarga ... */
 main{
-  background-color: #d8ec1f;
+  background-color: #050349;
+  /* background-color: linear-gradient(#181317, #ad2c91, #201423); */
   width: 100%;
-  min-height: 300px;
+  height: 460px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,35 +13,35 @@ main{
   gap: 20px;
 }
 
-/* ************** CONTAINER MEME **************  */
+/* 💥💥💥💥💥💥 CONTAINER MEME  💥💥💥💥💥💥 */
 /* .......... Alineación de elementos .......... */
 main .container-meme{
- background-color: #ffffff;
+  background-color: #030303;
   width: 90%;
+  max-height: 300px;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-/* --- GENERAL STYLES TOP TEX / BOTTOM TEX ---  */
-main .container-meme .top-text,
-.bottom-text{
+/* 💥💥💥 STYLES: TOP TEX / BOTTOM TEX  💥💥💥 */
+main .container-meme .top-text, .bottom-text{
   background-color: #ffffff;
+ font-family: "Black Ops One";
   text-transform: var(--converter);
-  /* text-shadow: 1.3px -1px 1px white;  */
-  /* -webkit-text-stroke:2px #b5cd47; */
-  /* font-family: Aldrich; */
-/* letter-spacing: 23px; */
--webkit-text-stroke: 1px white;
+  /* -webkit-text-stroke: 1px white; */
   margin: 0;
   padding: 10px;
 }
 
-/* main .top-text:checked{
-  display: flex;
 
-} */
-/* ------- IMAGE -------  */
+
+
+
+
+
+
+/* 💥💥💥💥💥💥 IMAGE MEME  💥💥💥💥💥💥 */
 main .container-meme .image-meme{
   background-color: #000000;
   background-repeat: no-repeat;
@@ -48,9 +49,11 @@ main .container-meme .image-meme{
   height: 300px;
 }
 
-/* --- BUTTON DOWNLOAD ---  */
+/* 💥💥💥💥💥 BUTTON DOWNLOAD 💥💥💥💥💥 */
 main .download-meme{
   background-color: #5782d2;
   border: none;
 } 
 
+
+/* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */

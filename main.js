@@ -4,11 +4,15 @@ const $ = element => document.querySelector(element);
 
 /* ============================ VARIABLES ============================ */
 
+const $bodyDarkMode = $(".body-dark-mode");
+const $header = $("header");
 /*💠💠💠💠💠💠💠💠 VARIABLES HEADER BUTTONS NAV 💠💠💠💠💠💠💠 */
 const $buttonImage = $(".button-image");
 const $buttonText = $(".button-text");
+const $buttonMode = $(".button-mode");
 
 /*💠💠💠💠💠💠💠💠 VARIABLES CONTAINER MEME 💠💠💠💠💠💠💠 */
+const $main = $("main");
 const $containerMeme = $(".container-meme");
 const $pTopText = $(".top-text");
 const $divImageMeme = $(".image-meme");
@@ -64,8 +68,10 @@ const $inputCheckboxNoBottomText = $("#no-bottom-text");
 const $selectFontFamily = $("#select-font");
 const $inputFontSizeText = $("#font-size-text");
 
-/* 💠💠💠💠💠💠💠 VARIABLE ALIGN-TEXT 💠💠💠💠💠💠💠 */
-// ????????????????????????????????????????????????????????????
+/* 💠💠💠💠💠💠💠 VARIABLE ALIGN-TEXT (alineacion) 💠💠💠💠💠💠💠 */
+const $inputButtonAlignLeft = $("#align-text-left");//izquierda 
+const $inputButtonAlignCenter = $("#align-text-center");//centrado       
+const $inputButtonAlignRight = $("#align-text-right");//derecha
 
 /* 💠💠💠💠💠💠💠 VARIABLE INPUT TEXT COLOR 💠💠💠💠💠💠💠 */
 const $inputColorText = $("#color-text");
@@ -77,15 +83,16 @@ const $labelNameBackgroundText = $(".name-background-text");
 
 /* 💠💠💠💠💠💠 TEXT TRANSPARENT (CHECKBOX) 💠💠💠💠💠💠 */
 // ????????????????????????????????????????????????????????????
+// ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗REVISAR LINEA 380❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
 
-/* 💠💠💠💠💠💠 VARIABLE TEXT FONT OUTLINE 💠💠💠💠💠💠💠 */
-// ??????????????????????????????????????????????????????????
+/* 💠💠💠 VARIABLE TEXT FONT OUTLINE (contorno de texto) 💠💠💠 */
+// ????????????????????????????????????????????????????????????
 
 /* 💠💠💠💠💠💠 VARIABLE TEXT LINE HEIGH 💠💠💠💠💠💠💠 */
-const $inputTextLineHeight = $("#text-line-height");
+const $inputTextLineHeight = $("#text-line-height");// interlineado
 
 /* 💠💠💠💠💠 VARIABLE TEXT LETTER SPACING 💠💠💠💠💠 */
-const $selectLetterSpacingText = $("#select-letter-spacing-text");
+const $selectLetterSpacingText = $("#select-letter-spacing-text");//espaciado
 
 
 /* =========================== FUNCTIONS =========================== */
@@ -174,7 +181,7 @@ resetValuesFilters()
 
 /* ============================== EVENTS ============================== */
 
-/* 💥💥💥💥💥💥💥💥💥💥 EVENT BUTTONS NAV 💥💥💥💥💥💥💥💥💥💥 */
+/* 💥💥💥💥💥 EVENT BUTTONS NAV (alternancia de paneles)💥💥💥💥💥 */
 $buttonText.addEventListener("click", () => {
   $asideImagePanelControls.style.display = "flex"
   if ( $asideImagePanelControls.style.display = "flex") {
@@ -191,7 +198,36 @@ $buttonImage.addEventListener("click", () => {
   }
 })
 
-// BUTTON MODO CLARO OSCURO =====>>
+/* 💥💥💥💥💥💥 EVENT BUTTON LIGHT MODE DARK MODE 💥💥💥💥💥💥 */
+$buttonMode.addEventListener("click", () => {
+  $buttonMode.innerText = "Modo Claro"
+  $header.style.backgroundColor = "#b4b9c3"
+  $main.style.backgroundColor = "#d1cdd7"
+  $asideImagePanelControls.style.backgroundColor = "#b4b9c3"
+  $asideTextPanelControls.style.backgroundColor = "#b4b9c3"
+  $buttonImage.style.color = "black"
+  $buttonText.style.color = "black"
+  $buttonMode.style.color = "black"
+  
+  if($bodyDarkMode.classList.contains("body-dark-mode")) {
+    $bodyDarkMode.classList.remove("body-dark-mode")
+    $bodyDarkMode.classList.add("body-light-mode")
+
+  } else {
+    $bodyDarkMode.classList.remove("body-light-mode")
+    $bodyDarkMode.classList.add("body-dark-mode")
+    $buttonMode.innerText = "Modo Oscuro"
+    $header.style.backgroundColor = "#1e0839"
+    $main.style.backgroundColor = "#0c1a58"
+    $asideImagePanelControls.style.backgroundColor = "black"
+    $asideTextPanelControls.style.backgroundColor = "black"
+    $buttonImage.style.color = "whitesmoke"
+    $buttonText.style.color = "whitesmoke"
+    $buttonMode.style.color = "whitesmoke"
+    
+  }
+
+})
 
 /* 💥💥💥💥💥💥 EVENT BUTTON CLOSE IMAGE /TEXT PANEL 💥💥💥💥💥💥 */
 $buttonCloseImagePanelControls.addEventListener("click", () => {
@@ -267,7 +303,6 @@ $inputRangeInvert.addEventListener("input", () => {
 /* 💥💥💥💥💥💥 EVENT BUTTON RESET FILTERS IMAGE 💥💥💥💥💥💥 */
 $buttonResetFilterImage.addEventListener("click", resetValuesFilters);
 
-
 /* ----------------------- EVENT PANEL TEXT ----------------------- */
 
 /* 💥💥💥💥💥💥💥💥 TEXTAREA TOP TEXT (WRITE) 💥💥💥💥💥💥💥💥 */
@@ -276,9 +311,11 @@ $textareaTopText.addEventListener("input", () => {
 })
 
 /* 💥💥💥💥💥💥💥💥 NO TOP TEXT (checkbox) 💥💥💥💥💥💥💥💥 */
-$inputCheckboxNoTopText.addEventListener("input", () => {
-  $pTopText.innertHtml = $inputCheckboxNoTopText.value
-  $pTopText.remove()
+$inputCheckboxNoTopText.addEventListener("change", () => {
+  $pTopText.style.display = "none"
+  if ($inputCheckboxNoTopText.checked) {
+    $pTopText.style.display = "block"
+  }
 })
 
 /* 💥💥💥💥💥💥💥 TEXTAREA BOTTOM TEXT (WRITE)💥💥💥💥💥💥💥 */
@@ -288,9 +325,13 @@ $textareaBottomText.addEventListener("input", () => {
 })
 
 /* 💥💥💥💥💥💥💥 NO BOTTOM TEXT (checkbox) 💥💥💥💥💥💥💥💥 */
-$inputCheckboxNoBottomText.addEventListener("input", () => {
-  $pBottomText.remove()
+$inputCheckboxNoBottomText.addEventListener("change", () => {
+  $pBottomText.style.display = "none"
+  if ($inputCheckboxNoBottomText.checked) {
+    $pBottomText.style.display = "block"
+  }
 })
+
 
 /* 💥💥💥💥💥💥💥 EVENT SELECT FONT FAMILY 💥💥💥💥💥💥💥 */
 $selectFontFamily.addEventListener("input", () => {
@@ -308,9 +349,20 @@ $inputFontSizeText.addEventListener("input", () => {
 })
 
 /* 💥💥💥💥💥💥💥 EVENT ALIGN-TEXT  💥💥💥💥💥💥💥💥 */
-// ??????????????????????????????????????????????????????????
+$inputButtonAlignLeft.addEventListener("click", () => {
+  $pTopText.style.textAlign = "left"
+  $pBottomText.style.textAlign = "left"
+})
 
+$inputButtonAlignCenter.addEventListener("click", () => {
+  $pTopText.style.textAlign = "center"
+  $pBottomText.style.textAlign = "center"
+})
 
+$inputButtonAlignRight.addEventListener("click", () => {
+  $pTopText.style.textAlign = "right"
+  $pBottomText.style.textAlign = "right"
+})
 /* 💥💥💥💥💥💥💥 EVENT INPUT TEXT COLOR  💥💥💥💥💥💥💥💥 */
 $inputColorText.addEventListener("input", () => {
   $labelNameColorText.innerText = $inputColorText.value
@@ -320,27 +372,35 @@ $inputColorText.addEventListener("input", () => {
 
 /* 💥💥💥💥💥 EVENT INPUT TEXT BACKGROUND COLOR 💥💥💥💥💥 */
 $inputBackgroundText.addEventListener("input", () => {
-  $labelNameBackgroundText.innerText = $inputBackgroundText.value
+  $labelNameBackgroundText.innerText = $inputBackgroundText.value 
   $pTopText.style.backgroundColor = $inputBackgroundText.value
   $pBottomText.style.backgroundColor = $inputBackgroundText.value
 })
 
-/* 💥💥💥💥💥💥 EVENT TEXT TRANSPARENT (CHECKBOX)💥💥💥💥💥💥💥 */
-// ??????????????????????????????????????????????????????????
 
+/* 💥💥💥💥💥💥 EVENT TEXT TRANSPARENT (CHECKBOX)💥💥💥💥💥💥💥 */
+// ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗REVISAR❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+$inputCheckboxTransparentBackgroundText = $("#transparent-background-text");
+
+$inputCheckboxTransparentBackgroundText.addEventListener("change", () => {
+  $pTopText.style.backgroundColor = "transparent"
+  if ($inputCheckboxTransparentBackgroundText.checked) {
+    $pTopText.style.backgroundColor = ""
+  }
+})// ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
 
 /* 💥💥💥💥💥💥 EVENT TEXT FONT OUTLINE💥💥💥💥💥💥💥 */
 // ??????????????????????????????????????????????????????????
+  /* -webkit-text-stroke: 1px white; */
 
 
 /* 💥💥💥💥💥💥 EVENT TEXT LINE HEIGHT 💥💥💥💥💥💥💥 */
-
-
 $inputTextLineHeight.addEventListener("input", () => {
   $pTopText.style.lineHeight= $inputTextLineHeight.value
   $pBottomText.style.lineHeight= $inputTextLineHeight.value
 
 })
+
 /* 💥💥💥💥💥💥 EVENT TEXT LETTER SPACING 💥💥💥💥💥💥💥 */
 $selectLetterSpacingText.addEventListener("input", () => {
   $pTopText.style.letterSpacing= `${$selectLetterSpacingText.value}px`

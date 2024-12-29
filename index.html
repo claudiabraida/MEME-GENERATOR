@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="./styles/css/1-principal-style.css">
   <title>Generador de Memes</title>
 </head>
-<body class="body-dak-mode">
+<body class="body-dark-mode">
   
   <!-- ※※※※※※※ HEADER: TITLE/NAV-MENU BUTTONS ※※※※※※※ -->
   <header>
     <h1 class="title-meme">Generador de Memes</h1>
     <nav class="nav-menu">
-      <button class="btn button-image">imagen</button>
-      <button class="btn button-text">texto</button>
-      <button class="btn button-mode">Modo Oscuro</button>
+      <button class="btn-nav-menu button-image">imagen</button>
+      <button class="btn-nav-menu button-text">texto</button>
+      <button class="btn-nav-menu button-mode">Modo Oscuro</button>
     </nav>
   </header>
   
@@ -34,10 +34,11 @@
   <aside class="image-panel-controls">
     <!-- __________________ BUTTON CLOSE IMAGE PANEL __________________ -->
     <button class="btn-close close-image-panel-controls">x</button>
-    <p class="paragraph-image">imagen</p>
+
     <form action="">
       <!-- ______________________ IMAGE URL ______________________ -->
       <fieldset>
+        <legend>imagen</legend>
         <label for="url-image-meme">URL</label>
         <input type="url" name="url-image-meme" id="url-image-meme">
        <!-- _____________________ IMAGE SIZE _____________________ -->
@@ -63,22 +64,22 @@
       </fieldset>
       
       <!-- ____________________ FILTERS IMAGE  ____________________ -->
-      <fieldset>
+      <fieldset class="filter-image">
         <legend>filtros</legend>
 
         <label for="brightness">brillo</label>
         <input type="range" name="brightness" id="brightness">
         
-        <label for="opacity">opacity</label>
+        <label for="opacity">opacidad</label>
         <input type="range" name="opacity" id="opacity">
 
         <label for="contrast">contraste</label>
         <input type="range" name="contrast" id="contrast">
 
-        <label for="blur">blur</label>
+        <label for="blur">desenfoque</label>
         <input type="range" name="blur" id="blur">
 
-        <label for="grayscale">grayscale</label>
+        <label for="grayscale">escala de grises</label>
         <input type="range" name="grayscale" id="grayscale">
 
         <label for="sepia">sepia</label>
@@ -87,10 +88,10 @@
         <label for="hue">hue</label>
         <input type="range" name="hue" id="hue">
 
-        <label for="saturate">saturate</label>
+        <label for="saturate">saturado</label>
         <input type="range" name="saturate" id="saturate">
 
-        <label for="invert">invert</label>
+        <label for="invert">negativo</label>
         <input type="range" name="invert" id="invert">
        <!-- _________ BUTTON RESET FILTERS IMAGE  _________ -->
         <button type="button" id="button-reset-filter-image">restablecer</button>
@@ -109,7 +110,7 @@
         <!-- __________________ TEXTAREA TOP TEXT (WRITE) __________________ -->
         <textarea name="top-text" id="top-text" placeholder="top text" cols="16" rows="2"></textarea>
         <!-- ______________ NO TOP TEXT (checkbox)  ______________ -->   
-        <input type="checkbox" name="no-top-text" id="no-top-text">
+        <input type="checkbox" checked name="no-top-text" id="no-top-text">
         <label for="no-top-text">sin texto superior</label>
       </fieldset>
       
@@ -118,8 +119,8 @@
         <!-- ___________________ TEXTAREA BOTTOM TEXT (WRITE) ___________________ -->
         <textarea name="bottom-text" id="bottom-text" placeholder="top text" cols="16" rows="2"></textarea>
         <!-- ______________ NO BOTTOM TEXT (checkbox)  ______________ -->   
-        <input type="checkbox" name="no-bottom-text" id="no-bottom-text">
-        <label for="no-top-text">sin texto inferior</label>
+        <input type="checkbox" checked name="no-bottom-text" id="no-bottom-text">
+        <label for="no-bottom-text">sin texto inferior</label>
       </fieldset>
 
       <!-- __________________ SELECT FONT-FAMILY __________________ -->
@@ -148,31 +149,33 @@
         <input type="button" id ="align-text-right">
       </fieldset>
       
-      <!-- _____________________ TEXT COLOR / BACKGROUND_____________________ -->
-      <div class="wrapper-input-color-text">
+      <!-- _____________________ TEXT COLOR and BACKGROUND _____________ -->
+      <div class="wrapper-input-color-and-background-text">
         <!-- _______ TEXT COLOR _______ -->
-        <fieldset>
+        <fieldset class="fieldset-color-text">
           <legend>color</legend>
           <input type="color" name="color-text" id="color-text">
           <label class="name-color-text" for="color-text">ffffff</label>
         </fieldset>
         <!-- _______ TEXT BACKGROUND COLOR _______ -->
-        <fieldset>
+        <fieldset class="fieldset-background-text">
           <legend>fondo</legend>
           <input type="color" name="background-text" id="background-text">
           <label class="name-background-text" for="background-text">ffffff</label>
           <!-- _______ TEXT TRANSPARENT (CHECKBOX) _______ -->
-          <input type="checkbox" name="transparent-background-text" id="transparent-background-text">
-          <label class="transparent-backg-text-" for="transparent-background-text">fondo transparente</label>
         </fieldset>
+        <div class="wrapper-transparent-background-text">
+          <input type="checkbox" checked name="transparent-background-text" id="transparent-background-text">
+          <label class="transparent-backg-text-" for="transparent-background-text">fondo transparente</label>
+        </div>
       </div>
 
       <!-- _______ TEXT FONT OUTLINE _______ -->
       <fieldset>
         <legend>contorno</legend>
-        <input type="button" id ="">ninguno
-        <input type="button" id ="">claro
-        <input type="button" id ="">oscuro
+        <input type="button" id ="text-outline-right">ninguno
+        <input type="button" id ="text-outline-center">claro
+        <input type="button" id ="text-outline-left">oscuro
       </fieldset>
 
       <!-- _______ TEXT LINE HEIGHT _______ -->

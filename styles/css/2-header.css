@@ -1,38 +1,42 @@
-/* ***** MOBILE FIRST ***** */
+
+/* ************** MOBILE FIRST ************** */
+
+/* 💥💥💥💥💥 HEADER: ALIGN ELEMENTS 💥💥💥💥💥 */
 header{
-  background-color: #da27a4;
+  background-color: #1e0839;
   width:var(--width);
-  height: 90px;
+  height: 130px;
   font-family: var(--fontGenos);
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+ 
 }
 
-/* ***** HEADER: TITLE ***** */
+/* 💥💥💥💥💥💥 HEADER: TITLE MEME 💥💥💥💥💥💥 */
 header .title-meme{
+  color:var(--colorWhitesmoke);
   font-weight: var(--fontWeight500);
   letter-spacing: 1px;
-  margin: 0;
+ 
 }
 
-/* ***** HEADER NAV-MENU BUTTONS ***** */
-
-/*  Alinación: botones del nav  */
-header .nav-menu{
-  background-color: blue;
+/* 💥💥💥💥💥 HEADER NAV-MENU BUTTONS 💥💥💥💥 */
+header .nav-menu{/* Alignment: nav buttons*/
+  /* background-color: #2b2bbb; */
   width: var(--width);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 30px;
 }
 
-/* ***** NAV-MENU BUTTONS ***** */
-/* ---- Estilos generales botones de navegación ---- */
-header .nav-menu .btn{
-  background-color: black;
+/* 💥💥💥💥💥💥 NAV-MENU BUTTONS 💥💥💥💥💥💥 */
+/* ---- General Navigation Button Styles ---- */
+header .nav-menu .btn-nav-menu{
+  background-color: transparent;
   width: 29%;
   font-size: 0.9em;
   color: var(--colorWhitesmoke);
@@ -45,14 +49,14 @@ header .nav-menu .btn{
 }
 
 /* -------- Pseudo elements buttons icons -------- */
-/* .......... icono imagen .......... */
+/* .......... image icon .......... */
 header .nav-menu .button-image::before{
   font-family: "font awesome 5 free";
   font-weight: 600;
   content: "\f03e";
 }
 
-/* ........... icono texto ........... */
+/* ........... text icon ........... */
 header .nav-menu .button-text::before{
   font-family: "font awesome 5 free";
   font-weight: 900;
@@ -61,7 +65,7 @@ header .nav-menu .button-text::before{
   margin-top: -1px;
 }
 
-/* .... icono (gato) modo claro/oscuro .... */
+/* .... (cat) icon light/dark mode .... */
 header .nav-menu .button-mode::before{
   font-family: "font awesome 5 free";
   font-weight: 600;
