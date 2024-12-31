@@ -1,15 +1,49 @@
 
+/* 💥💥💥💥💥💥 IMAGE PANEL CONTROLS (ASIDE) 💥💥💥💥💥💥 */
 body .image-panel-controls{
-  background-color: #ae00ff;
+  background-color:#251d2e;
+  display: flex;
+  flex-direction: column;
   z-index: 2;
 }
 
+/* 💥💥💥 IMAGE URL 💥💥💥 */
+.image-panel-controls .wrapper-url-image-meme{
+  display: flex;
+  flex-direction: column;
 
+}
+
+/* 💥💥💥 IMAGE BACKGROUND COLOR (FONDO) 💥💥💥 */
+.select-color-and-background-image{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.wrapper-input-background-color-image,
+#select-blend-mode-image{
+  width: 50%;
+}
+
+/* 💥💥💥💥💥💥 COLOR INPUT APPEARANCE  💥💥💥💥💥💥 */
+#background-color-image{
+  background-color:transparent;
+  width: 25px;
+  border-radius: 50%;
+  border: none;
+}
+
+input[type="color"]#background-color-image::-webkit-color-swatch {
+ border: none;
+ border-radius: 50%;
+
+}
+
+/* 💥💥💥💥💥💥 FILTERS IMAGE 💥💥💥💥💥💥 */
 body .image-panel-controls form .filter-image{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
+  gap: 10px;
 }
-
-

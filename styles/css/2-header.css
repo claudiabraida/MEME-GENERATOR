@@ -20,7 +20,6 @@ header .title-meme{
   color:var(--colorWhitesmoke);
   font-weight: var(--fontWeight500);
   letter-spacing: 1px;
- 
 }
 
 /* 💥💥💥💥💥 HEADER NAV-MENU BUTTONS 💥💥💥💥 */
@@ -72,4 +71,15 @@ header .nav-menu .button-mode::before{
   content: "\f6be";
 }
 
+/* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
+
+/* @media (min-width: 768px) {
+
+} */
+
+/* @-@-@-@- MEDIA QUERIE DESKTOP -@-@-@-@ */
+
+/* @media (min-width: 1024px) {
+  
+} */
 

@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+      crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+      crossorigin="anonymous">
+    </script>
   <link rel="shortcut icon" href="./styles/css/image/emoji.ico" type="image/x-icon">
   <link rel="stylesheet" href="./styles/css/0-normalize.css">
   <link rel="stylesheet" href="./styles/css/1-principal-style.css">
@@ -23,11 +32,12 @@
   <!-- ※※※※※※※※※※※※ MAIN: MEME ※※※※※※※※※※※※ -->
   <main>
     <section class="container-meme">
-      <p class="top-text">Top Text</p>
-      <div class="image-meme"></div>
-      <p class="bottom-text">Bottom Text</p>
+      <div class="image-meme">
+        <p class="top-text-meme">Top Text</p>
+        <p class="bottom-text-meme">Bottom Text</p>
+      </div>
     </section>
-    <button class="download-meme">download</button>
+    <button class="download-meme">descargar meme</button>
   </main>
   
   <!-- ※※※※※※※※※※ IMAGE PANEL CONTROL ※※※※※※※※※※ -->
@@ -36,9 +46,9 @@
     <button class="btn-close close-image-panel-controls">x</button>
 
     <form action="">
+      <p class="title-image-form">imagen</p>
       <!-- ______________________ IMAGE URL ______________________ -->
-      <fieldset>
-        <legend>imagen</legend>
+      <fieldset class="wrapper-url-image-meme">
         <label for="url-image-meme">URL</label>
         <input type="url" name="url-image-meme" id="url-image-meme">
        <!-- _____________________ IMAGE SIZE _____________________ -->
@@ -47,19 +57,23 @@
       </fieldset>
 
       <!-- _____________ IMAGE BACKGROUND COLOR (FONDO) ____________ -->
-      <fieldset>
+      <fieldset class="select-color-and-background-image">
         <legend>fondo</legend>
-        <input type="color" name="background-color-image" id="background-color-image">
-        <label class="name-background-color-image" for="background-color-image">ffffff</label>
+        <!--  ............input-background-color-image ............ -->
+        <div class="wrapper-input-background-color-image">
+          <input type="color" name="background-color-image" id="background-color-image">
+        <!--  ............name-background-color-image ............ -->
+          <label class="name-background-color-image" for="background-color-image">#FFFFFF</label>
+        </div>
         
         <!-- ____________ SELECT BLEND MODE IMAGE ____________ -->
        <select name="select-blend-mode-image" id="select-blend-mode-image">
-        <option id="blend-mode-image" value="initial">Ninguno</option>
-        <option id="blend-mode-image" value="lighten">Aclarar</option>
-        <option id="blend-mode-image" value="darken">Oscurecer</option>
-        <option id="blend-mode-image" value="difference">Diferencia</option>
-        <option id="blend-mode-image" value="luminosity">Luminosidad</option>
-        <option id="blend-mode-image" value="multiply">Multiplicar</option>
+        <option value="initial">Ninguno</option>
+        <option value="lighten">Aclarar</option>
+        <option value="darken">Oscurecer</option>
+        <option value="difference">Diferencia</option>
+        <option value="luminosity">Luminosidad</option>
+        <option value="multiply">Multiplicar</option>
        </select>
       </fieldset>
       
@@ -67,16 +81,16 @@
       <fieldset class="filter-image">
         <legend>filtros</legend>
 
-        <label for="brightness">brillo</label>
+        <label class="filter-name" for="brightness">brillo</label>
         <input type="range" name="brightness" id="brightness">
         
-        <label for="opacity">opacidad</label>
+        <label class="filter-name" for="opacity">opacidad</label>
         <input type="range" name="opacity" id="opacity">
 
-        <label for="contrast">contraste</label>
+        <label class="filter-name" for="contrast">contraste</label>
         <input type="range" name="contrast" id="contrast">
 
-        <label for="blur">desenfoque</label>
+        <label class="filter-name" for="blur">desenfoque</label>
         <input type="range" name="blur" id="blur">
 
         <label for="grayscale">escala de grises</label>
@@ -85,13 +99,13 @@
         <label for="sepia">sepia</label>
         <input type="range" name="sepia" id="sepia">
 
-        <label for="hue">hue</label>
+        <label class="filter-name" for="hue">hue</label>
         <input type="range" name="hue" id="hue">
 
-        <label for="saturate">saturado</label>
+        <label class="filter-name" for="saturate">saturado</label>
         <input type="range" name="saturate" id="saturate">
 
-        <label for="invert">negativo</label>
+        <label class="filter-name" for="invert">negativo</label>
         <input type="range" name="invert" id="invert">
        <!-- _________ BUTTON RESET FILTERS IMAGE  _________ -->
         <button type="button" id="button-reset-filter-image">restablecer</button>
@@ -103,21 +117,21 @@
   <aside class="text-panel-controls">
     <!-- ________________ BUTTON CLOSE TEXT PANEL ________________ -->
     <button class="btn-close close-text-panel-controls">x</button>
-    <p>texto</p>
+    <p class="title-text-form">texto</p>
     <form action="">
-      <fieldset>
+      <fieldset class="fieldset-top-text-area">
         <legend>superior</legend>
         <!-- __________________ TEXTAREA TOP TEXT (WRITE) __________________ -->
-        <textarea name="top-text" id="top-text" placeholder="top text" cols="16" rows="2"></textarea>
+        <textarea name="top-text-area" id="top-text-area" placeholder="top text" cols="16" rows="2"></textarea>
         <!-- ______________ NO TOP TEXT (checkbox)  ______________ -->   
         <input type="checkbox" checked name="no-top-text" id="no-top-text">
         <label for="no-top-text">sin texto superior</label>
       </fieldset>
       
-      <fieldset>
+      <fieldset class="fieldset-bottom-text-area">
         <legend>inferior</legend>
         <!-- ___________________ TEXTAREA BOTTOM TEXT (WRITE) ___________________ -->
-        <textarea name="bottom-text" id="bottom-text" placeholder="top text" cols="16" rows="2"></textarea>
+        <textarea name="bottom-text-area" id="bottom-text-area" placeholder="bottom text" cols="16" rows="2"></textarea>
         <!-- ______________ NO BOTTOM TEXT (checkbox)  ______________ -->   
         <input type="checkbox" checked name="no-bottom-text" id="no-bottom-text">
         <label for="no-bottom-text">sin texto inferior</label>
@@ -126,27 +140,27 @@
       <!-- __________________ SELECT FONT-FAMILY __________________ -->
       <fieldset>
         <legend>fuente</legend>
-        <select name="select-font" id="select-font">
-          <option value="initial">ninguno</option>
-          <option value="Combo">Combo</option>
-          <option value="Barrio">Barrio</option>
-          <option value="Montserrat Alternates">Montserrat Alternates</option>
-          <option value="Griffy">Griffy</option>
-          <option value="Special Elite">Special Elite</option>
-          <option value="Black Ops One">Black Ops One</option>
-          <option value="Genos">Genos</option>
-          <option value="Permanent Marker">Permanent Marker</option>
-          <option value="Kranky">Kranky</option>
+        <select name="select-font" id="select-font" >
+          <option>ninguno</option>
+          <option>Combo</option>
+          <option>Barrio</option>
+          <option>Montserrat Alternates</option>
+          <option>Griffy</option>
+          <option>Special Elite</option>
+          <option>Black Ops One</option>
+          <option>Genos</option>
+          <option>Permanent Marker</option>
+          <option>Kranky</option>
         </select>
       </fieldset>
 
-      <fieldset>
+      <fieldset class="wrapper-font-align-text">
         <!-- __________________ FONT SIZE -TEXT __________________ -->
         <input type="number" name="font-size-text" id="font-size-text" placeholder="tamaño de fuente">
         <!-- _____________________ ALIGN-TEXT _____________________ -->
-        <input type="button" id ="align-text-left">
-        <input type="button" id ="align-text-center">
-        <input type="button" id ="align-text-right">
+        <button type="button" id="align-text-left"></button>
+        <button type="button" id="align-text-center"></button>
+        <button type="button" id="align-text-right"></button>
       </fieldset>
       
       <!-- _____________________ TEXT COLOR and BACKGROUND _____________ -->
@@ -155,45 +169,45 @@
         <fieldset class="fieldset-color-text">
           <legend>color</legend>
           <input type="color" name="color-text" id="color-text">
-          <label class="name-color-text" for="color-text">ffffff</label>
+          <label class="name-color-text" for="color-text">#000000</label>
         </fieldset>
         <!-- _______ TEXT BACKGROUND COLOR _______ -->
         <fieldset class="fieldset-background-text">
           <legend>fondo</legend>
           <input type="color" name="background-text" id="background-text">
-          <label class="name-background-text" for="background-text">ffffff</label>
+          <label class="name-background-text" for="background-text">#FFFFFF</label>
           <!-- _______ TEXT TRANSPARENT (CHECKBOX) _______ -->
         </fieldset>
         <div class="wrapper-transparent-background-text">
           <input type="checkbox" checked name="transparent-background-text" id="transparent-background-text">
-          <label class="transparent-backg-text-" for="transparent-background-text">fondo transparente</label>
+          <label class="transparent-backg-text" for="transparent-background-text">fondo transparente</label>
         </div>
       </div>
 
       <!-- _______ TEXT FONT OUTLINE _______ -->
-      <fieldset>
+      <fieldset class="text-font-outline">
         <legend>contorno</legend>
-        <input type="button" id ="text-outline-right">ninguno
-        <input type="button" id ="text-outline-center">claro
-        <input type="button" id ="text-outline-left">oscuro
+        <button type="button" id="text-outline-none">ninguno</button>
+        <button type="button" id="text-outline-light">claro</button>
+        <button type="button" id="text-outline-dark">oscuro</button>
       </fieldset>
 
       <!-- _______ TEXT LINE HEIGHT _______ -->
       <fieldset>
         <legend>interlineado</legend>
-        <input type="number" name="text-line-height" id="text-line-height">
+        <input type="number" name="text-line-height" id="input-text-line-height" placeholder="numero de interlineado">
       </fieldset>
 
       <!-- _______ TEXT LETTER SPACING _______ -->
        <fieldset>
         <legend>espaciado</legend>
         <select name="select-letter-spacing-text" id="select-letter-spacing-text">
-          <option value="2">2</option>
-          <option value="4">4</option>
-          <option value="6">6</option>
-          <option value="8">8</option>
-          <option value="10">10</option>
-          <option value="12">12</option>
+          <option>2</option>
+          <option>4</option>
+          <option>6</option>
+          <option>8</option>
+          <option>12</option>
+          <option>10</option>
         </select>
        </fieldset>
     </form>

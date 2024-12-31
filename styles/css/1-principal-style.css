@@ -1,6 +1,5 @@
 
 /* 💥💥💥💥💥💥 IMPORTS GOOGLE FONTS 💥💥💥💥💥💥 */
-
 @import url('https://fonts.googleapis.com/css2?family=Barrio&family=Black+Ops+One&family=Combo&family=Genos:ital,wght@0,100..900;1,100..900&family=Griffy&family=Kranky&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Special+Elite&display=swap');
 
 /* 💥💥💥💥💥💥 IMPORTS STYLES 💥💥💥💥💥💥 */
@@ -10,7 +9,7 @@
 @import url("./5-aside-text.css");
 @import url("./6-footer.css");
 
-/* 💥💥💥💥💥💥 ESTILOS GENERALES 💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥 GENERAL STYLES 💥💥💥💥💥💥 */
 /* ____ VARIABLES ____ */ 
 :root{
   --width:100%;
@@ -22,7 +21,7 @@
 
 /* 🔹🔹🔹🔹🔹🔹 MODE: LIGHT / DARK 🔹🔹🔹🔹🔹🔹 */ 
 .body-dark-mode{
-  background-color: #dd79a3;
+  background-color: #76d749;
   /* °optional background color
  background-color: linear-gradient(#181317, #ad2c91, #201423) ; 
   */
@@ -33,7 +32,9 @@
   /* °optional color (line 27) */
 }
 
-/* 🔹🔹🔹🔹🔹🔹 PANELS CONTROLS 🔹🔹🔹🔹🔹🔹 */ 
+/* 🔹🔹🔹🔹🔹🔹 PANELS CONTROLS IMAGE/TEXT 🔹🔹🔹🔹🔹🔹 */
+
+/* .......... control panels position .......... */
 body aside{
   /* width: 100%; */
   position: absolute;
@@ -41,45 +42,82 @@ body aside{
   /* display: none; */
 }
 
-/* 🔹🔹🔹🔹🔹 BUTTON CLOSE PANELS 🔹🔹🔹🔹🔹 */ 
-body aside .btn-close{
-  background: transparent;
-  height: 20px;
-  border: none;
-  position: relative;
-  left: 90%;
+
+/* ... font and font color panels download button ... */
+body aside, .download-meme {
+  font-family: var(--fontGenos);
+  color: var(--colorWhitesmoke);
 }
 
-/* 🔹🔹🔹🔹🔹 CHECKBOXS STYLES 🔹🔹🔹🔹🔹 */ 
+/* ... panel titles font size and alignment ... */
+body aside .title-text-form,
+.title-image-form{
+  text-align: center;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+/* ........ panel form element styles ........ */
+textarea, 
+select,
+optgroup,
+input,
+button,
+::placeholder{
+  background-color: #393e49;
+  color: var(--colorWhitesmoke);
+}
+
+/* ...... text transformation: panel titles / main text ...... */ 
+.filter-image,
+legend,
+textarea {
+  text-transform: var(--converter);
+}
+
+
+/* ........... button close panels ........... */ 
+body aside .btn-close{
+  width: 10%;
+  color: var(--colorWhitesmoke);
+  font-size: 1.6em;
+  font-weight: 600;
+  border: none;
+  position: relative;
+  left: 85%;
+  margin-top:2%;
+}
+
+/* ............ checkbox styles ............ */ 
 input[type="checkbox"] {
   appearance: none;
 }
 input[type="checkbox"] + label::before {
-
-  border: 2px solid #f11515;
+  border: 1px solid var(--colorWhitesmoke);
   border-radius: 50%;
-  content: "🔹";
+  content: "💥";
   font-size: 8px;
-  margin: 3px;
+  margin-left: 15px;
+  margin-right: 7px;
   text-align: center;
 }
 
 input[type="checkbox"]:checked + label::before {
-  border-color: rgb(238, 79, 21);
+  border-color: rgb(255, 254, 254);
   color: transparent;
 }
+
 
 /* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
 
 @media (min-width: 768px) {
-
-  /* PANELS IMAGE/TEXT */
+  /* ........ panels image / text ........ */
   body aside{
     background-color: aqua;
     right: 10%;
   }
 
-  /* HIDDEN PANEL BUTTONL */
+  /* ........ hidden panel button ........ */
   aside .btn-close{
     display: none;
   }
@@ -91,9 +129,10 @@ input[type="checkbox"]:checked + label::before {
 @media (min-width: 1024px) {
   main{
     background-color: #ff9ce6;
+  
   }
 
-  /* PANELS IMAGE/TEXT */
+ /* ........ panels image / text ........ */
   body aside{
     display: flex;
     right: 30%;

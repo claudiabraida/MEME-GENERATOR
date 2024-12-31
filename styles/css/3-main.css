@@ -1,6 +1,6 @@
 
 /* 💥💥💥💥💥💥 MAIN: MEME 💥💥💥💥💥💥 */
-/* ... Alineación:container y botón de descarga ... */
+/* ... Alignment:container and download button ... */
 main{
   background-color: #050349;
   /* background-color: linear-gradient(#181317, #ad2c91, #201423); */
@@ -14,46 +14,59 @@ main{
 }
 
 /* 💥💥💥💥💥💥 CONTAINER MEME  💥💥💥💥💥💥 */
-/* .......... Alineación de elementos .......... */
+/* .......... Element Alignment .......... */
 main .container-meme{
   background-color: #030303;
   width: 90%;
-  max-height: 300px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  height: 300px;
 }
 
 /* 💥💥💥 STYLES: TOP TEX / BOTTOM TEX  💥💥💥 */
-main .container-meme .top-text, .bottom-text{
-  background-color: #ffffff;
- font-family: "Black Ops One";
+main .container-meme .top-text-meme,
+.bottom-text-meme{
+  font-family: "Black Ops One";
   text-transform: var(--converter);
   /* -webkit-text-stroke: 1px white; */
   margin: 0;
   padding: 10px;
 }
 
-
-
-
-
-
-
-
 /* 💥💥💥💥💥💥 IMAGE MEME  💥💥💥💥💥💥 */
 main .container-meme .image-meme{
-  background-color: #000000;
+  background-color: #c42f2f;
   background-repeat: no-repeat;
   background-position: center;
   height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  
 }
 
 /* 💥💥💥💥💥 BUTTON DOWNLOAD 💥💥💥💥💥 */
 main .download-meme{
-  background-color: #5782d2;
+  background-color: #2b59ae;
+  width: 50%;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  line-height: 2;
   border: none;
+  border-radius: 30px;
+  padding: 3px;
 } 
+
+/* ...... download-meme: pseudoelement adds icon ...... */
+main .download-meme::before{
+  font-family: "font awesome 5 free";
+  font-weight: 600;
+  content: "\f019";
+  margin-right: 5%;
+} 
+/* .... download-meme: pseudoelement color change .... */
+main .download-meme:hover{
+  background-color: rgb(128, 120, 202);
+}
 
 
 /* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
