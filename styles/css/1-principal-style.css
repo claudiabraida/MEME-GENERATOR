@@ -13,98 +13,101 @@
 /* ____ VARIABLES ____ */ 
 :root{
   --width:100%;
-  --colorWhitesmoke: whitesmoke;
+  --colorWhitesmoke: #f5f5f5;
+  --color-violet: #570b55;
+  --color-violet-dark:#2f1130;
+  --color-grayish-violet: #66487a;
+  --color-light-grayish-violet:#d1cdd7;
+  --color-light-blue: #4a46ce;
+  --color-light-blue:#9f81c4 ;
   --fontGenos: Genos;
   --fontWeight500: 500;
   --converter: uppercase;
+  
 }
 
 /* 🔹🔹🔹🔹🔹🔹 MODE: LIGHT / DARK 🔹🔹🔹🔹🔹🔹 */ 
 .body-dark-mode{
-  background-color: #76d749;
-  /* °optional background color
- background-color: linear-gradient(#181317, #ad2c91, #201423) ; 
-  */
+  background-color:var(--color-violet);
+  /* °optional background color*/
+ /* background-color: linear-gradient(#181317, #ad2c91, #201423) ;  */
+  
 }
 
 .body-light-mode{
-  background-color: #ffffff ;
+  background-color:var(--color-light-grayish-violet);
+
   /* °optional color (line 27) */
 }
 
 /* 🔹🔹🔹🔹🔹🔹 PANELS CONTROLS IMAGE/TEXT 🔹🔹🔹🔹🔹🔹 */
 
-/* .......... control panels position .......... */
+/* .......... position and alignment .......... */
 body aside{
-  /* width: 100%; */
+  background-color:var(--color-violet-dark);
+  width: 78%;
+  height: 780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 0;
+  z-index: 2;
   /* display: none; */
 }
 
-
-/* ... font and font color panels download button ... */
-body aside, .download-meme {
-  font-family: var(--fontGenos);
-  color: var(--colorWhitesmoke);
+fieldset{
+  border: none;
 }
 
-/* ... panel titles font size and alignment ... */
+/* ... font-font color panels, download button ... */
+body aside, .download-meme {
+  font-family: var(--fontGenos);
+  /* color: var(--colorWhitesmoke); */
+}
+
+/* ..... panel titles font size and alignment ..... */
 body aside .title-text-form,
 .title-image-form{
   text-align: center;
   font-size: 1.3em;
-  margin-bottom: 20px;
 }
 
-/* ........ panel form element styles ........ */
-textarea, 
+/* ........... panel form element styles ........... */
+aside,
+textarea,
+::placeholder, 
 select,
 optgroup,
 input,
 button,
-::placeholder{
-  background-color: #393e49;
+.box-background-text,
+.box-color-text,
+.box-input-background-color-image{
+  background-color:var(--color-grayish-violet);
   color: var(--colorWhitesmoke);
 }
 
-/* ...... text transformation: panel titles / main text ...... */ 
+/* .. text transformation: panel titles / main text .. */ 
+.title-image-form,
+.title-text-form,
 .filter-image,
 legend,
-textarea {
+textarea{
   text-transform: var(--converter);
 }
 
-
-/* ........... button close panels ........... */ 
+/* ............... button close panels ............... */ 
 body aside .btn-close{
   width: 10%;
+  background-color: transparent;
   color: var(--colorWhitesmoke);
   font-size: 1.6em;
   font-weight: 600;
   border: none;
-  position: relative;
-  left: 85%;
-  margin-top:2%;
-}
-
-/* ............ checkbox styles ............ */ 
-input[type="checkbox"] {
-  appearance: none;
-}
-input[type="checkbox"] + label::before {
-  border: 1px solid var(--colorWhitesmoke);
-  border-radius: 50%;
-  content: "💥";
-  font-size: 8px;
-  margin-left: 15px;
-  margin-right: 7px;
-  text-align: center;
-}
-
-input[type="checkbox"]:checked + label::before {
-  border-color: rgb(255, 254, 254);
-  color: transparent;
+  position: fixed;
+  left: 59%;
+  top: 0;
 }
 
 
@@ -113,7 +116,7 @@ input[type="checkbox"]:checked + label::before {
 @media (min-width: 768px) {
   /* ........ panels image / text ........ */
   body aside{
-    background-color: aqua;
+   
     right: 10%;
   }
 

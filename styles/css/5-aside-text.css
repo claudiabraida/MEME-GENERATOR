@@ -1,36 +1,56 @@
-/* 💥💥💥💥💥💥 TEXT PANEL CONTROLS (ASIDE) 💥💥💥💥💥💥 */
+
+/* 💥💥💥💥💥💥💥💥 TEXT PANEL CONTROLS (ASIDE) 💥💥💥💥💥💥💥💥 */
 body .text-panel-controls {
-  display: flex;
-  flex-direction: column;
-  background-color: #c49292;
+  display: none;
   z-index: 1;
+}
+
+/* 💥💥💥💥💥💥💥💥💥💥 TITLE TEXT FORM 💥💥💥💥💥💥💥💥💥💥 */
+body .text-panel-controls .title-text-form{
+  margin: -9% 0% 5%;
 }
 
 /* 💥💥💥💥💥💥 ALIGNMENT: FORM 💥💥💥💥💥💥 */
 body .text-panel-controls form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7px;
 }
 
-
-/* 💥💥💥 ALIGNMENT: FIELDSET TEXTAREA / CHECKBOX 💥💥💥 */
-body .text-panel-controls form .fieldset-top-text-area,
-.fieldset-bottom-text-area{
+/* 💥💥💥💥 ALIGNMENT: FIELDSET-(TOP-TEXT / BOTTOM )-AREA 💥💥💥💥 */
+.text-panel-controls form .fieldset-top-text-area, .fieldset-bottom-text-area{
   display: flex;
   flex-direction: column;
+  resize: none;
 }
 
-/* 💥💥 ALIGNMENT:WRAPPER FONT SIZE / BUTTON ALIGN TEXT 💥💥 */
-.text-panel-controls form .wrapper-font-align-text{
+/* 💥💥💥💥💥💥💥💥💥 GENERAL FIELDSET STYLES  💥💥💥💥💥💥💥 */
+body .text-panel-controls form 
+#select-font,
+#input-text-line-height,
+#select-letter-spacing-text{
+  width: 100%;
+  height: 40px;
+  border: none;
+}
+
+/* 💥💥💥💥💥 ALIGNMENT: WRAPPER FONT TEXT (elements)💥💥💥💥💥 */
+.text-panel-controls form .wrapper-font-text{
+  /* background-color: black; */
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
 }
 
-/* 💥💥💥💥💥💥 BUTTONS ALIGN TEXT 💥💥💥💥💥💥 */
-.text-panel-controls form .wrapper-font-align-text
+/* 💥💥💥💥💥💥💥💥💥💥 FONT- SIZE 💥💥💥💥💥💥💥💥💥💥 */
+body .text-panel-controls form #font-size-text{
+  width: 90px;
+  height: 30px;
+  border: none;
+}
+
+/* 💥💥💥💥💥💥💥 BUTTONS STYLES: ALIGN TEXT 💥💥💥💥💥💥💥 */
+.text-panel-controls form .wrapper-font-text
 #align-text-left,
 #align-text-center,
 #align-text-right{
@@ -41,139 +61,178 @@ body .text-panel-controls form .fieldset-top-text-area,
   border-end-start-radius: 19px;
 }
 
-.text-panel-controls form .wrapper-font-align-text
+/* ------ Pseudo elements buttons icons ------ */
+/* .......... left icon .......... */
+.text-panel-controls form .wrapper-font-text
 #align-text-left::before{
   font-family: "font awesome 5 free";
   font-weight: 600;
   content: "\f036";
 }
 
-.text-panel-controls form .wrapper-font-align-text
+/* .......... center icon .......... */
+.text-panel-controls form .wrapper-font-text
 #align-text-center::before{
   font-family: "font awesome 5 free";
   font-weight: 600;
   content: "\f037";
 }
 
-.text-panel-controls form .wrapper-font-align-text
+/* .......... right icon .......... */
+.text-panel-controls form .wrapper-font-text
 #align-text-right::before{
   font-family: "font awesome 5 free";
   font-weight: 600;
   content: "\f038";
 }
 
-/* 💥💥💥💥💥 BUTTONS ALIGN TEXT HOVER 💥💥💥💥💥 */
+/* .... buttons align text hover .... */
 .text-panel-controls form
-.wrapper-font-align-text #align-text-left:hover{
-  background-color: #370467;
+.wrapper-font-text #align-text-left:hover{
+  background-color: var(--color-light-blue);
 }
 
 .text-panel-controls form 
-.wrapper-font-align-text #align-text-right:hover{
-  background-color: #370467;
+.wrapper-font-text #align-text-right:hover{
+  background-color: var(--color-light-blue);
 }
 
 .text-panel-controls form
-.wrapper-font-align-text #align-text-center:hover{
-  background-color: #370467;
+.wrapper-font-text #align-text-center:hover{
+  background-color: var(--color-light-blue);
 }
 
-/* 💥💥 FIELDSET FONT: (select, line-heigth, spacing💥💥 */
-body .text-panel-controls form 
-#select-font,
-#input-text-line-height,
-#select-letter-spacing-text{
-  width: 100%;
-}
-
-/* 💥💥💥 ALIGNMENT: INPUT COLOR-BACKGROUND  💥💥💥 */
-body .text-panel-controls form
-.wrapper-input-color-and-background-text{
-  /* background-color: blue; */
+/* 💥💥💥 ALIGNMENT: WRAPPER-COLOR-AND-BACKGROUND-TEXT (elements)  💥💥💥 */
+body .text-panel-controls form .wrapper-color-and-background-text{
+  height: 80px;
   display: flex;
-  flex-wrap: wrap; 
-}
-
-/* 💥💥💥 ALIGNMENT: COLOR-BACKGROUND FIELDSET 💥💥💥 */
-body .text-panel-controls form .fieldset-color-text,
-.fieldset-background-text{
-  width: 39%;
-  display: flex;
-  margin-left: 3px;
-}
-
-/* 💥💥💥💥💥💥 COLOR-TEXT INPUT APPEARANCE  💥💥💥💥💥💥 */
-.text-panel-controls form
-.wrapper-input-color-and-background-text
-.fieldset-color-text #color-text{
-  background-color:transparent;
-  width: 25px;
-  border-radius: 50%;
-  border: none;
-}
-
-input[type="color"]#color-text::-webkit-color-swatch {
- border: none;
- border-radius: 50%;
-
-}
-
-/* 💥💥💥💥💥💥 BACKGROUND-TEXT INPUT APPEARANCE  💥💥💥💥💥💥 */
-.text-panel-controls form
-.wrapper-input-color-and-background-text
-.fieldset-background-text #background-text{
-  background-color:transparent;
-  width: 25px;
-  border-radius: 50%;
-  border: none;
-}
-
-input[type="color"]#background-text::-webkit-color-swatch {
-  border: none;
-  border-radius: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
  
- }
-/* 💥💥💥 TEXT FONT OUTLINE 💥💥💥 */
+}
+
+/* 💥💥💥 ALIGNMENT: BOX COLOR TEXT / BOX BACKGROUND TEXT 💥💥💥 */
+body .text-panel-controls form .wrapper-color-and-background-text .box-color-text,
+.box-background-text{
+  height: 30px;
+  display: flex;
+  justify-content:center;
+  justify-content: center;
+}
+
+.wrapper-color-and-background-text .box-color-text .title-color,
+.box-background-text .title-background{
+  position: relative;
+  top: -30%;
+  left: -5%;
+}
+
+
+/* .... appearance color-text, backgroubd text (input) .... */
+.text-panel-controls form .wrapper-color-and-background-text
+.box-color-text #color-text,
+.box-background-text #background-text{
+  background-color:transparent;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none; 
+  margin: -14%;
+}
+
+input[type="color"]#color-text::-webkit-color-swatch,
+input[type="color"]#background-text::-webkit-color-swatch{
+  border: none;
+  border-radius: 50%;
+  
+}
+
+/* ........ name (color,background) text ........ */
+.wrapper-color-and-background-text .box-color-text .name-color-text,
+.wrapper-color-and-background-text .box-background-text .name-background-text{
+  margin-left: 15%;
+  margin-top: -6%;
+}
+
+/* ..... checkbox appearance no (top, bottom) text ..... */ 
+#checkbox-no-top-text[type="checkbox"],
+#checkbox-no-bottom-text[type="checkbox"],
+#checkbox-transparent-background-text[type="checkbox"] {
+  appearance: none;
+  margin-top: 4%;
+}
+
+#checkbox-no-top-text[type="checkbox"] + .label-icon-checkbox::before,
+#checkbox-no-bottom-text[type="checkbox"] + .label-icon-checkbox::before,
+#checkbox-transparent-background-text[type="checkbox"] + .label-icon-checkbox::before{
+  border: 1px solid var(--colorWhitesmoke);
+  border-radius: 50%;
+  content: "💥";
+  font-size: 8px;
+  text-align: center;
+}
+
+#checkbox-no-top-text[type="checkbox"]:checked + .label-icon-checkbox::before,
+#checkbox-no-bottom-text[type="checkbox"]:checked + .label-icon-checkbox::before,
+#checkbox-transparent-background-text[type="checkbox"]:checked + .label-icon-checkbox::before  {
+  border-color: #fffefe;
+  color: transparent;
+}
+
+/* ........... box-transparent-background-text ........... */
+.wrapper-color-and-background-text #checkbox-transparent-background-text{
+ margin-left: -35%;
+
+}
+
+/* 💥💥💥💥💥💥💥💥 TEXT FONT OUTLINE 💥💥💥💥💥💥💥💥*/
 body .text-panel-controls form .text-font-outline{
+  margin-top: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 3px;
 }
 
-/* 💥💥💥 BUTTONS: TEXT FONT OUTLINE 💥💥💥 */
+/* 💥💥💥💥💥💥 BUTTONS: TEXT FONT OUTLINE 💥💥💥💥💥💥 */
 body .text-panel-controls form .text-font-outline
-#text-outline-none,
-#text-outline-light,
-#text-outline-dark{
-  width: 30%;
-  text-align: left;
-  letter-spacing: 1.3px;
+#no-text-outline,
+#light-text-outline,
+#dark-text-outline{
+  width: 80%;
+  font-size: 0.9em;
+  text-align: center;
+  letter-spacing: 1px;
   border: none;
-  border-end-end-radius: 30px;
+  border-radius: 50px 90px 80px 10px;
+  margin: 0;
   padding: 7px;
 }
 
 body .text-panel-controls form .text-font-outline
 #text-outline-none:hover{
-  background-color: #370467;
+  background-color: var(--color-370467);
 }
 
 body .text-panel-controls form .text-font-outline
 #text-outline-light:hover{
-  background-color: #370467;
+  background-color: var(--color-370467);
 }
 
 body .text-panel-controls form .text-font-outline
 #text-outline-dark:hover{
-  background-color: #370467;
+  background-color: var(--color-370467);
 }
 
 /* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
-/* 
-@media (min-width: 768px) {
 
-} */
+@media (min-width: 768px) {
+  /* aside{
+    display: none;
+  } */
+
+}
 
 /* @-@-@-@- MEDIA QUERIE DESKTOP -@-@-@-@ */
 

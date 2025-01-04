@@ -2,7 +2,7 @@
 /* 💥💥💥💥💥💥 MAIN: MEME 💥💥💥💥💥💥 */
 /* ... Alignment:container and download button ... */
 main{
-  background-color: #050349;
+  background-color: rgb(87, 11, 85);
   /* background-color: linear-gradient(#181317, #ad2c91, #201423); */
   width: 100%;
   height: 460px;
@@ -19,6 +19,31 @@ main .container-meme{
   background-color: #030303;
   width: 90%;
   height: 300px;
+  text-align: center;
+}
+
+/* 💥💥💥💥💥💥 IMAGE MEME  💥💥💥💥💥💥 */
+main .container-meme .image-meme{
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+
+/* 💥💥💥💥💥💥 WRAPPER TEXT IMAGE MEME  💥💥💥💥💥💥 */
+main .container-meme .wrapper-text-image-meme{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position:relative;
+  top: -100%;
+  z-index: 1;
 }
 
 /* 💥💥💥 STYLES: TOP TEX / BOTTOM TEX  💥💥💥 */
@@ -29,24 +54,14 @@ main .container-meme .top-text-meme,
   /* -webkit-text-stroke: 1px white; */
   margin: 0;
   padding: 10px;
-}
-
-/* 💥💥💥💥💥💥 IMAGE MEME  💥💥💥💥💥💥 */
-main .container-meme .image-meme{
-  background-color: #c42f2f;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  
+  /* word-break: break-all; */
+  overflow-wrap: break-word;
+  position: relative;
 }
 
 /* 💥💥💥💥💥 BUTTON DOWNLOAD 💥💥💥💥💥 */
 main .download-meme{
-  background-color: #2b59ae;
+  background-color:#6c29ab;
   width: 50%;
   font-size: 0.9em;
   letter-spacing: 1px;
@@ -63,10 +78,10 @@ main .download-meme::before{
   content: "\f019";
   margin-right: 5%;
 } 
+
 /* .... download-meme: pseudoelement color change .... */
 main .download-meme:hover{
-  background-color: rgb(128, 120, 202);
+  background-color: #9822a5;
 }
-
 
 /* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */

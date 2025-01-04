@@ -1,35 +1,54 @@
 
-/* 💥💥💥💥💥💥 IMAGE PANEL CONTROLS (ASIDE) 💥💥💥💥💥💥 */
-body .image-panel-controls{
-  background-color:#251d2e;
-  display: flex;
-  flex-direction: column;
-  z-index: 2;
+.image-panel-controls{
+  display: none;
+} 
+/* 💥💥💥💥💥💥 TITLE IMAGE FORM 💥💥💥💥💥💥 */
+body aside .title-image-form{
+  margin: -1% 0% 5%;
 }
 
-/* 💥💥💥 IMAGE URL 💥💥💥 */
+/* 💥💥💥💥💥💥 ALIGNMENT: WRAPPER URL IMAGE ELEMENTS💥💥💥💥💥💥 */
 .image-panel-controls .wrapper-url-image-meme{
   display: flex;
   flex-direction: column;
+}
 
+/* 💥💥💥💥💥 URL IMAGE MEME (input) 💥💥💥💥💥 */
+form .wrapper-url-image-meme #url-image-meme{
+  height: 40px;
+  border: none;
+  margin-bottom: 10%;
+}
+
+.wrapper-url-image-meme .slide-range{
+  margin: 8% 2%;
 }
 
 /* 💥💥💥 IMAGE BACKGROUND COLOR (FONDO) 💥💥💥 */
-.select-color-and-background-image{
+.wrapper-color-and-background-image{
   display: flex;
   justify-content: center;
   gap: 12px;
 }
 
-.wrapper-input-background-color-image,
+/* .... box-input-background-color-image .... */
+.box-input-background-color-image{
+  background-color: #393e49;
+  display: flex;
+}
+
+/* .... width elements .... */
+.box-input-background-color-image,
 #select-blend-mode-image{
   width: 50%;
 }
 
+
 /* 💥💥💥💥💥💥 COLOR INPUT APPEARANCE  💥💥💥💥💥💥 */
-#background-color-image{
+.wrapper-color-and-background-image .box-input-background-color-image #background-color-image{
   background-color:transparent;
-  width: 25px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   border: none;
 }
@@ -37,13 +56,41 @@ body .image-panel-controls{
 input[type="color"]#background-color-image::-webkit-color-swatch {
  border: none;
  border-radius: 50%;
+}
 
+.wrapper-color-and-background-image .box-input-background-color-image{
+  height: 40px;
+}
+
+.box-input-background-color-image .name-background-color-image{
+  line-height: 2;
 }
 
 /* 💥💥💥💥💥💥 FILTERS IMAGE 💥💥💥💥💥💥 */
-body .image-panel-controls form .filter-image{
+body .image-panel-controls form .wrapper-filter-image{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+/* 💥💥💥💥💥💥 RANGE INPUT APPEARANCE  💥💥💥💥💥💥 */
+.image-panel-controls form .wrapper-filter-image .slide-range,
+.wrapper-url-image-meme .slide-range{
+  height: 3px;
+}
+
+/* 💥💥💥💥💥💥 BUTTON RESET FILTER IMAGE 💥💥💥💥💥💥 */
+#button-reset-filter-image{
+  background-color:#6c29ab;
+  width: 50%;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  line-height: 2;
+  border: none;
+  border-radius: 30px;
+  padding: 3px;
+  margin-top: 10%;
+  margin: auto;
+  margin-top: 10%;
 }

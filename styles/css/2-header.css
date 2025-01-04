@@ -3,7 +3,7 @@
 
 /* 💥💥💥💥💥 HEADER: ALIGN ELEMENTS 💥💥💥💥💥 */
 header{
-  background-color: #1e0839;
+  background-color: #0b0a0b;
   width:var(--width);
   height: 130px;
   font-family: var(--fontGenos);
@@ -27,7 +27,7 @@ header .nav-menu{/* Alignment: nav buttons*/
   /* background-color: #2b2bbb; */
   width: var(--width);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
@@ -73,9 +73,24 @@ header .nav-menu .button-mode::before{
 
 /* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
+  header{
+    height: 250px;
+  }
 
-} */
+  header .title-meme{
+    font-size: 3em;
+  }
+
+  header .nav-menu{
+  
+  }
+  header .nav-menu .btn-nav-menu{
+    font-size: 2em;
+    
+  }
+
+} 
 
 /* @-@-@-@- MEDIA QUERIE DESKTOP -@-@-@-@ */
 

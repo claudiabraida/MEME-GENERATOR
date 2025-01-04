@@ -31,15 +31,17 @@
   
   <!-- ※※※※※※※※※※※※ MAIN: MEME ※※※※※※※※※※※※ -->
   <main>
-    <section class="container-meme">
-      <div class="image-meme">
+    <div class="container-meme">
+      <div class="image-meme"></div>
+      <div class="wrapper-text-image-meme">
         <p class="top-text-meme">Top Text</p>
         <p class="bottom-text-meme">Bottom Text</p>
       </div>
-    </section>
+    </div>
     <button class="download-meme">descargar meme</button>
   </main>
   
+ 
   <!-- ※※※※※※※※※※ IMAGE PANEL CONTROL ※※※※※※※※※※ -->
   <aside class="image-panel-controls">
     <!-- __________________ BUTTON CLOSE IMAGE PANEL __________________ -->
@@ -53,16 +55,16 @@
         <input type="url" name="url-image-meme" id="url-image-meme">
        <!-- _____________________ IMAGE SIZE _____________________ -->
         <label for="image-size">Tamaño de imagen</label>
-        <input type="range" name="image-size" id="image-size">
+        <input class="slide-range" type="range" name="image-size" id="image-size">
       </fieldset>
 
       <!-- _____________ IMAGE BACKGROUND COLOR (FONDO) ____________ -->
-      <fieldset class="select-color-and-background-image">
+      <fieldset class="wrapper-color-and-background-image">
         <legend>fondo</legend>
         <!--  ............input-background-color-image ............ -->
-        <div class="wrapper-input-background-color-image">
+        <div class="box-input-background-color-image">
           <input type="color" name="background-color-image" id="background-color-image">
-        <!--  ............name-background-color-image ............ -->
+         <!--  ............name-background-color-image ............ -->
           <label class="name-background-color-image" for="background-color-image">#FFFFFF</label>
         </div>
         
@@ -78,35 +80,35 @@
       </fieldset>
       
       <!-- ____________________ FILTERS IMAGE  ____________________ -->
-      <fieldset class="filter-image">
+      <fieldset class="wrapper-filter-image">
         <legend>filtros</legend>
 
         <label class="filter-name" for="brightness">brillo</label>
-        <input type="range" name="brightness" id="brightness">
+        <input class="slide-range" type="range" name="brightness" id="brightness">
         
         <label class="filter-name" for="opacity">opacidad</label>
-        <input type="range" name="opacity" id="opacity">
+        <input class="slide-range" type="range" name="opacity" id="opacity">
 
         <label class="filter-name" for="contrast">contraste</label>
-        <input type="range" name="contrast" id="contrast">
+        <input class="slide-range" type="range" name="contrast" id="contrast">
 
         <label class="filter-name" for="blur">desenfoque</label>
-        <input type="range" name="blur" id="blur">
+        <input class="slide-range" type="range" name="blur" id="blur">
 
         <label for="grayscale">escala de grises</label>
-        <input type="range" name="grayscale" id="grayscale">
+        <input class="slide-range" type="range" name="grayscale" id="grayscale">
 
         <label for="sepia">sepia</label>
-        <input type="range" name="sepia" id="sepia">
+        <input class="slide-range" type="range" name="sepia" id="sepia">
 
         <label class="filter-name" for="hue">hue</label>
-        <input type="range" name="hue" id="hue">
+        <input class="slide-range" type="range" name="hue" id="hue">
 
         <label class="filter-name" for="saturate">saturado</label>
-        <input type="range" name="saturate" id="saturate">
+        <input class="slide-range" type="range" name="saturate" id="saturate">
 
         <label class="filter-name" for="invert">negativo</label>
-        <input type="range" name="invert" id="invert">
+        <input class="slide-range" type="range" name="invert" id="invert">
        <!-- _________ BUTTON RESET FILTERS IMAGE  _________ -->
         <button type="button" id="button-reset-filter-image">restablecer</button>
       </fieldset>
@@ -116,28 +118,34 @@
   <!-- ※※※※※※※※※※ TEXT PANEL CONTROL ※※※※※※※※※※ -->
   <aside class="text-panel-controls">
     <!-- ________________ BUTTON CLOSE TEXT PANEL ________________ -->
+
     <button class="btn-close close-text-panel-controls">x</button>
+    
+    <!-- ____________________ TITLE TEXT FORM ____________________ -->
     <p class="title-text-form">texto</p>
+
     <form action="">
+      <!-- ___________ FIELDSET TOP-TEXT AREA ___________ -->
       <fieldset class="fieldset-top-text-area">
         <legend>superior</legend>
-        <!-- __________________ TEXTAREA TOP TEXT (WRITE) __________________ -->
-        <textarea name="top-text-area" id="top-text-area" placeholder="top text" cols="16" rows="2"></textarea>
+        <!--...... TEXTAREA TOP TEXT (WRITE)...... -->
+        <textarea name="top-text-area" id="top-text-area"  placeholder="top text" cols="16" rows="2">top tex</textarea>
         <!-- ______________ NO TOP TEXT (checkbox)  ______________ -->   
-        <input type="checkbox" checked name="no-top-text" id="no-top-text">
-        <label for="no-top-text">sin texto superior</label>
+        <input type="checkbox" checked name="no-top-text" id="checkbox-no-top-text">
+        <label class="label-icon-checkbox" for="checkbox-no-top-text">sin texto superior</label>
       </fieldset>
       
+      <!-- ___________ FIELDSET BOTTOM TEXT AREA ___________ -->
       <fieldset class="fieldset-bottom-text-area">
         <legend>inferior</legend>
-        <!-- ___________________ TEXTAREA BOTTOM TEXT (WRITE) ___________________ -->
-        <textarea name="bottom-text-area" id="bottom-text-area" placeholder="bottom text" cols="16" rows="2"></textarea>
+        <!-- ...... TEXTAREA BOTTOM TEXT (WRITE) ...... -->
+        <textarea name="bottom-text-area" id="bottom-text-area" cols="16" rows="2">bottom text</textarea>
         <!-- ______________ NO BOTTOM TEXT (checkbox)  ______________ -->   
-        <input type="checkbox" checked name="no-bottom-text" id="no-bottom-text">
-        <label for="no-bottom-text">sin texto inferior</label>
+        <input type="checkbox" checked name="no-bottom-text" id="checkbox-no-bottom-text">
+        <label class="label-icon-checkbox" for="checkbox-no-bottom-text">sin texto inferior</label>
       </fieldset>
 
-      <!-- __________________ SELECT FONT-FAMILY __________________ -->
+      <!-- ________________________ SELECT FONT-FAMILY ________________________ -->
       <fieldset>
         <legend>fuente</legend>
         <select name="select-font" id="select-font" >
@@ -154,51 +162,54 @@
         </select>
       </fieldset>
 
-      <fieldset class="wrapper-font-align-text">
+      <!-- ________________________ SELECT FONT-FAMILY ________________________ -->
+      <fieldset class="wrapper-font-text">
         <!-- __________________ FONT SIZE -TEXT __________________ -->
-        <input type="number" name="font-size-text" id="font-size-text" placeholder="tamaño de fuente">
+        <legend>tamaño</legend>
+      
+        <input type="number" name="font-size-text" id="font-size-text" >
         <!-- _____________________ ALIGN-TEXT _____________________ -->
-        <button type="button" id="align-text-left"></button>
-        <button type="button" id="align-text-center"></button>
-        <button type="button" id="align-text-right"></button>
+        <button type="button" id="align-text-left" aria-label="align text left"></button>
+        <button type="button" id="align-text-center" aria-label="align text center"></button>
+        <button type="button" id="align-text-right" aria-label="align text right "></button>
       </fieldset>
       
-      <!-- _____________________ TEXT COLOR and BACKGROUND _____________ -->
-      <div class="wrapper-input-color-and-background-text">
-        <!-- _______ TEXT COLOR _______ -->
-        <fieldset class="fieldset-color-text">
-          <legend>color</legend>
+      <!-- _____________________ WRAPPER COLOR AND BACKGROUND TEXT _____________ -->
+      <div class="wrapper-color-and-background-text">
+        <!-- ________________ BOX TEXT COLOR ________________ -->
+        <fieldset class="box-color-text">
+          <legend class="title-color">color</legend>
           <input type="color" name="color-text" id="color-text">
           <label class="name-color-text" for="color-text">#000000</label>
         </fieldset>
-        <!-- _______ TEXT BACKGROUND COLOR _______ -->
-        <fieldset class="fieldset-background-text">
-          <legend>fondo</legend>
+        <!-- ___________TEXT BACKGROUND COLOR ___________ -->
+        <fieldset class="box-background-text">
+          <legend class="title-background">fondo</legend>
           <input type="color" name="background-text" id="background-text">
           <label class="name-background-text" for="background-text">#FFFFFF</label>
           <!-- _______ TEXT TRANSPARENT (CHECKBOX) _______ -->
         </fieldset>
-        <div class="wrapper-transparent-background-text">
-          <input type="checkbox" checked name="transparent-background-text" id="transparent-background-text">
-          <label class="transparent-backg-text" for="transparent-background-text">fondo transparente</label>
+        <div class="box-transparent-background-text">
+          <input type="checkbox" checked name="transparent-background-text" id="checkbox-transparent-background-text">
+          <label class="label-icon-checkbox" for="checkbox-transparent-background-text">fondo transparente</label>
         </div>
       </div>
 
-      <!-- _______ TEXT FONT OUTLINE _______ -->
+      <!-- _________________________ TEXT FONT OUTLINE _________________________ -->
       <fieldset class="text-font-outline">
         <legend>contorno</legend>
-        <button type="button" id="text-outline-none">ninguno</button>
-        <button type="button" id="text-outline-light">claro</button>
-        <button type="button" id="text-outline-dark">oscuro</button>
+        <button type="button" id="no-text-outline" aria aria-label="no text outline">ninguno</button>
+        <button type="button" id="light-text-outline" aria-label="light text outline">claro</button>
+        <button type="button" id="dark-text-outline" aria-label="dark text outline">oscuro</button>
       </fieldset>
 
-      <!-- _______ TEXT LINE HEIGHT _______ -->
+      <!-- _________________________ TEXT LINE HEIGHT _________________________ -->
       <fieldset>
         <legend>interlineado</legend>
-        <input type="number" name="text-line-height" id="input-text-line-height" placeholder="numero de interlineado">
+        <input type="number" name="text-line-height" id="input-text-line-height">
       </fieldset>
 
-      <!-- _______ TEXT LETTER SPACING _______ -->
+      <!-- _______________________ TEXT LETTER SPACING _______________________ -->
        <fieldset>
         <legend>espaciado</legend>
         <select name="select-letter-spacing-text" id="select-letter-spacing-text">
