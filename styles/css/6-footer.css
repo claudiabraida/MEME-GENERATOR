@@ -6,14 +6,16 @@ footer{
   
 }
 
-/* ................MEDIA QUERIE TABLET................ */
+/* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
+
 @media (min-width: 768px) {
   footer{
     height: 83px;
   }
-
+  
 }
 
+/* @-@-@-@- MEDIA QUERIE DESKTOP -@-@-@-@ */
 @media (min-width: 1024px) {
   footer{
     height: 88px;

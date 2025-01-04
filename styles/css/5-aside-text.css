@@ -145,7 +145,6 @@ input[type="color"]#color-text::-webkit-color-swatch,
 input[type="color"]#background-text::-webkit-color-swatch{
   border: none;
   border-radius: 50%;
-  
 }
 
 /* ........ name (color,background) text ........ */
