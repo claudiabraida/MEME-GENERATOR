@@ -521,23 +521,22 @@ $selectLetterSpacingText.value ="12"
 
 
 /* FONT VALUES */
-$selectFontFamily.value="Impact"
 $selectFontFamily.value="Barrio"
-$selectFontFamily.value="Montserrat Alternates"
-$selectFontFamily.value="Griffy"
-$selectFontFamily.value="Special Elite"
+$selectFontFamily.value="Combo"
 $selectFontFamily.value="Genos"
-$selectFontFamily.value="Permanent Marker"
+$selectFontFamily.value="Griffy"
 $selectFontFamily.value="Kranky"
+$selectFontFamily.value="Montserrat Alternates"
+$selectFontFamily.value="Permanent Marker"
+$selectFontFamily.value="Special Elite"
 $selectFontFamily.value="Black Ops One"
+
 
 $selectFontFamily.addEventListener("input", () => {
   $pTopTextMeme.style.fontFamily = $selectFontFamily.value
   $pBottomTextMeme.style.fontFamily = $selectFontFamily.value
 })
 
-// $selectFontFamily.addEventListener("input", () => {
-// })
 
 /* 💥💥💥💥💥💥 EVENT INPUT FONT SIZE TEXT 💥💥💥💥💥💥💥 */
 

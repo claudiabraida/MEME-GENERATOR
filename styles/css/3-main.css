@@ -50,7 +50,7 @@ main .container-meme .wrapper-text-image-meme{
 main .container-meme .top-text-meme,
 .bottom-text-meme{
   background-color: #ffffff;
-  /* font-family: "barrio"; */
+  font-family: "Black Ops One";
   text-transform: var(--converter);
   margin: 0;
   padding: 10px;
