@@ -3,7 +3,11 @@
 
 /* 💥💥💥💥💥 HEADER: ALIGN ELEMENTS 💥💥💥💥💥 */
 header{
-  background-color: #0b0a0b;
+  /* background-color: #0b0a0b; */
+  /* background: linear-gradient(#a262c6, #a693e1, #ba53ff); */
+
+  background: linear-gradient(#181317, #ad2c91, #201423);
+
   width:var(--width);
   height: 130px;
   font-family: var(--fontGenos);
@@ -76,6 +80,8 @@ header .nav-menu .button-mode::before{
 @media (min-width: 768px) {
   header{
     height: 250px;
+    justify-content: center;
+    gap: 10px;
   }
 
   header .title-meme{
@@ -83,11 +89,12 @@ header .nav-menu .button-mode::before{
   }
 
   /* header .nav-menu{
-  
+    background-color: blueviolet;
   } */
+
   header .nav-menu .btn-nav-menu{
     font-size: 2em;
-    
+  
   }
 
 } 

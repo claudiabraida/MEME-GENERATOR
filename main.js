@@ -54,7 +54,7 @@ const $labelNameBackgroundColorImage = $(".name-background-color-image");
 /* 💠💠💠💠💠 VARIABLE SELECT BLEND MODE IMAGE (FONDO) 💠💠💠💠💠 */
 const $selectBlendModeImage = $("#select-blend-mode-image")
 
-/* 💠💠💠💠💠💠💠💠💠 VARIABLES FILTERS IMAGE 💠💠💠💠💠💠💠💠 */ 
+/* 💠💠💠💠💠💠💠💠💠 VARIABLES FILTERS IMAGE 💠💠💠💠💠💠💠💠 */
 const $inputRangeBrightness = $("#brightness");
 const $inputRangeOpacity = $("#opacity");
 const $inputRangeContrast = $("#contrast");
@@ -65,7 +65,7 @@ const $inputRangeHue = $("#hue")
 const $inputRangeSaturate = $("#saturate")
 const $inputRangeInvert = $("#invert")
 
-/* 💠💠💠💠💠💠 VARIABLE BUTTON RESET FILTERS IMAGE 💠💠💠💠💠💠 */ 
+/* 💠💠💠💠💠💠 VARIABLE BUTTON RESET FILTERS IMAGE 💠💠💠💠💠💠 */
 const $buttonResetFilterImage = $("#button-reset-filter-image");
 
 
@@ -84,8 +84,8 @@ const $selectFontFamily = $("#select-font");
 const $inputFontSizeText = $("#font-size-text");
 
 /* 💠💠💠💠💠💠💠 VARIABLE ALIGN-TEXT (alineacion) 💠💠💠💠💠💠💠 */
-const $inputButtonAlignLeft = $("#align-text-left");//izquierda 
-const $inputButtonAlignCenter = $("#align-text-center");//centrado       
+const $inputButtonAlignLeft = $("#align-text-left");//izquierda
+const $inputButtonAlignCenter = $("#align-text-center");//centrado
 const $inputButtonAlignRight = $("#align-text-right");//derecha
 
 /* 💠💠💠💠💠💠💠 VARIABLE INPUT TEXT COLOR 💠💠💠💠💠💠💠 */
@@ -119,13 +119,14 @@ function fusionFilters () {$divImageMeme.style.filter = `
   brightness(${$inputRangeBrightness.value})
   opacity(${$inputRangeOpacity.value})
   contrast(${$inputRangeContrast.value}%)
-  blur(${$inputRangeBlur.value}px) 
-  grayscale(${$inputRangeGrayscale.value}%) 
-  sepia(${$inputRangeSepia.value}%) 
+  blur(${$inputRangeBlur.value}px)
+  grayscale(${$inputRangeGrayscale.value}%)
+  sepia(${$inputRangeSepia.value}%)
   hue-rotate(${$inputRangeHue.value}deg)
-  saturate(${$inputRangeSaturate.value}%) 
+  saturate(${$inputRangeSaturate.value}%)
   invert(${$inputRangeInvert.value})`
 }
+
 
 /* 💡💡💡💡💡💡💡💡 FUNTION RESET VALUES FILTER IMAGE 💡💡💡💡💡💡💡💡 */
 function resetValuesFilters () {
@@ -133,61 +134,61 @@ function resetValuesFilters () {
   $inputRangeImageSize.value = "100"
   $inputRangeImageSize.max = "300"
   $inputRangeImageSize.step = "1"
-  
+
   /* FILTER BRIGHTNESS */
   $inputRangeBrightness.value = "1"
   $inputRangeBrightness.min = "0"
   $inputRangeBrightness.max = "1"
   $inputRangeBrightness.step = "0.1"
-   
+
   /* FILTER OPACITY */
   $inputRangeOpacity.value = "1"
   $inputRangeOpacity.min = "0"
   $inputRangeOpacity.max = "1"
   $inputRangeOpacity.step = "0.1"
-   
+
   /* FILTER CONTRAST */
   $inputRangeContrast.value = "100"
   $inputRangeContrast.min = "0"
   $inputRangeContrast.max = "400"
   $inputRangeContrast.step = "1"
-  
+
   /* FILTER BLUR */
   $inputRangeBlur.value = "0"
   $inputRangeBlur.min = "0"
   $inputRangeBlur.max = "10"
   $inputRangeBlur.step = "0.1"
-  
+
   /* FILTER GRAYSACLE */
   $inputRangeGrayscale.value = "0"
   $inputRangeGrayscale.min = "0"
   $inputRangeGrayscale.max = "100"
   $inputRangeGrayscale.step = "1"
-  
+
   /* FILTER SEPIA */
   $inputRangeSepia.value = "0"
   $inputRangeSepia.min = "0"
   $inputRangeSepia.max = "100"
   $inputRangeSepia.step = "1"
-  
+
   /* FILTER HUE */
   $inputRangeHue.value = "0"
   $inputRangeHue.min = "0"
   $inputRangeHue.max = "359"
   $inputRangeHue.step = "1"
-  
+
   /* FILTER SATURATE */
   $inputRangeSaturate.value = "1"
   $inputRangeSaturate.min = "100"
   $inputRangeSaturate.max = "1000"
   $inputRangeSaturate.step = "10"
-  
+
   /* FILTER INVERT */
   $inputRangeInvert.value = "0"
   $inputRangeInvert.min = "0"
   $inputRangeInvert.max = "1"
   $inputRangeInvert.step = "0.1"
-  
+
   /* INITIAL VALUES */
   /* image size */
   $divImageMeme.style.backgroundSize = `${$inputRangeImageSize.value}%`
@@ -220,7 +221,7 @@ $buttonImage.addEventListener("click", () => {
 $buttonMode.addEventListener("click", () => {
   $buttonMode.innerText = "Modo Claro"
   /* .... header .... */
-  $header.style.backgroundColor = "#af7df9"
+  $header.style.background = `linear-gradient( #a262c6,  #a693e1, #ba53ff)`
   /* .... title meme .... */
   $titleMeme.style.color = "#000000"
   /* .... button nav menu .... */
@@ -232,6 +233,9 @@ $buttonMode.addEventListener("click", () => {
   /* .... button download .... */
   $buttonDownloadMeme.style.backgroundColor = "#af7df9"
   $buttonDownloadMeme.style.color = "#000000"
+  /* .... button close text panel controls.... */
+  $buttonCloseTextPanelControls.style.color = "#000000"
+  $buttonCloseImagePanelControls.style.color = "#000000"
   /* .... panels .... */
   $asideImagePanelControls.style.backgroundColor = "#be9be8"
   $asideTextPanelControls.style.backgroundColor = "#be9be8"
@@ -272,8 +276,8 @@ $buttonMode.addEventListener("click", () => {
   /* .... title color .... */
   $legendTitleColor.style.color = "#000000"
   /* .... box color text .... */
-  $boxColorText.style.backgroundColor = "#e4ceff" 
-  $boxColorText.style.color = "#000000" 
+  $boxColorText.style.backgroundColor = "#e4ceff"
+  $boxColorText.style.color = "#000000"
   /* .... title background .... */
   $legendTitleBackground.style.color = "#000000"
   /* .... box background color text .... */
@@ -281,10 +285,10 @@ $buttonMode.addEventListener("click", () => {
   $boxBackgroundText.style.color = "#000000"
   /* .... no-text-outline .... */
   $buttonNoTextOutline.style.backgroundColor = "#e4ceff"
-  $buttonNoTextOutline.style.color = "#000000" 
+  $buttonNoTextOutline.style.color = "#000000"
   /* .... light text outline .... */
   $buttonLightTextOutline.style.backgroundColor = "#e4ceff"
-  $buttonLightTextOutline.style.color = "#000000" 
+  $buttonLightTextOutline.style.color = "#000000"
   /* .... dark text outline .... */
   $buttonDarkTextOutline.style.backgroundColor = "#e4ceff"
   $buttonDarkTextOutline.style.color = "#000000"
@@ -303,19 +307,23 @@ $buttonMode.addEventListener("click", () => {
     $bodyDarkMode.classList.remove("body-light-mode")
     $bodyDarkMode.classList.add("body-dark-mode")
     $buttonMode.innerText = "Modo Oscuro"
-    /* .... header ... */
-    $header.style.backgroundColor = "#000000"
-    /* .... title meme ... */
+    /* .... header .... */
+    $header.style.background = ""
+    /* .... title meme .... */
     $titleMeme.style.color = "#ffffff"
-    /* .... button nav menu ... */
+    /* .... button nav menu .... */
     $buttonImage.style.color = "whitesmoke"
     $buttonText.style.color = "whitesmoke"
     $buttonMode.style.color = "whitesmoke"
     /* .... main ... */
     $main.style.backgroundColor = "#570b55"
-    /* .... button download ... */
+    /* .... button download .... */
     $buttonDownloadMeme.style.backgroundColor = "#6c29ab"
     $buttonDownloadMeme.style.color = "#ffffff"
+    /* .... button close text panel controls.... */
+    $buttonCloseTextPanelControls.style.color = "#ffffff"
+    $buttonCloseImagePanelControls.style.color = "#ffffff"
+
     /* .... panels .... */
     $asideImagePanelControls.style.backgroundColor = "#2f1130"
     $asideTextPanelControls.style.backgroundColor = "#2f1130"
@@ -356,7 +364,7 @@ $buttonMode.addEventListener("click", () => {
     /* .... title color .... */
     $legendTitleColor.style.color = "#ffffff"
     /* .... box color text .... */
-    $boxColorText.style.backgroundColor = "#66487a" 
+    $boxColorText.style.backgroundColor = "#66487a"
     $boxColorText.style.color = "#ffffff"
     /* .... title background .... */
     $legendTitleBackground.style.color = "#ffffff"
@@ -364,11 +372,11 @@ $buttonMode.addEventListener("click", () => {
     $boxBackgroundText.style.backgroundColor = "#66487a"
     $boxBackgroundText.style.color = "#ffffff"
     /* .... no-text-outline .... */
-    $buttonNoTextOutline.style.backgroundColor = "#66487a" 
-    $buttonNoTextOutline.style.color = "#ffffff" 
+    $buttonNoTextOutline.style.backgroundColor = "#66487a"
+    $buttonNoTextOutline.style.color = "#ffffff"
     /* .... light text outline .... */
-    $buttonLightTextOutline.style.backgroundColor = "#66487a" 
-    $buttonLightTextOutline.style.color = "#ffffff" 
+    $buttonLightTextOutline.style.backgroundColor = "#66487a"
+    $buttonLightTextOutline.style.color = "#ffffff"
     /* .... dark text outline .... */
     $buttonDarkTextOutline.style.backgroundColor = "#66487a"
     $buttonDarkTextOutline.style.color = "#ffffff"
@@ -378,6 +386,7 @@ $buttonMode.addEventListener("click", () => {
     // select-letter-spacing-text
     $selectLetterSpacingText.style.backgroundColor = "#66487a"
     $selectLetterSpacingText.style.color = "#ffffff"
+
   }
 
 })
@@ -400,13 +409,13 @@ $inputUrlImageMeme.addEventListener("input", () => {
 })
 
 
-/* 💥💥💥💥💥💥💥💥💥💥 EVENT IMAGE SIZE 💥💥💥💥💥💥💥💥💥💥 */ 
+/* 💥💥💥💥💥💥💥💥💥💥 EVENT IMAGE SIZE 💥💥💥💥💥💥💥💥💥💥 */
 $inputRangeImageSize.addEventListener("input", () => {
   $divImageMeme.style.backgroundSize = `${$inputRangeImageSize.value}%`
 })
 
 
-/* 💥💥💥💥💥 EVENT INPUT IMAGE BACKGROUND COLOR (FONDO)  💥💥💥💥💥 */ 
+/* 💥💥💥💥💥 EVENT INPUT IMAGE BACKGROUND COLOR (FONDO)  💥💥💥💥💥 */
 $inputBackgroundColorImage.value = "#ffffff"/* default value input color */
 
 
@@ -510,9 +519,6 @@ $selectLetterSpacingText.value ="8"
 $selectLetterSpacingText.value ="10"
 $selectLetterSpacingText.value ="12"
 
-$selectFontFamily.addEventListener("input", () => {
-  $pTopTextMeme.style.fontFamily = $selectFontFamily.value
-})
 
 /* FONT VALUES */
 $selectFontFamily.value="Combo"
@@ -526,8 +532,12 @@ $selectFontFamily.value="Kranky"
 $selectFontFamily.value="Black Ops One"
 
 $selectFontFamily.addEventListener("input", () => {
+  $pTopTextMeme.style.fontFamily = $selectFontFamily.value
   $pBottomTextMeme.style.fontFamily = $selectFontFamily.value
 })
+
+// $selectFontFamily.addEventListener("input", () => {
+// })
 
 /* 💥💥💥💥💥💥 EVENT INPUT FONT SIZE TEXT 💥💥💥💥💥💥💥 */
 
@@ -568,15 +578,15 @@ $inputColorText.addEventListener("input", () => {
 $inputBackgroundText.value ="#ffffff" /* default value input color */
 
 $inputBackgroundText.addEventListener("input", () => {
-  $labelNameBackgroundText.innerText = $inputBackgroundText.value 
+  $labelNameBackgroundText.innerText = $inputBackgroundText.value
   $pTopTextMeme.style.backgroundColor = $inputBackgroundText.value
   $pBottomTextMeme.style.backgroundColor = $inputBackgroundText.value
 })
 
 
 /* 💥💥💥💥💥💥 EVENT TEXT TRANSPARENT (CHECKBOX)💥💥💥💥💥💥💥 */
-$pTopTextMeme.style.backgroundColor = "whitesmoke"
-$pBottomTextMeme.style.backgroundColor = "whitesmoke"
+// $pTopTextMeme.style.backgroundColor = ""
+// $pBottomTextMeme.style.backgroundColor = ""
 
 $checkboxTransparentBackgroundText.addEventListener("change", () => {
   $pTopTextMeme.style.backgroundColor = "transparent"
@@ -588,10 +598,24 @@ $checkboxTransparentBackgroundText.addEventListener("change", () => {
   }
 })
 
-
 /* 💥💥💥💥💥💥 EVENT TEXT FONT OUTLINE💥💥💥💥💥💥💥 */
 // ??????????????????????????????????????????????????????????
-  /* -webkit-text-stroke: 1px white; */
+$buttonNoTextOutline.addEventListener("click", () => {
+  $pTopTextMeme.style.webkitTextStroke = "initial"
+  $pBottomTextMeme.style.webkitTextStroke = "initial"
+})
+
+$buttonLightTextOutline.addEventListener("click", () => {
+  $pTopTextMeme.style.webkitTextStroke = "1px #ffffff"
+  $pBottomTextMeme.style.webkitTextStroke = "1px #ffffff"
+})
+
+$buttonDarkTextOutline.addEventListener("click", () => {
+  $pTopTextMeme.style.webkitTextStroke = "1px #000000"
+  $pBottomTextMeme.style.webkitTextStroke = "1px #000000"
+})
+
+/* -webkit-text-stroke: 1px white; */
 
 /* 💥💥💥💥💥💥 EVENT TEXT LINE HEIGHT 💥💥💥💥💥💥💥 */
 
@@ -614,7 +638,7 @@ $selectLetterSpacingText.addEventListener("input", () => {
 })
 
 /* 💥💥💥💥💥💥💥 EVENT RESET PANEL TEX 💥💥💥💥💥💥💥💥 */
-
+// const $wrapperTextImageMeme = $(".wrapper-text-image-meme")
 
 /* 💥💥💥💥💥💥💥 EVENT DOWNLOAD MEME 💥💥💥💥💥💥💥💥 */
 $buttonDownloadMeme.addEventListener("click", () => {

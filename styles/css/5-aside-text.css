@@ -61,46 +61,43 @@ body .text-panel-controls form #font-size-text{
   border-end-start-radius: 19px;
 }
 
+
 /* ------ Pseudo elements buttons icons ------ */
 /* .......... left icon .......... */
-.text-panel-controls form .wrapper-font-text
-#align-text-left::before{
+.text-panel-controls form .wrapper-font-text #align-text-left::before{
   font-family: "font awesome 5 free";
   font-weight: 600;
   content: "\f036";
 }
 
 /* .......... center icon .......... */
-.text-panel-controls form .wrapper-font-text
-#align-text-center::before{
+.text-panel-controls form .wrapper-font-text #align-text-center::before{
   font-family: "font awesome 5 free";
   font-weight: 600;
   content: "\f037";
 }
 
 /* .......... right icon .......... */
-.text-panel-controls form .wrapper-font-text
-#align-text-right::before{
+.text-panel-controls form .wrapper-font-text #align-text-right::before{
   font-family: "font awesome 5 free";
   font-weight: 600;
   content: "\f038";
 }
 
 /* .... buttons align text hover .... */
-.text-panel-controls form
-.wrapper-font-text #align-text-left:hover{
-  background-color: var(--color-light-blue);
+.text-panel-controls form .wrapper-font-text #align-text-left:hover{
+  background-color: var(--color-light-violet);
 }
 
-.text-panel-controls form 
-.wrapper-font-text #align-text-right:hover{
-  background-color: var(--color-light-blue);
+.text-panel-controls form .wrapper-font-text #align-text-right:hover{
+  background-color: var(--color-light-violet);
 }
 
-.text-panel-controls form
-.wrapper-font-text #align-text-center:hover{
-  background-color: var(--color-light-blue);
+.text-panel-controls form .wrapper-font-text #align-text-center:hover{
+  background-color: var(--color-light-violet);
 }
+
+
 
 /* 💥💥💥 ALIGNMENT: WRAPPER-COLOR-AND-BACKGROUND-TEXT (elements)  💥💥💥 */
 body .text-panel-controls form .wrapper-color-and-background-text{
@@ -209,19 +206,16 @@ body .text-panel-controls form .text-font-outline
   padding: 7px;
 }
 
-body .text-panel-controls form .text-font-outline
-#text-outline-none:hover{
-  background-color: var(--color-370467);
+body .text-panel-controls form .text-font-outline #no-text-outline:hover{
+  background-color: var(--color-light-violet);
 }
 
-body .text-panel-controls form .text-font-outline
-#text-outline-light:hover{
-  background-color: var(--color-370467);
+body .text-panel-controls form .text-font-outline #light-text-outline:hover{
+  background-color: var(--color-light-violet);
 }
 
-body .text-panel-controls form .text-font-outline
-#text-outline-dark:hover{
-  background-color: var(--color-370467);
+body .text-panel-controls form .text-font-outline #dark-text-outline:hover{
+  background-color: var(--color-light-violet);
 }
 
 /* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
