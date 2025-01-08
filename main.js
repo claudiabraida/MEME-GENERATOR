@@ -521,7 +521,7 @@ $selectLetterSpacingText.value ="12"
 
 
 /* FONT VALUES */
-$selectFontFamily.value="Combo"
+$selectFontFamily.value="Impact"
 $selectFontFamily.value="Barrio"
 $selectFontFamily.value="Montserrat Alternates"
 $selectFontFamily.value="Griffy"

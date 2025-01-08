@@ -49,8 +49,8 @@ main .container-meme .wrapper-text-image-meme{
 /* 💥💥💥 5- STYLES: TOP TEX / BOTTOM TEX  💥💥💥 */
 main .container-meme .top-text-meme,
 .bottom-text-meme{
-  background-color: #55fa1e;
-  font-family: "Black Ops One";
+  background-color: #ffffff;
+  /* font-family: "barrio"; */
   text-transform: var(--converter);
   margin: 0;
   padding: 10px;
