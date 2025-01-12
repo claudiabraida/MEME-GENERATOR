@@ -222,81 +222,82 @@ $buttonMode.addEventListener("click", () => {
   /* .... header .... */
   $header.style.background = `linear-gradient( #d5a2f3, #dbd1fc, #c361ff)`
   /* .... title meme .... */
-  $titleMeme.style.color = "#000000"
+  $titleMeme.style.color = " #000000"
   /* .... button nav menu .... */
-  $buttonImage.style.color = "#1e0839"
-  $buttonText.style.color = "#1e0839"
-  $buttonMode.style.color = "#1e0839"
+  $buttonImage.style.color = " #1e0839"
+  $buttonText.style.color = " #1e0839"
+  $buttonMode.style.color = " #1e0839"
   /* .... main .... */
   $main.style.background =  `linear-gradient( #8e51b1, #8169d3, #c793f6)`
   /* .... button download .... */
-  $buttonDownloadMeme.style.backgroundColor = "rgb(235, 195, 255)"
-  $buttonDownloadMeme.style.color = "#000000"
+  $buttonDownloadMeme.style.backgroundColor = " #ebc3ff"
+  $buttonDownloadMeme.style.color = " #000000"
   /* .... button close text panel controls.... */
-  $buttonCloseTextPanelControls.style.color = "#000000"
-  $buttonCloseImagePanelControls.style.color = "#000000"
+  $buttonCloseTextPanelControls.style.color = " #000000"
+  $buttonCloseImagePanelControls.style.color = " #000000"
   /* .... panels .... */
-  $asideImagePanelControls.style.backgroundColor = "#be9be8"
-  $asideTextPanelControls.style.backgroundColor = "#be9be8"
-  $asideImagePanelControls.style.color = "#000000"
-  $asideTextPanelControls.style.color = "#000000"
+  $asideImagePanelControls.style.backgroundColor = " #be9be8"
+  $asideTextPanelControls.style.backgroundColor = " #be9be8"
+  $asideImagePanelControls.style.color = " #000000"
+  $asideTextPanelControls.style.color = " #000000"
   /* .... input url .... */
-  $inputUrlImageMeme.style.backgroundColor = "#e4ceff"
+  $inputUrlImageMeme.style.backgroundColor = " #e4ceff"
+  $inputUrlImageMeme.style.color = " #000000"
   /* .... input color image  .... */
-  $divBoxInputBackgroundColorImage.style.backgroundColor = "#e4ceff"
-  $divBoxInputBackgroundColorImage.style.color = "#000000"
+  $divBoxInputBackgroundColorImage.style.backgroundColor = " #e4ceff"
+  $divBoxInputBackgroundColorImage.style.color = " #000000"
   /* .... select blend mode image .... */
-  $selectBlendModeImage.style.backgroundColor = "#e4ceff"
-  $selectBlendModeImage.style.color = "#000000"
+  $selectBlendModeImage.style.backgroundColor = " #e4ceff"
+  $selectBlendModeImage.style.color = " #000000"
   /* .... button reset .... */
-  $buttonResetFilterImage.style.backgroundColor = "#e4ceff"
+  $buttonResetFilterImage.style.backgroundColor = " #e4ceff"
   $buttonResetFilterImage.style.color = "#000000"
   /* .... textarea top text .... */
-  $textareaTopText.style.backgroundColor = "#e4ceff"
-  $textareaTopText.style.color = "#000000"
+  $textareaTopText.style.backgroundColor = " #e4ceff"
+  $textareaTopText.style.color = " #000000"
   /* .... textarea bottom text .... */
   $textareaBottomText.style.backgroundColor = "#e4ceff"
   $textareaBottomText.style.color = "#000000"
   // /* .... select font ... */
-  $selectFontFamily.style.backgroundColor = "#e4ceff"
-  $selectFontFamily.style.color = "#000000"
+  $selectFontFamily.style.backgroundColor = " #e4ceff"
+  $selectFontFamily.style.color = " #000000"
   /* .... align left .... */
-  $inputFontSizeText.style.backgroundColor = "#e4ceff"
-  $inputFontSizeText.style.color = "#000000"
+  $inputFontSizeText.style.backgroundColor = " #e4ceff"
+  $inputFontSizeText.style.color = " #000000"
   /* .... align left .... */
-  $buttonAlignLeft.style.backgroundColor = "#e4ceff"
-  $buttonAlignLeft.style.color = "#000000"
+  $buttonAlignLeft.style.backgroundColor = " #e4ceff"
+  $buttonAlignLeft.style.color = " #000000"
   /* .... align center .... */
-  $buttonAlignCenter.style.backgroundColor = "#e4ceff"
-  $buttonAlignCenter.style.color = "#000000"
+  $buttonAlignCenter.style.backgroundColor = " #e4ceff"
+  $buttonAlignCenter.style.color = " #000000"
   /* .... align right .... */
-  $buttonAlignRight.style.backgroundColor = "#e4ceff"
-  $buttonAlignRight.style.color = "#000000"
+  $buttonAlignRight.style.backgroundColor = " #e4ceff"
+  $buttonAlignRight.style.color = " #000000"
   /* .... title color .... */
-  $legendTitleColor.style.color = "#000000"
+  $legendTitleColor.style.color = " #000000"
   /* .... box color text .... */
   $boxColorText.style.backgroundColor = "#e4ceff"
-  $boxColorText.style.color = "#000000"
+  $boxColorText.style.color = " #000000"
   /* .... title background .... */
-  $legendTitleBackground.style.color = "#000000"
+  $legendTitleBackground.style.color = " #000000"
   /* .... box background color text .... */
-  $boxBackgroundText.style.backgroundColor = "#e4ceff"
-  $boxBackgroundText.style.color = "#000000"
+  $boxBackgroundText.style.backgroundColor = " #e4ceff"
+  $boxBackgroundText.style.color = " #000000"
   /* .... no-text-outline .... */
-  $buttonNoTextOutline.style.backgroundColor = "#e4ceff"
-  $buttonNoTextOutline.style.color = "#000000"
+  $buttonNoTextOutline.style.backgroundColor = " #e4ceff"
+  $buttonNoTextOutline.style.color = " #000000"
   /* .... light text outline .... */
   $buttonLightTextOutline.style.backgroundColor = "#e4ceff"
-  $buttonLightTextOutline.style.color = "#000000"
+  $buttonLightTextOutline.style.color = " #000000"
   /* .... dark text outline .... */
-  $buttonDarkTextOutline.style.backgroundColor = "#e4ceff"
-  $buttonDarkTextOutline.style.color = "#000000"
+  $buttonDarkTextOutline.style.backgroundColor = " #e4ceff"
+  $buttonDarkTextOutline.style.color = " #000000"
   /* .... text-lineheight .... */
-  $selectTextLineHeight.style.backgroundColor = "#e4ceff"
-  $selectTextLineHeight.style.color = "#000000"
+  $selectTextLineHeight.style.backgroundColor = " #e4ceff"
+  $selectTextLineHeight.style.color = " #000000"
   /* .... select-letter-spacing-text .... */
-  $inputLetterSpacingText.style.backgroundColor = "#e4ceff"
-  $inputLetterSpacingText.style.color = "#000000"
+  $inputLetterSpacingText.style.backgroundColor = " #e4ceff"
+  $inputLetterSpacingText.style.color = " #000000"
 
   if($bodyDarkMode.classList.contains("body-dark-mode")) {
     $bodyDarkMode.classList.remove("body-dark-mode")
@@ -309,82 +310,84 @@ $buttonMode.addEventListener("click", () => {
     /* .... header .... */
     $header.style.background = ""
     /* .... title meme .... */
-    $titleMeme.style.color = "#ffffff"
+    $titleMeme.style.color = " #ffffff"
     /* .... button nav menu .... */
-    $buttonImage.style.color = "whitesmoke"
-    $buttonText.style.color = "whitesmoke"
-    $buttonMode.style.color = "whitesmoke"
+    $buttonImage.style.color = " #f5f5f5"
+    $buttonText.style.color = " #f5f5f5"
+    $buttonMode.style.color = " #f5f5f5"
     /* .... main ... */
     $main.style.background = `linear-gradient( #181317, #ad2c91, #201423)`
     /* .... button download .... */
-    $buttonDownloadMeme.style.backgroundColor = "#6c29ab"
-    $buttonDownloadMeme.style.color = "#ffffff"
+    $buttonDownloadMeme.style.backgroundColor = " #6c29ab"
+    $buttonDownloadMeme.style.color = " #ffffff"
     /* .... button close text panel controls.... */
-    $buttonCloseTextPanelControls.style.color = "#ffffff"
-    $buttonCloseImagePanelControls.style.color = "#ffffff"
+    $buttonCloseTextPanelControls.style.color = " #ffffff"
+    $buttonCloseImagePanelControls.style.color = " #ffffff"
 
     /* .... panels .... */
-    $asideImagePanelControls.style.backgroundColor = "#2f1130"
-    $asideTextPanelControls.style.backgroundColor = "#2f1130"
-    $asideImagePanelControls.style.color = "#ffffff"
-    $asideTextPanelControls.style.color = "#ffffff"
+    $asideImagePanelControls.style.backgroundColor = " #2f1130"
+    $asideTextPanelControls.style.backgroundColor = " #2f1130"
+    $asideImagePanelControls.style.color = " #ffffff"
+    $asideTextPanelControls.style.color = " #ffffff"
     /* .... input url ... */
-    $inputUrlImageMeme.style.backgroundColor = "#66487a"
+    $inputUrlImageMeme.style.backgroundColor = " #66487a"
+    $inputUrlImageMeme.style.color = " #ffffff"
+
     /* .... input color image .... */
-    $divBoxInputBackgroundColorImage.style.backgroundColor = "#66487a"
-    $divBoxInputBackgroundColorImage.style.color = "#ffffff"
+    $divBoxInputBackgroundColorImage.style.color = " #ffffff"
+    $divBoxInputBackgroundColorImage.style.backgroundColor = " #66487a"
     /* .... select blend mode image .... */
-    $selectBlendModeImage.style.backgroundColor = "#66487a"
-    $selectBlendModeImage.style.color = "#ffffff"
+    $selectBlendModeImage.style.color = " #ffffff"
+    $selectBlendModeImage.style.backgroundColor = " #66487a"
     /* .... button reset  .... */
-    $buttonResetFilterImage.style.backgroundColor = "#6c29ab"
-    $buttonResetFilterImage.style.color = "#ffffff"
+    $buttonResetFilterImage.style.color = " #ffffff"
+    $buttonResetFilterImage.style.backgroundColor = " #6c29ab"
     /* .... textarea top text .... */
-    $textareaTopText.style.backgroundColor = "#66487a"
-    $textareaTopText.style.color = "#ffffff"
+    $textareaTopText.style.color = " #ffffff"
+    $textareaTopText.style.backgroundColor = " #66487a"
     /* .... textarea bottom text ... */
-    $textareaBottomText.style.backgroundColor = "#66487a"
-    $textareaBottomText.style.color = "#ffffff"
+    $textareaBottomText.style.color = " #ffffff"
+    $textareaBottomText.style.backgroundColor = " #66487a"
     /* .... select font .... */
-    $selectFontFamily.style.backgroundColor =  "#66487a"
-    $selectFontFamily.style.color = "#ffffff"
+    $selectFontFamily.style.color = " #ffffff"
+    $selectFontFamily.style.backgroundColor =  " #66487a"
     /* .... font size .... */
-    $inputFontSizeText.style.backgroundColor = "#66487a"
-    $inputFontSizeText.style.color = "#ffffff"
+    $inputFontSizeText.style.color = " #ffffff"
+    $inputFontSizeText.style.backgroundColor = " #66487a"
     /* .... align left .... */
     $buttonAlignLeft.style.backgroundColor = "#66487a"
-    $buttonAlignLeft.style.color = "#ffffff"
+    $buttonAlignLeft.style.color = " #ffffff"
     /* .... align center ..... */
-    $buttonAlignCenter.style.backgroundColor = "#66487a"
-    $buttonAlignCenter.style.color = "#ffffff"
+    $buttonAlignCenter.style.backgroundColor = " #66487a"
+    $buttonAlignCenter.style.color = " #ffffff"
     /* .... align right .... */
-    $buttonAlignRight.style.backgroundColor = "#66487a"
-    $buttonAlignRight.style.color = "#ffffff"
+    $buttonAlignRight.style.backgroundColor = " #66487a"
+    $buttonAlignRight.style.color = " #ffffff"
     /* .... title color .... */
-    $legendTitleColor.style.color = "#ffffff"
+    $legendTitleColor.style.color = " #ffffff"
     /* .... box color text .... */
-    $boxColorText.style.backgroundColor = "#66487a"
-    $boxColorText.style.color = "#ffffff"
+    $boxColorText.style.backgroundColor = " #66487a"
+    $boxColorText.style.color = " #ffffff"
     /* .... title background .... */
-    $legendTitleBackground.style.color = "#ffffff"
+    $legendTitleBackground.style.color = " #ffffff"
     /* .... box background color text .... */
-    $boxBackgroundText.style.backgroundColor = "#66487a"
-    $boxBackgroundText.style.color = "#ffffff"
+    $boxBackgroundText.style.backgroundColor = " #66487a"
+    $boxBackgroundText.style.color = " #ffffff"
     /* .... no-text-outline .... */
-    $buttonNoTextOutline.style.backgroundColor = "#66487a"
-    $buttonNoTextOutline.style.color = "#ffffff"
+    $buttonNoTextOutline.style.backgroundColor = " #66487a"
+    $buttonNoTextOutline.style.color = " #ffffff"
     /* .... light text outline .... */
-    $buttonLightTextOutline.style.backgroundColor = "#66487a"
-    $buttonLightTextOutline.style.color = "#ffffff"
+    $buttonLightTextOutline.style.backgroundColor = " #66487a"
+    $buttonLightTextOutline.style.color = " #ffffff"
     /* .... dark text outline .... */
-    $buttonDarkTextOutline.style.backgroundColor = "#66487a"
-    $buttonDarkTextOutline.style.color = "#ffffff"
+    $buttonDarkTextOutline.style.backgroundColor = " #66487a"
+    $buttonDarkTextOutline.style.color = " #ffffff"
     /* .... text-line height .... */
-    $selectTextLineHeight.style.backgroundColor = "#66487a"
-    $selectTextLineHeight.style.color = "#ffffff"
+    $selectTextLineHeight.style.backgroundColor = " #66487a"
+    $selectTextLineHeight.style.color = " #ffffff"
     // select-letter-spacing-text
-    $inputLetterSpacingText.style.backgroundColor = "#66487a"
-    $inputLetterSpacingText.style.color = "#ffffff"
+    $inputLetterSpacingText.style.backgroundColor = " #66487a"
+    $inputLetterSpacingText.style.color = " #ffffff"
 
   }
 
