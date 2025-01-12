@@ -2,13 +2,12 @@
 /* 💥💥💥💥💥💥 1- MAIN: MEME 💥💥💥💥💥💥 */
 /* ... Alignment:container and download button ... */
 main{
-  background-color: rgb(87, 11, 85);
-  /* background-color: linear-gradient(#181317, #ad2c91, #201423); */
+  background: linear-gradient(#181317, #ad2c91, #201423);
   width: 100%;
   height: 460px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:flex-start;
   align-items: center;
   gap: 20px;
 }
@@ -29,10 +28,8 @@ main .container-meme .image-meme{
   height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-align: center;
 }
-
 
 /* 💥💥💥💥💥💥 4- WRAPPER TEXT IMAGE MEME  💥💥💥💥💥💥 */
 main .container-meme .wrapper-text-image-meme{
@@ -55,6 +52,7 @@ main .container-meme .top-text-meme,
   margin: 0;
   padding: 10px;
   overflow-wrap: break-word;
+  overflow: hidden;
   position: relative;
 }
 
@@ -80,57 +78,103 @@ main .download-meme::before{
 
 /* .... download-meme: pseudoelement color change .... */
 main .download-meme:hover{
-  background-color: #9822a5;
+  background-color: #b929c9;
+  border: 2px solid #68205b;
 }
 
 /* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
 
 @media (min-width: 768px) {
-/* 💥💥💥💥💥💥 1- MAIN: MEME 💥💥💥💥💥💥 */
+  /* 💥💥💥💥💥💥 1- MAIN: MEME 💥💥💥💥💥💥 */
   main{
-  /* background-color: aqua; */
-  background: linear-gradient(#181317, #ad2c91, #201423);
-  height: 900px;
-  justify-content: space-evenly;
-}
-
-/* 💥💥💥💥💥💥 2- CONTAINER MEME 💥💥💥💥💥💥 */
-/* .......... Element Alignment .......... */
-main .container-meme{
-  background-color: #030303;
-  width: 90%;
-  height: 600px;
-}
-
-/* 💥💥💥💥💥💥 3- IMAGE MEME  💥💥💥💥💥💥 */
-main .container-meme .image-meme{
-  height: 600px;
-}
-
-/* 💥💥💥💥 4- WRAPPER TEXT IMAGE MEME💥💥💥💥 */
-main .container-meme .wrapper-text-image-meme{
-  height: 600px;
-  top: -100%;
-  z-index: 1;
-}
-
-/* 💥💥💥 5- STYLES: TOP TEX / BOTTOM TEX  💥💥💥 */
-main .container-meme .wrapper-text-image-meme
-.top-text-meme, .bottom-text-meme{
-  background-color: red;
-  padding:3%;
+    /* background: linear-gradient(#181317, #ad2c91, #201423); */
+    height: 900px;
   
-}
-/* 💥💥💥💥💥6- BUTTON DOWNLOAD 💥💥💥💥💥 */
-main .download-meme{
-  width: 40%;
-  font-size: 1.7em;
-  padding: 4px;
-  margin-top: -10%;
-} 
+  }
+  
+  /* 💥💥💥💥💥💥 2- CONTAINER MEME 💥💥💥💥💥💥 */
+  /* .......... Element Alignment .......... */
+  main .container-meme{
+    background-color: #030303;
+    width: 75%;
+    height: 500px;
+  }
+  
+  /* 💥💥💥💥💥💥 3- IMAGE MEME  💥💥💥💥💥💥 */
+  main .container-meme .image-meme{
+    height: 500px;
+  }
+  
+  /* 💥💥💥💥 4- WRAPPER TEXT IMAGE MEME💥💥💥💥 */
+  main .container-meme .wrapper-text-image-meme{
+    height: 500px;
+  }
+  
+  /* 💥💥💥 5- STYLES: TOP TEX / BOTTOM TEX  💥💥💥 */
+  main .container-meme .wrapper-text-image-meme
+  .top-text-meme, .bottom-text-meme{
+    /* background-color: red; */
+    font-size: 35px ;
+    padding:3%;
+  }
+  
+  /* 💥💥💥💥💥6- BUTTON DOWNLOAD 💥💥💥💥💥 */
+  main .download-meme{
+    width: 36%;
+    height: 60px;
+    font-size: 1.5em;
+    padding: 3%;
+    line-height: 1px;
+    margin-top: 3%;
+  } 
 
 }
-
-
 
 /* @-@-@-@- MEDIA QUERIE DESKTOP -@-@-@-@ */
+
+@media (min-width: 1024px) {
+  /* 💥💥💥💥💥💥 1- MAIN: MEME 💥💥💥💥💥💥 */
+  main{
+    /* background-color: aqua; */
+    height: 900px;
+    justify-content:space-around;
+  }
+  
+  /* 💥💥💥💥💥💥 2- CONTAINER MEME 💥💥💥💥💥💥 */
+  /* .......... Element Alignment .......... */
+  main .container-meme{
+    background-color: #030303;
+    width: 70%;
+    height: 600px;
+  }
+  
+  /* 💥💥💥💥💥💥 3- IMAGE MEME  💥💥💥💥💥💥 */
+  main .container-meme .image-meme{
+    height: 600px;
+  }
+  
+  /* 💥💥💥💥 4- WRAPPER TEXT IMAGE MEME💥💥💥💥 */
+  main .container-meme .wrapper-text-image-meme{
+    height: 600px;
+    top: -100%;
+  }
+  
+  /* 💥💥💥 5- STYLES: TOP TEX / BOTTOM TEX  💥💥💥 */
+  main .container-meme .wrapper-text-image-meme
+  .top-text-meme, .bottom-text-meme{
+    /* background-color: red; */
+    font-size: 45px ;
+    padding:3%;
+  }
+  
+  /* 💥💥💥💥💥 6- BUTTON DOWNLOAD 💥💥💥💥💥 */
+  main .download-meme{
+    width: 33%;
+    height: 70px;
+    font-size: 1.8em;
+    padding: 2%;
+    line-height: 1px;
+    margin-top: -10%;
+  } 
+
+}

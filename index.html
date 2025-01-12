@@ -25,7 +25,7 @@
     <nav class="nav-menu">
       <button class="btn-nav-menu button-image">imagen</button>
       <button class="btn-nav-menu button-text">texto</button>
-      <button class="btn-nav-menu button-mode">Modo Oscuro</button>
+      <button class="btn-nav-menu button-mode">modo oscuro</button>
     </nav>
   </header>
   
@@ -128,20 +128,20 @@
       <fieldset class="fieldset-top-text-area">
         <legend>superior</legend>
         <!--...... TEXTAREA TOP TEXT (WRITE)...... -->
-        <textarea name="top-text-area" id="top-text-area"  placeholder="top text" cols="16" rows="2">top tex</textarea>
+        <textarea name="top-text-area" id="top-text-area"  placeholder="top text" cols="24" rows="2">top tex</textarea>
         <!-- ______________ NO TOP TEXT (checkbox)  ______________ -->   
         <input type="checkbox" checked name="no-top-text" id="checkbox-no-top-text">
-        <label class="label-icon-checkbox" for="checkbox-no-top-text">sin texto superior</label>
+        <label class="label-text-checkbox-icon" for="checkbox-no-top-text">sin texto superior</label>
       </fieldset>
       
       <!-- ___________ FIELDSET BOTTOM TEXT AREA ___________ -->
       <fieldset class="fieldset-bottom-text-area">
         <legend>inferior</legend>
         <!-- ...... TEXTAREA BOTTOM TEXT (WRITE) ...... -->
-        <textarea name="bottom-text-area" id="bottom-text-area" cols="16" rows="2">bottom text</textarea>
+        <textarea name="bottom-text-area" id="bottom-text-area" cols="24" rows="2">bottom text</textarea>
         <!-- ______________ NO BOTTOM TEXT (checkbox)  ______________ -->   
         <input type="checkbox" checked name="no-bottom-text" id="checkbox-no-bottom-text">
-        <label class="label-icon-checkbox" for="checkbox-no-bottom-text">sin texto inferior</label>
+        <label class="label-text-checkbox-icon" for="checkbox-no-bottom-text">sin texto inferior</label>
       </fieldset>
 
       <!-- ________________________ SELECT FONT-FAMILY ________________________ -->
@@ -160,16 +160,16 @@
         </select>
       </fieldset>
 
-      <!-- ________________________ SELECT FONT-FAMILY ________________________ -->
+      <!-- ________________________ WRAPPER FONT TEXT ________________________ -->
       <fieldset class="wrapper-font-text">
         <!-- __________________ FONT SIZE -TEXT __________________ -->
         <legend>tamaño</legend>
       
         <input type="number" name="font-size-text" id="font-size-text" >
         <!-- _____________________ ALIGN-TEXT _____________________ -->
-        <button type="button" id="align-text-left" aria-label="align text left"></button>
-        <button type="button" id="align-text-center" aria-label="align text center"></button>
-        <button type="button" id="align-text-right" aria-label="align text right "></button>
+        <button type="button" class="align-text-left" aria-label="align text left"></button>
+        <button type="button" class="align-text-center" aria-label="align text center"></button>
+        <button type="button" class="align-text-right" aria-label="align text right "></button>
       </fieldset>
       
       <!-- _____________________ WRAPPER COLOR AND BACKGROUND TEXT _____________ -->
@@ -189,34 +189,34 @@
         </fieldset>
         <div class="box-transparent-background-text">
           <input type="checkbox" checked name="transparent-background-text" id="checkbox-transparent-background-text">
-          <label class="label-icon-checkbox" for="checkbox-transparent-background-text">fondo transparente</label>
+          <label class="label-text-checkbox-icon" for="checkbox-transparent-background-text">fondo transparente</label>
         </div>
       </div>
 
       <!-- _________________________ TEXT FONT OUTLINE _________________________ -->
-      <fieldset class="text-font-outline">
+      <fieldset class="wrapper-buttons-text-font-outline">
         <legend>contorno</legend>
         <button type="button" id="no-text-outline" aria aria-label="no text outline">ninguno</button>
         <button type="button" id="light-text-outline" aria-label="light text outline">claro</button>
         <button type="button" id="dark-text-outline" aria-label="dark text outline">oscuro</button>
       </fieldset>
 
-      <!-- _________________________ TEXT LINE HEIGHT _________________________ -->
-      <fieldset>
-        <legend>interlineado</legend>
-        <input type="number" name="text-line-height" id="input-text-line-height">
-      </fieldset>
-
       <!-- _______________________ TEXT LETTER SPACING _______________________ -->
+      <fieldset>
+        <legend>espaciado <i class="fa-solid fa-arrows-left-right"></i></legend>
+        <input type="number" name="letter-spacing-text" id="letter-spacing-text">
+      </fieldset>
+      
+      <!-- _________________________ TEXT LINE HEIGHT _________________________ -->
        <fieldset>
-        <legend>espaciado</legend>
-        <select name="select-letter-spacing-text" id="select-letter-spacing-text">
+        <legend>interlineado <i class="fa-solid fa-arrow-down-wide-short"></i></legend>
+        <select name="text-line-height" id="text-line-height">
+          <option>0.8</option>
+          <option>1</option>
+          <option>1.2</option>
+          <option>1.5</option>
           <option>2</option>
-          <option>4</option>
-          <option>6</option>
-          <option>8</option>
-          <option>12</option>
-          <option>10</option>
+          <option>2.5</option>
         </select>
        </fieldset>
     </form>

@@ -1,237 +1,468 @@
 
-/* 💥💥💥💥💥💥💥💥 TEXT PANEL CONTROLS (ASIDE) 💥💥💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥💥💥 1- TEXT PANEL CONTROLS (ASIDE) 💥💥💥💥💥💥💥💥 */
 body .text-panel-controls {
   display: none;
   z-index: 1;
 }
 
-/* 💥💥💥💥💥💥💥💥💥💥 TITLE TEXT FORM 💥💥💥💥💥💥💥💥💥💥 */
-body .text-panel-controls .title-text-form{
-  margin: -9% 0% 5%;
-}
-
-/* 💥💥💥💥💥💥 ALIGNMENT: FORM 💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥 1.2- ALIGNMENT: FORM 💥💥💥💥💥💥 */
 body .text-panel-controls form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 7px;
 }
 
-/* 💥💥💥💥 ALIGNMENT: FIELDSET-(TOP-TEXT / BOTTOM )-AREA 💥💥💥💥 */
-.text-panel-controls form .fieldset-top-text-area, .fieldset-bottom-text-area{
+/* 💥💥💥💥💥💥 1.3 GENERAL FIELDSET STYLES FONT 💥💥💥💥💥💥 */
+body .text-panel-controls form
+#select-font,
+#text-line-height,
+#letter-spacing-text{
+  width: 100%;
+  height: 30px;
+  border: none;
+}
+
+/* 💥💥💥💥💥💥💥💥💥💥 2- TITLE TEXT FORM 💥💥💥💥💥💥💥💥💥💥 */
+body .text-panel-controls .title-text-form{
+  margin: 1% 0% 9%;
+}
+
+/* 💥💥💥💥 3 - ALIGNMENT: FIELDSET-(TOP-TEXT / BOTTOM-TEXT )-AREA 💥💥💥💥 */
+.text-panel-controls form #top-text-area, 
+.text-panel-controls form #bottom-text-area{
   display: flex;
   flex-direction: column;
   resize: none;
 }
 
-/* 💥💥💥💥💥💥💥💥💥 GENERAL FIELDSET STYLES  💥💥💥💥💥💥💥 */
-body .text-panel-controls form 
-#select-font,
-#input-text-line-height,
-#select-letter-spacing-text{
-  width: 100%;
-  height: 40px;
-  border: none;
+/* ..... checkbox appearance no-top-tex / no-bottom-text ..... */
+#checkbox-no-top-text[type="checkbox"],
+#checkbox-no-bottom-text[type="checkbox"],
+#checkbox-transparent-background-text[type="checkbox"] {
+  appearance: none;
+  margin-top: 13%;
 }
 
-/* 💥💥💥💥💥 ALIGNMENT: WRAPPER FONT TEXT (elements)💥💥💥💥💥 */
+/* ..:::::::: label-text-checkbox-icon::before ..:::::::: */
+#checkbox-no-top-text[type="checkbox"] + .label-text-checkbox-icon::before,
+#checkbox-no-bottom-text[type="checkbox"] + .label-text-checkbox-icon::before,
+#checkbox-transparent-background-text[type="checkbox"] + .label-text-checkbox-icon::before{
+/* ....#checkbox-transparent-background-text[type="checkbox"]
++ .label-text-checkbox-icon::before....is added to these styles for similarity*/
+  border: 1px solid var(--colorWhitesmoke);
+  background-color: #ffffff;
+  border-color: #000000;
+  border-radius: 40px;
+  content: "💥";
+  font-size: 8px;
+  text-align: center;
+  margin: 5px;
+  margin-left: -3px;
+}
+
+/* .. label-text-checkbox-icon::before .. */
+#checkbox-no-top-text[type="checkbox"]:checked + .label-text-checkbox-icon::before,
+#checkbox-no-bottom-text[type="checkbox"]:checked + .label-text-checkbox-icon::before,
+#checkbox-transparent-background-text[type="checkbox"]:checked + .label-text-checkbox-icon::before{
+ /* ... #checkbox-transparent-background-text[type="checkbox"]:checked
+  + .label-text-checkbox-icon::before ....is added to these styles for similarity*/
+  background-color: #ffffff;
+  border-color: rgb(0, 0, 0);
+  color: transparent;
+}
+
+/* .. general style: size name checkbox icon .. */
+.text-panel-controls form #heckbox-no-top-text
+#checkbox-no-bottom-text,
+#checkbox-transparent-background-tex,
+.label-text-checkbox-icon{
+  font-size: 12px;
+}
+
+/* ....................................................................... */
+
+
+/* 💥💥💥💥💥 3- ALIGNMENT: WRAPPER FONT TEXT (elements)💥💥💥💥💥 */
 .text-panel-controls form .wrapper-font-text{
   /* background-color: black; */
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 6px;
+  margin-bottom: 2%;
 }
 
-/* 💥💥💥💥💥💥💥💥💥💥 FONT- SIZE 💥💥💥💥💥💥💥💥💥💥 */
-body .text-panel-controls form #font-size-text{
-  width: 90px;
+/* 💥💥💥💥💥💥💥 3.1 FONT SIZE TEXT 💥💥💥💥💥💥💥💥 */
+body .text-panel-controls form .wrapper-font-text #font-size-text{
+  width: 55px;
   height: 30px;
   border: none;
 }
 
-/* 💥💥💥💥💥💥💥 BUTTONS STYLES: ALIGN TEXT 💥💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥💥 3.2 BUTTONS STYLES: ALIGN TEXT 💥💥💥💥💥💥💥 */
 .text-panel-controls form .wrapper-font-text
-#align-text-left,
-#align-text-center,
-#align-text-right{
-  width: 15%;
+.align-text-left,
+.align-text-center,
+.align-text-right{
+  width: 20%;
   height: 30px;
-  border: none;
+  border: 2px solid #00000000;
   /* border-end-end-radius: 10px; */
   border-end-start-radius: 19px;
+}
+
+/* ------ Pseudo elements buttons hover  ------ */
+.text-panel-controls form  .align-text-left:hover,
+.align-text-center:hover,
+.align-text-right:hover{
+  border: 2px solid #0d00ff;
 }
 
 
 /* ------ Pseudo elements buttons icons ------ */
 /* .......... left icon .......... */
-.text-panel-controls form .wrapper-font-text #align-text-left::before{
+.text-panel-controls form .wrapper-font-text .align-text-left::before{
   font-family: "font awesome 5 free";
-  font-weight: 600;
   content: "\f036";
 }
 
 /* .......... center icon .......... */
-.text-panel-controls form .wrapper-font-text #align-text-center::before{
+.text-panel-controls form .wrapper-font-text .align-text-center::before{
   font-family: "font awesome 5 free";
-  font-weight: 600;
   content: "\f037";
 }
 
 /* .......... right icon .......... */
-.text-panel-controls form .wrapper-font-text #align-text-right::before{
+.text-panel-controls form .wrapper-font-text .align-text-right::before{
   font-family: "font awesome 5 free";
-  font-weight: 600;
   content: "\f038";
 }
 
-/* .... buttons align text hover .... */
-.text-panel-controls form .wrapper-font-text #align-text-left:hover{
-  background-color: var(--color-light-violet);
-}
-
-.text-panel-controls form .wrapper-font-text #align-text-right:hover{
-  background-color: var(--color-light-violet);
-}
-
-.text-panel-controls form .wrapper-font-text #align-text-center:hover{
-  background-color: var(--color-light-violet);
+/* .......... styles icon .......... */
+.align-text-left::before,
+.align-text-center::before,
+.align-text-right::before{
+  font-weight: 600;
+  font-size: 15px;
 }
 
 
+/* .... color of alignment buttons on hover .... */
+.text-panel-controls form .wrapper-font-text .align-text-left:hover{
+  background-color: var(--color-light-violet);
+}
 
-/* 💥💥💥 ALIGNMENT: WRAPPER-COLOR-AND-BACKGROUND-TEXT (elements)  💥💥💥 */
+.text-panel-controls form .wrapper-font-text .align-text-right:hover{
+  background-color: var(--color-light-violet);
+}
+
+.text-panel-controls form .wrapper-font-text .align-text-center:hover{
+  background-color: var(--color-light-violet);
+}
+
+
+/* 💥💥💥 5 ALIGNMENT: WRAPPER-COLOR-AND-BACKGROUND-TEXT (elements)  💥💥💥 */
 body .text-panel-controls form .wrapper-color-and-background-text{
-  height: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
- 
+  gap: 2px;
 }
 
-/* 💥💥💥 ALIGNMENT: BOX COLOR TEXT / BOX BACKGROUND TEXT 💥💥💥 */
+
+/* ........ 5.1 ALIGNMENT: BOX COLOR TEXT / BOX BACKGROUND TEXT ....... */
 body .text-panel-controls form .wrapper-color-and-background-text .box-color-text,
 .box-background-text{
-  height: 30px;
-  display: flex;
-  justify-content:center;
+  width: 30%;
+  height: 20px;
   justify-content: center;
 }
 
+/* .......... 5.2 TITLE COLOR / TITLE BACKGROUND ......... */
 .wrapper-color-and-background-text .box-color-text .title-color,
 .box-background-text .title-background{
   position: relative;
-  top: -30%;
-  left: -5%;
+  top: -50%;
+  left: -20%;
 }
 
-
-/* .... appearance color-text, backgroubd text (input) .... */
-.text-panel-controls form .wrapper-color-and-background-text
-.box-color-text #color-text,
+/* .... 5. 3 appearance color-text, backgroubd text (input) .... */
+.text-panel-controls form .wrapper-color-and-background-text .box-color-text #color-text,
 .box-background-text #background-text{
-  background-color:transparent;
-  width: 35px;
-  height: 35px;
+  /* ...... styles outer circle not visible ...... */
+  background-color:#e63c3c00;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   border: none; 
-  margin: -14%;
+  position: relative;
+  top: -220%;
+  left: -15%;
 }
 
+/* ........ 5.4 visible inner circle styles ........ */
 input[type="color"]#color-text::-webkit-color-swatch,
 input[type="color"]#background-text::-webkit-color-swatch{
+  height: 16px;
   border: none;
-  border-radius: 50%;
+  border-radius:50%;
 }
 
-/* ........ name (color,background) text ........ */
+/* ........... 5.5 box-transparent-background-text ........... */
+.wrapper-color-and-background-text #checkbox-transparent-background-text{
+  margin: -27%;
+}
+
+/* ........ 5.6 name (color,background) text ........ */
 .wrapper-color-and-background-text .box-color-text .name-color-text,
 .wrapper-color-and-background-text .box-background-text .name-background-text{
-  margin-left: 15%;
-  margin-top: -6%;
+  font-size: 0.7em;
+  padding: 20%;
+  margin: 0;
+  position: relative;
+  left: 6px;
+  top: -35px;
 }
 
-/* ..... checkbox appearance no (top, bottom) text ..... */ 
-#checkbox-no-top-text[type="checkbox"],
-#checkbox-no-bottom-text[type="checkbox"],
-#checkbox-transparent-background-text[type="checkbox"] {
-  appearance: none;
-  margin-top: 4%;
-}
-
-#checkbox-no-top-text[type="checkbox"] + .label-icon-checkbox::before,
-#checkbox-no-bottom-text[type="checkbox"] + .label-icon-checkbox::before,
-#checkbox-transparent-background-text[type="checkbox"] + .label-icon-checkbox::before{
-  border: 1px solid var(--colorWhitesmoke);
-  border-radius: 50%;
-  content: "💥";
-  font-size: 8px;
-  text-align: center;
-}
-
-#checkbox-no-top-text[type="checkbox"]:checked + .label-icon-checkbox::before,
-#checkbox-no-bottom-text[type="checkbox"]:checked + .label-icon-checkbox::before,
-#checkbox-transparent-background-text[type="checkbox"]:checked + .label-icon-checkbox::before  {
-  border-color: #fffefe;
-  color: transparent;
-}
-
-/* ........... box-transparent-background-text ........... */
-.wrapper-color-and-background-text #checkbox-transparent-background-text{
- margin-left: -35%;
+/* ............ 5.7 label-text-checkbox-icon ............ */
+.wrapper-color-and-background-text .box-transparent-background-text .label-text-checkbox-icon{
+ margin: 24%;
 
 }
 
-/* 💥💥💥💥💥💥💥💥 TEXT FONT OUTLINE 💥💥💥💥💥💥💥💥*/
-body .text-panel-controls form .text-font-outline{
-  margin-top: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* 💥💥💥💥💥💥 6 - WRAPPER BUTTONS TEXT FONT OUTLINE 💥💥💥💥💥💥*/
+body .text-panel-controls form .wrapper-buttons-text-font-outline{
+  /* background-color: rgb(155, 55, 255); */
+  height: 300%;
+  display:flex;
   gap: 3px;
 }
 
-/* 💥💥💥💥💥💥 BUTTONS: TEXT FONT OUTLINE 💥💥💥💥💥💥 */
-body .text-panel-controls form .text-font-outline
+/* 💥💥💥💥💥💥 7 - BUTTONS: TEXT FONT OUTLINE 💥💥💥💥💥💥 */
+body .text-panel-controls form .wrapper-buttons-text-font-outline
 #no-text-outline,
 #light-text-outline,
 #dark-text-outline{
-  width: 80%;
-  font-size: 0.9em;
+  font-size: 0.8em;
   text-align: center;
   letter-spacing: 1px;
-  border: none;
-  border-radius: 50px 90px 80px 10px;
-  margin: 0;
-  padding: 7px;
+  border: 2px solid #ff000000;
+  border-radius: 10px 0px 10px 0px;
+  padding: 6px;
 }
 
-body .text-panel-controls form .text-font-outline #no-text-outline:hover{
-  background-color: var(--color-light-violet);
+body .text-panel-controls form .wrapper-buttons-text-font-outline
+#no-text-outline:hover,
+#light-text-outline:hover,
+#dark-text-outline:hover{
+  border: 2px solid #0d00ff;
 }
 
-body .text-panel-controls form .text-font-outline #light-text-outline:hover{
-  background-color: var(--color-light-violet);
-}
-
-body .text-panel-controls form .text-font-outline #dark-text-outline:hover{
-  background-color: var(--color-light-violet);
-}
 
 /* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
 
 @media (min-width: 768px) {
-  /* aside{
-    display: none;
-  } */
+  /* 💥💥💥💥💥💥💥 2- TITLE TEXT FORM 💥💥💥💥💥💥💥 */
+  body .text-panel-controls .title-text-form{
+    margin: -50% 0% 9%;
+  }
+  
+  /* 💥💥💥💥 3 - ALIGNMENT: FIELDSET-(TOP-TEXT / BOTTOM-TEXT )-AREA 💥💥💥💥 */
+  .text-panel-controls form #top-text-area, 
+  .text-panel-controls form #bottom-text-area{
+    width: 100%;
+  }
 
+  /* ..... checkbox appearance no-top-tex / no-bottom-text ..... */
+  #checkbox-no-top-text[type="checkbox"],
+  #checkbox-no-bottom-text[type="checkbox"],
+  #checkbox-transparent-background-text[type="checkbox"] {
+    margin-top: 9%;
+  }
+  
+  /* .. general style: size name checkbox icon .. */
+  .text-panel-controls form #heckbox-no-top-text
+  #checkbox-no-bottom-text,
+  #checkbox-transparent-background-tex,
+  .label-text-checkbox-icon{
+    font-size: 16px;
+  }
+
+  /* ........ 5.1 ALIGNMENT: BOX COLOR TEXT / BOX BACKGROUND TEXT ....... */
+  body .text-panel-controls form .wrapper-color-and-background-text .box-color-text,
+  .box-background-text{
+    height: 35px;
+  }
+
+  /* .... 5.3 appearance color-text, backgroubd text (input) .... */
+  .text-panel-controls form .wrapper-color-and-background-text .box-color-text #color-text,
+  .box-background-text #background-text{
+    /* ...... styles outer circle not visible ...... */
+    width: 30px;
+    height: 30px;
+    top: -50%;
+  }
+
+  /* ........ 5.4 visible inner circle styles ........ */
+  input[type="color"]#color-text::-webkit-color-swatch,
+  input[type="color"]#background-text::-webkit-color-swatch{
+    height: 21px;
+  }
+
+
+  /* ........... 5.5 box-transparent-background-text ........... */
+  .wrapper-color-and-background-text #checkbox-transparent-background-text{
+    margin: -24%;
+  }
+  
+  /* ........ 5.6 name (color,background) text ........ */
+  .wrapper-color-and-background-text .box-color-text .name-color-text,
+  .wrapper-color-and-background-text .box-background-text .name-background-text{
+    font-size: 0.89em;
+    left: 6px;
+    top: -35px;
+  }
+  
+  /* 💥💥💥💥💥💥 6 - WRAPPER BUTTONS TEXT FONT OUTLINE 💥💥💥💥💥💥*/
+  body .text-panel-controls form .wrapper-buttons-text-font-outline{
+    gap: 6px;
+  }
+  
+  /* 💥💥💥💥💥💥 7 - BUTTONS: TEXT FONT OUTLINE 💥💥💥💥💥💥 */
+  body .text-panel-controls form .wrapper-buttons-text-font-outline
+  #no-text-outline,
+  #light-text-outline,
+  #dark-text-outline{
+    font-size: 0.9em;
+  }
 }
 
 /* @-@-@-@- MEDIA QUERIE DESKTOP -@-@-@-@ */
 
-/* @media (min-width: 1024px) {
+@media (min-width: 1024px) {
+  /* 💥💥💥💥💥💥 1.3 GENERAL FIELDSET STYLES FONT 💥💥💥💥💥💥 */
+  body .text-panel-controls form
+  #select-font,
+  #text-line-height,
+  #letter-spacing-text{
+    height: 50px;
+    font-size: 1.8em;
+  }
+
+  /* 💥💥💥💥💥💥💥 2- TITLE TEXT FORM 💥💥💥💥💥💥💥 */
+  body .text-panel-controls .title-text-form{
+    margin: -60% 0% 9%;
+    font-size: 1.9em;
+  }
   
-} */
+  /* 💥💥💥💥 3 - ALIGNMENT: FIELDSET-(TOP-TEXT / BOTTOM-TEXT )-AREA 💥💥💥💥 */
+  .text-panel-controls form #top-text-area,
+  .text-panel-controls form #bottom-text-area{
+    width: 100%;
+    height: 60px;
+    font-size: 1.3em;
+    margin-top: 1%;
+  }
+
+  /* ..:::::::: label-text-checkbox-icon::before ..:::::::: */
+#checkbox-no-top-text[type="checkbox"] + .label-text-checkbox-icon::before,
+#checkbox-no-bottom-text[type="checkbox"] + .label-text-checkbox-icon::before,
+#checkbox-transparent-background-text[type="checkbox"] + .label-text-checkbox-icon::before{
+  font-size: 12px;
+  margin-left: 1%;
+}
+
+  
+  /* 💥💥💥💥💥💥💥 3.1 FONT SIZE TEXT 💥💥💥💥💥💥💥💥 */
+  body .text-panel-controls form .wrapper-font-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  body .text-panel-controls form .wrapper-font-text #font-size-text{
+    height: 40px;
+    font-size: 2em;
+  
+  }
+  
+  /* 💥💥💥💥💥💥💥 3.2 BUTTONS STYLES: ALIGN TEXT 💥💥💥💥💥💥💥 */
+  /* .......... styles icon .......... */
+  .align-text-left::before,
+  .align-text-center::before,
+  .align-text-right::before{
+    font-size: 20px;
+  }
+
+  /* 💥💥💥💥💥💥💥 3.2 BUTTONS STYLES: ALIGN TEXT 💥💥💥💥💥💥💥 */
+  .text-panel-controls form .wrapper-font-text
+  .align-text-left,
+  .align-text-center,
+  .align-text-right{
+    height: 40px;
+  }
+
+  /* ........ 4.1 ALIGNMENT: BOX COLOR TEXT / BOX BACKGROUND TEXT ....... */
+  body .text-panel-controls form .wrapper-color-and-background-text .box-color-text,
+  .box-background-text{
+    width: 34%;
+    height: 50px;
+    margin-top: 8%;
+    margin-bottom: 3%;
+  }
+
+  /* .......... 4.2 TITLE COLOR / TITLE BACKGROUND ......... */
+  .wrapper-color-and-background-text .box-color-text .title-color,
+  .box-background-text .title-background{
+    top: -45%;
+    left: -11%;
+  }
+  
+  /* .... 4.3 appearance color-text, backgroubd text (input) .... */
+  .text-panel-controls form .wrapper-color-and-background-text .box-color-text #color-text,
+  .box-background-text #background-text{
+    /* ...... styles outer circle not visible ...... */
+    width: 40px;
+    height: 70px;
+    top: -80%;
+    left: -11%;
+  }
+
+  /* ........ 4.4 visible inner circle styles ........ */
+  input[type="color"]#color-text::-webkit-color-swatch,
+  input[type="color"]#background-text::-webkit-color-swatch{
+    height: 30px;
+  }
+
+  /* ........... 4.5 box-transparent-background-text ........... */
+  .wrapper-color-and-background-text #checkbox-transparent-background-text{
+    margin-left: -34%;
+  }
+  
+  /* ........ 4.6 name (color,background) text ........ */
+  .wrapper-color-and-background-text .box-color-text .name-color-text,
+  .wrapper-color-and-background-text .box-background-text .name-background-text{
+    font-size: 0.89em;
+    left: 15px;
+    top: -80px;
+  }
+  
+  /* 💥💥💥💥💥💥 5 - WRAPPER BUTTONS TEXT FONT OUTLINE 💥💥💥💥💥💥*/
+  body .text-panel-controls form .wrapper-buttons-text-font-outline{
+    margin-top: 8%;
+    gap: 6px;
+  }
+  
+  /* 💥💥💥💥💥💥 6 - BUTTONS: TEXT FONT OUTLINE 💥💥💥💥💥💥 */
+  body .text-panel-controls form .wrapper-buttons-text-font-outline
+  #no-text-outline,
+  #light-text-outline,
+  #dark-text-outline{
+    font-size: 1.4em;
+  }
+
+}
 
 
 

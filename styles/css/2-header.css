@@ -1,20 +1,15 @@
-
 /* ************** MOBILE FIRST ************** */
-
 /* 💥💥💥💥💥 HEADER: ALIGN ELEMENTS 💥💥💥💥💥 */
 header{
   /* background-color: #0b0a0b; */
-  /* background: linear-gradient(#a262c6, #a693e1, #ba53ff); */
-
   background: linear-gradient(#181317, #ad2c91, #201423);
-
   width:var(--width);
   height: 130px;
   font-family: var(--fontGenos);
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
  
 }
@@ -23,7 +18,9 @@ header{
 header .title-meme{
   color:var(--colorWhitesmoke);
   font-weight: var(--fontWeight500);
-  letter-spacing: 1px;
+  font-size: 1.6em;
+  margin: -5% 0 4%;
+
 }
 
 /* 💥💥💥💥💥 HEADER NAV-MENU BUTTONS 💥💥💥💥 */
@@ -33,7 +30,7 @@ header .nav-menu{/* Alignment: nav buttons*/
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+ 
 }
 
 /* 💥💥💥💥💥💥 NAV-MENU BUTTONS 💥💥💥💥💥💥 */
@@ -41,15 +38,18 @@ header .nav-menu{/* Alignment: nav buttons*/
 header .nav-menu .btn-nav-menu{
   background-color: transparent;
   width: 29%;
-  font-size: 0.9em;
   color: var(--colorWhitesmoke);
+  font-size: 0.9em;
+  text-transform: capitalize;
   font-weight: var(--fontWeight500);
-  border: none;
+  border: 2px solid #ff000000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
+
 
 /* -------- Pseudo elements buttons icons -------- */
 /* .......... image icon .......... */
@@ -75,33 +75,78 @@ header .nav-menu .button-mode::before{
   content: "\f6be";
 }
 
+/* ----- Pseudo elements buttons icons ----- */
+header .nav-menu 
+.button-image::before,
+.button-text::before,
+.button-mode::before{
+  font-size: 1.3em;
+}
+
+header .nav-menu .btn-nav-menu:hover{
+  border: 2px solid #0d00ff;
+}
+
 /* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
 
 @media (min-width: 768px) {
+/* 💥💥💥💥 HEADER: ALIGN ELEMENTS 💥💥💥💥 */
   header{
-    height: 250px;
-    justify-content: center;
+    /* background-color: red; */
+    height: 240px;
     gap: 10px;
+   
   }
 
+/* 💥💥💥💥 HEADER: TITLE MEME 💥💥💥💥 */
   header .title-meme{
-    font-size: 3em;
+    font-size: 3.3em;
+    margin: -2% 0 3%;
   }
 
-  /* header .nav-menu{
-    background-color: blueviolet;
-  } */
-
+/* 💥💥💥💥 NAV-MENU BUTTONS 💥💥💥💥 */
   header .nav-menu .btn-nav-menu{
-    font-size: 2em;
-  
+    /* background-color: greenyellow; */
+    width: 20%;
+    font-size: 1.4em;
   }
 
-} 
+  /* ----- Pseudo elements buttons icons ----- */
+  header .nav-menu .button-image::before,
+  .button-text::before,
+  .button-mode::before{
+    font-size: 1.4em;
+  }
+}
 
 /* @-@-@-@- MEDIA QUERIE DESKTOP -@-@-@-@ */
 
-/* @media (min-width: 1024px) {
-  
-} */
+@media (min-width: 1024px) {
+/* 💥💥💥💥 HEADER: ALIGN ELEMENTS 💥💥💥💥 */
+header{
+  /* background-color: red; */
+  height: 250px;
+  justify-content: flex-start;
+  gap: 1px;
+}
+ 
+/* 💥💥💥💥 HEADER: TITLE MEME 💥💥💥💥 */
+  header .title-meme{
+    font-size: 3.7em;
+    margin: 4% 0 3%;
+  }
 
+  header .nav-menu .btn-nav-menu{
+    /* background-color: greenyellow; */
+    width: 16%;
+    font-size: 1.7em;
+  }
+
+  /* -------- Pseudo elements buttons icons -------- */
+  header .nav-menu
+  .button-image::before,
+  .button-text::before,
+  .button-mode::before{
+    font-size: 1.3em;
+  }
+}

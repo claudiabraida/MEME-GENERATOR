@@ -1,24 +1,24 @@
-footer{
-  /* background-color: #461a57; */
-  /* background: linear-gradient(#181317, #ad2c91, #201423); */
+  /*footer{
+ background-color: #461a57; */
+  /* background: linear-gradient(#181317, #ad2c91, #201423); 
   width: 100%;
   height: 40px;
   
-}
+}*/
 
 /* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   footer{
     height: 83px;
   }
   
-}
+} */
 
 /* @-@-@-@- MEDIA QUERIE DESKTOP -@-@-@-@ */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   footer{
     height: 88px;
   }
 
-}
+} */

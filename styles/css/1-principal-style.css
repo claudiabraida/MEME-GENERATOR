@@ -1,4 +1,3 @@
-
 /* 💥💥💥💥💥💥 IMPORTS STYLES 💥💥💥💥💥💥 */
 @import url("./2-header.css");
 @import url("./3-main.css");
@@ -21,7 +20,6 @@
   font-family:"Combo";
   src: url(./fonts/Combo-Regular.ttf);
 }
-
 
 @font-face{
   font-family:"Genos";
@@ -53,21 +51,13 @@
   src: url(./fonts/SpecialElite-Regular.ttf);
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Barrio&family=Black+Ops+One&family=Genos:ital,wght@0,100..900;1,100..900&family=Griffy&family=Kranky&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Special+Elite&display=swap'); */
-
-
-
-
 /* 💥💥💥💥💥💥 GENERAL STYLES 💥💥💥💥💥💥 */
 /* ____ VARIABLES ____ */ 
 :root{
   --width:100%;
   --colorWhitesmoke: #f5f5f5;
-  --color-violet: #570b55;
   --color-violet-dark:#2f1130;
   --color-grayish-violet: #66487a;
-  --color-light-grayish-violet:#d1cdd7;
-  --color-light-blue: #4a46ce;
   --color-light-violet:#9f81c4 ;
   --fontGenos:"Genos";
   --fontWeight500: 500;
@@ -76,49 +66,52 @@
 
 /* 🔹🔹🔹🔹🔹🔹 MODE: LIGHT / DARK 🔹🔹🔹🔹🔹🔹 */ 
 .body-dark-mode{
-  background-color:var(--color-violet);
-  /* °optional background color*/
- /* background-color: linear-gradient(#181317, #ad2c91, #201423) ;  */
   
+ background: linear-gradient(#181317, #ad2c91, #201423) ; 
 }
 
 .body-light-mode{
-  background-color:var(--color-light-grayish-violet);
-
-  /* °optional color (line 27) */
+  background: linear-gradient( #c68df8, #8e51b1, #c1b0f9);
 }
 
 /* 🔹🔹🔹🔹🔹🔹 PANELS CONTROLS IMAGE/TEXT 🔹🔹🔹🔹🔹🔹 */
-
-/* .......... position and alignment .......... */
+/* .......... position and alignment (panesls).......... */
 body aside{
   background-color:var(--color-violet-dark);
-  width: 78%;
-  height: 780px;
+  width: 60%;
+  height: 790px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   z-index: 2;
   /* display: none; */
 }
 
-fieldset{
+/* ........ fieldset border (panels)...... */
+body aside form fieldset{
+  width: 83%;
   border: none;
+  /* background-color: rgb(81, 255, 0); */
+}
+
+/* .......... legend font size .......... */
+body aside form fieldset legend{
+  font-size: 0.8em;
 }
 
 /* ... font-font color panels, download button ... */
 body aside, .download-meme {
   font-family: var(--fontGenos);
-  /* color: var(--colorWhitesmoke); */
 }
 
 /* ..... panel titles font size and alignment ..... */
 body aside .title-text-form,
 .title-image-form{
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 /* ........... panel form element styles ........... */
@@ -150,27 +143,33 @@ body aside .btn-close{
   width: 10%;
   background-color: transparent;
   color: var(--colorWhitesmoke);
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 600;
   border: none;
   position: fixed;
-  left: 59%;
+  left: 48%;
   top: 0;
 }
-
 
 /* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
 
 @media (min-width: 768px) {
-  /* ........ panels image / text ........ */
+  /* 🔹🔹🔹🔹🔹🔹 PANELS CONTROLS IMAGE/TEXT 🔹🔹🔹🔹🔹🔹 */
   body aside{
-   
-    right: 10%;
+    width: 30%;
+    height: 900px;
+    right: 0%;
   }
 
-  /* ........ hidden panel button ........ */
-  aside .btn-close{
-    display: none;
+  /* ........ button close panels ........ */
+  body aside .btn-close{
+    left: 92%;
+    margin-top: 2%;
+  }
+
+ /* .......... legend font size .......... */
+  body aside form fieldset legend, label{
+    font-size: 1em;
   }
 
 }
@@ -178,20 +177,30 @@ body aside .btn-close{
 /* @-@-@-@- MEDIA QUERIE DESKTOP -@-@-@-@ */
 
 @media (min-width: 1024px) {
-  main{
-    background-color: #ff9ce6;
-  
+/* 🔹🔹🔹🔹🔹🔹 PANELS CONTROLS IMAGE/TEXT 🔹🔹🔹🔹🔹🔹 */
+  body aside{
+    width: 28%;
+    height: 1280px;
   }
 
- /* ........ panels image / text ........ */
-  body aside{
-    display: flex;
-    right: 30%;
+ /* .......... legend font size .......... */
+  body .text-panel-controls form fieldset legend{
+    font-size: 1.6em;
   }
-  
-  /* HIDDEN TEXT PANEL */
+  /* ........ button close panels ........ */
+  body aside .btn-close{
+    left: 92%;
+    top: -3%;
+    font-size: 2em;
+  }
+  /* hidden text panel controls */
   body .text-panel-controls{
     display: none;
+  }
+
+  /* image panel controls */
+  body .image-panel-controls{
+    display: flex;
   }
   
 }

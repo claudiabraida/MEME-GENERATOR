@@ -2,18 +2,29 @@
 .image-panel-controls{
   display: none;
 } 
-/* 💥💥💥💥💥💥 TITLE IMAGE FORM 💥💥💥💥💥💥 */
+
+.image-panel-controls form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #bc12ae2a; */
+  /* display: none; */
+} 
+
+/* 💥💥💥💥💥💥 1- TITLE IMAGE FORM 💥💥💥💥💥💥 */
 body aside .title-image-form{
-  margin: -1% 0% 5%;
+  margin: 15% 0% 0%;
 }
 
-/* 💥💥💥💥💥💥 ALIGNMENT: WRAPPER URL IMAGE ELEMENTS💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥 2- ALIGNMENT: WRAPPER URL IMAGE ELEMENTS💥💥💥💥💥💥 */
 .image-panel-controls .wrapper-url-image-meme{
   display: flex;
   flex-direction: column;
 }
 
-/* 💥💥💥💥💥 URL IMAGE MEME (input) 💥💥💥💥💥 */
+/* 💥💥💥💥💥 3- URL IMAGE MEME (input) 💥💥💥💥💥 */
 form .wrapper-url-image-meme #url-image-meme{
   height: 40px;
   border: none;
@@ -24,48 +35,46 @@ form .wrapper-url-image-meme #url-image-meme{
   margin: 8% 2%;
 }
 
-/* 💥💥💥 IMAGE BACKGROUND COLOR (FONDO) 💥💥💥 */
+/* 💥💥💥 4 - ALIGNMENT: WRAPPER COLOR AND BACKGROUND IMAGE (FONDO) 💥💥💥 */
 .wrapper-color-and-background-image{
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 7px;
 }
 
-/* .... box-input-background-color-image .... */
-.box-input-background-color-image{
-  background-color: #393e49;
-  display: flex;
-}
-
-/* .... width elements .... */
-.box-input-background-color-image,
+/* .... width elements: box-input background color image / select-blend-mode-image .... */
+form .wrapper-color-and-background-image .box-input-background-color-image,
 #select-blend-mode-image{
   width: 50%;
+  height: 30px;
 }
 
-/* 💥💥💥💥💥💥 COLOR INPUT APPEARANCE  💥💥💥💥💥💥 */
+
+/* 💥💥💥💥💥💥 5 COLOR INPUT APPEARANCE  💥💥💥💥💥💥 */
+/* ........ appearance input color ........ */
 .wrapper-color-and-background-image .box-input-background-color-image #background-color-image{
-  background-color:transparent;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+  background-color: #80ff0000;
+  width: 24px;
+  height: 25px;
   border: none;
+  border-radius: 50%;
+  margin-top: 2%;
 }
 
-input[type="color"]#background-color-image::-webkit-color-swatch {
- border: none;
- border-radius: 50%;
+[type="color"]#background-color-image::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
 }
-
-.wrapper-color-and-background-image .box-input-background-color-image{
-  height: 40px;
+ 
+/* ........ name-background-color-image ........ */
+.wrapper-color-and-background-image .box-input-background-color-image .name-background-color-image{
+  font-size: 12px;
+  position: relative;
+  text-transform: uppercase;
+  top: -14%;
+  left: -5%;
 }
-
-.box-input-background-color-image .name-background-color-image{
-  line-height: 2;
-}
-
-/* 💥💥💥💥💥💥 FILTERS IMAGE 💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥 6 FILTERS IMAGE 💥💥💥💥💥💥 */
 body .image-panel-controls form .wrapper-filter-image{
   display: flex;
   flex-direction: column;
@@ -73,23 +82,167 @@ body .image-panel-controls form .wrapper-filter-image{
   gap: 10px;
 }
 
-/* 💥💥💥💥💥💥 RANGE INPUT APPEARANCE  💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥 7 GENERAL STYLES: INPUTS APPEARANCE  💥💥💥💥💥💥 */
 .image-panel-controls form .wrapper-filter-image .slide-range,
 .wrapper-url-image-meme .slide-range{
   height: 3px;
 }
 
-/* 💥💥💥💥💥💥 BUTTON RESET FILTER IMAGE 💥💥💥💥💥💥 */
+/* 💥💥💥💥💥💥 8 BUTTON RESET FILTER IMAGE 💥💥💥💥💥💥 */
 #button-reset-filter-image{
   background-color:#6c29ab;
-  width: 50%;
+  width: 70%;
   font-size: 0.9em;
   letter-spacing: 1px;
   line-height: 2;
-  border: none;
+  border: 2px solid #ff000000;
   border-radius: 30px;
   padding: 3px;
-  margin-top: 10%;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 9%;
+}
+
+#button-reset-filter-image:hover{
+  border: 2px solid #0d00ff;
+}
+
+
+/* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
+
+@media (min-width: 768px) {
+  /* 💥💥💥💥💥💥 1- TITLE IMAGE FORM 💥💥💥💥💥💥 */
+  body aside .title-image-form{
+    margin: 20% 0% 5%;
+    
+  }
+
+  /* 💥💥💥💥💥💥 2- ALIGNMENT: WRAPPER URL IMAGE ELEMENTS💥💥💥💥💥💥 */
+  .image-panel-controls .wrapper-url-image-meme{
+    margin-top: 1%;
+    width: 90%;
+  }
+  
+  .image-panel-controls .wrapper-url-image-meme label{
+    margin-bottom: 3%;
+  }
+
+  /* .... width elements: box-input background color image / select-blend-mode-image .... */
+  form .wrapper-color-and-background-image .box-input-background-color-image,
+  #select-blend-mode-image{
+    height: 40px;
+  }
+  
+  /* 💥💥💥💥💥💥 5 COLOR INPUT APPEARANCE  💥💥💥💥💥💥 */
+  /* ........ appearance input color ........ */
+  .wrapper-color-and-background-image .box-input-background-color-image #background-color-image{
+    background-color: #80ff0000;
+    width: 30px;
+    height: 30px;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  
+  [type="color"]#background-color-image::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+  }
+  
+  /* ........ name-background-color-image ........ */
+  .wrapper-color-and-background-image .box-input-background-color-image .name-background-color-image{
+    font-size: 12px;
+    top: -17%;
+    left: 1%;
+  }
+
+  /* 💥💥💥💥💥💥 6 FILTERS IMAGE 💥💥💥💥💥💥 */
+  body .image-panel-controls form .wrapper-filter-image{
+    gap: 12px;
+    font-size: 1.4em;
+  }
+
+  /* 💥💥💥💥💥💥 8 BUTTON RESET FILTER IMAGE 💥💥💥💥💥💥 */
+  #button-reset-filter-image{
+    background-color:#6c29ab;
+    width: 80%;
+    font-size: 0.90em;
+  }
+
+}
+/* @-@-@-@- MEDIA QUERIE TABLET -@-@-@-@ */
+
+@media (min-width: 1024px) {
+  /* 💥💥💥💥💥💥 1- TITLE IMAGE FORM 💥💥💥💥💥💥 */
+  body aside .title-image-form{
+    margin: 10% 0% 10%;
+    font-size: 1.9em ;
+  }
+
+  /* 💥💥💥💥💥💥 2- ALIGNMENT: WRAPPER URL IMAGE ELEMENTS💥💥💥💥💥💥 */
+  .image-panel-controls .wrapper-url-image-meme{
+    margin-top: -9%;
+  }
+  
+  .image-panel-controls .wrapper-url-image-meme label{
+    font-size: 1.8em;
+    margin-top: 1%;
+  }
+  
+  /* .... elements: box-input background color image / select-blend-mode-image .... */
+  form .wrapper-color-and-background-image legend{
+    font-size: 1.8em;
+  }
+  
+
+  form .wrapper-color-and-background-image .box-input-background-color-image,
+  #select-blend-mode-image{
+    height: 50px;
+    font-size: 1.6em;
+  }
+ 
+  
+  /* 💥💥💥💥💥💥 5 COLOR INPUT APPEARANCE  💥💥💥💥💥💥 */
+  .wrapper-color-and-background-image{
+    width: 90%;
+    font-size: 1em;
+    margin-bottom: 3%;
+  }
+
+  
+  /* ........ appearance input color ........ */
+  .wrapper-color-and-background-image .box-input-background-color-image #background-color-image{
+    background-color: #80ff0000;
+    width: 37px;
+    height: 37px;
+    margin-top: 6%;
+  }
+  
+  /* ........ name-background-color-image ........ */
+  .wrapper-color-and-background-image .box-input-background-color-image .name-background-color-image{
+    font-size: 18px;
+    top: -19%;
+    left: -2%;
+   
+  }
+
+  /* 💥💥💥💥💥💥 6 FILTERS IMAGE 💥💥💥💥💥💥 */
+  body .image-panel-controls form .wrapper-filter-image{
+    gap: 16px;
+    font-size: 1.8em;
+  }
+  
+  /* 💥💥💥💥💥💥 7 GENERAL STYLES: INPUTS APPEARANCE  💥💥💥💥💥💥 */
+  .image-panel-controls form .wrapper-filter-image .slide-range,
+  .wrapper-url-image-meme .slide-range{
+    height: 10px;
+    margin: 3%;
+  }
+
+  /* 💥💥💥💥💥💥 8 BUTTON RESET FILTER IMAGE 💥💥💥💥💥💥 */
+  #button-reset-filter-image{
+    background-color:#6c29ab;
+    width: 70%;
+    font-size: 0.9em;
+  }
+
+
 }
